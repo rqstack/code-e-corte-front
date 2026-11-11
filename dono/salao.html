@@ -1,0 +1,509 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Meu salão | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="../dono/painel.html" class="logo"><img src="../img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para dono/painel.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="../dono/painel.html" class="link-navegacao">Painel</a></li>  <!-- Item “Painel”, que leva para dono/painel.html -->
+            <li><a href="../dono/salao.html" class="link-navegacao" aria-current="page">Meu salão</a></li>  <!-- Item “Meu salão”, que leva para dono/salao.html -->
+            <li><a href="../dono/financeiro.html" class="link-navegacao">Financeiro</a></li>  <!-- Item “Financeiro”, que leva para dono/financeiro.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Dono</summary>  <!-- Área atual, que abre o menu ao clicar: Dono -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="../index.html">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="../funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="../dono/painel.html" aria-current="page">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="../admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="../dono/perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para dono/perfil.html -->
+          <a href="../login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Área do dono / Meu salão</p>  <!-- Caminho da página: Área do dono / Meu salão -->
+          <h1 class="titulo">Meu salão</h1>  <!-- Título da página: Meu salão -->
+          <p class="descricao">Unidades, horários de funcionamento, equipe e serviços.</p>  <!-- Descrição da página: Unidades, horários de funcionamento, equipe e serviços. -->
+        </div>  <!-- Fecha bloco -->
+      </section>  <!-- Fecha topo da página -->
+      <div class="abas">  <!-- Abre grupo de abas -->
+        <input type="radio" name="secao" id="secao-0" checked aria-label="Unidades" />  <!-- Opção de escolha única: Unidades, já marcada -->
+        <input type="radio" name="secao" id="secao-1" aria-label="Horários" />  <!-- Opção de escolha única: Horários -->
+        <input type="radio" name="secao" id="secao-2" aria-label="Equipe" />  <!-- Opção de escolha única: Equipe -->
+        <input type="radio" name="secao" id="secao-3" aria-label="Serviços" />  <!-- Opção de escolha única: Serviços -->
+        <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+          <label for="secao-0">Unidades</label>  <!-- Rótulo: Unidades -->
+          <label for="secao-1">Horários</label>  <!-- Rótulo: Horários -->
+          <label for="secao-2">Equipe</label>  <!-- Rótulo: Equipe -->
+          <label for="secao-3">Serviços</label>  <!-- Rótulo: Serviços -->
+        </div>  <!-- Fecha linha com os botões das abas -->
+        <div class="paineis">  <!-- Abre conteúdo das abas -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <p class="mb-14"><a href="#nova-unidade" class="botao">Nova unidade</a></p>  <!-- Parágrafo: Nova unidade -->
+            <div class="grade-2">  <!-- Abre grade de 2 colunas -->
+              <article class="cartao">  <!-- Abre cartão -->
+                <h2>Black Barber · Tatuapé <span class="etiqueta etiqueta-ok">Ativa</span></h2>  <!-- Título de seção: Black Barber · Tatuapé Ativa -->
+                <ul class="lista-linhas">  <!-- Abre lista de dados em linhas -->
+                  <li><span>CNPJ e telefone</span><span>12.345.678/0001-90 · (11) 3333-0000</span></li>  <!-- Item da lista: CNPJ e telefone 12.345.678/0001-90 · (11) 3333-0000 -->
+                  <li><span>Endereço</span><span>Rua Tuiuti, 1200 · Tatuapé · São Paulo/SP</span></li>  <!-- Item da lista: Endereço Rua Tuiuti, 1200 · Tatuapé · São Paulo/SP -->
+                  <li><span>Equipe</span><span>6 funcionários</span></li>  <!-- Item da lista: Equipe 6 funcionários -->
+                </ul>  <!-- Fecha lista de dados em linhas -->
+                <div class="grupo-botoes mt-14">  <!-- Abre grupo de botões -->
+                  <a href="#editar-unidade" class="botao-secundario botao-pequeno">Editar</a>  <!-- Botão secundário “Editar”, que abre a janela editar-unidade -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Horários</a>  <!-- Botão secundário “Horários”, que leva para salao.html -->
+                  <a href="#desativar-unidade" class="botao-perigo botao-pequeno">Desativar</a>  <!-- Botão de ação perigosa “Desativar”, que abre a janela desativar-unidade -->
+                </div>  <!-- Fecha grupo de botões -->
+              </article>  <!-- Fecha cartão -->
+              <article class="cartao">  <!-- Abre cartão -->
+                <h2>Black Barber · Penha <span class="etiqueta etiqueta-ok">Ativa</span></h2>  <!-- Título de seção: Black Barber · Penha Ativa -->
+                <ul class="lista-linhas">  <!-- Abre lista de dados em linhas -->
+                  <li><span>CNPJ e telefone</span><span>12.345.678/0002-71 · (11) 3333-1111</span></li>  <!-- Item da lista: CNPJ e telefone 12.345.678/0002-71 · (11) 3333-1111 -->
+                  <li><span>Endereço</span><span>Av. Amador Bueno da Veiga, 500 · Penha · São Paulo/SP</span></li>  <!-- Item da lista: Endereço Av. Amador Bueno da Veiga, 500 · Penha · São Paulo/SP -->
+                  <li><span>Equipe</span><span>3 funcionários</span></li>  <!-- Item da lista: Equipe 3 funcionários -->
+                </ul>  <!-- Fecha lista de dados em linhas -->
+                <div class="grupo-botoes mt-14">  <!-- Abre grupo de botões -->
+                  <a href="#editar-unidade" class="botao-secundario botao-pequeno">Editar</a>  <!-- Botão secundário “Editar”, que abre a janela editar-unidade -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Horários</a>  <!-- Botão secundário “Horários”, que leva para salao.html -->
+                  <a href="#desativar-unidade" class="botao-perigo botao-pequeno">Desativar</a>  <!-- Botão de ação perigosa “Desativar”, que abre a janela desativar-unidade -->
+                </div>  <!-- Fecha grupo de botões -->
+              </article>  <!-- Fecha cartão -->
+            </div>  <!-- Fecha grade de 2 colunas -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <form class="empilhado" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="ho-id_salao">Unidade</label>  <!-- Rótulo: Unidade -->
+                <select id="ho-id_salao" required>  <!-- Abre a lista de seleção obrigatória -->
+                  <option>Black Barber · Tatuapé</option>  <!-- Opção da lista: Black Barber · Tatuapé -->
+                  <option>Black Barber · Penha</option>  <!-- Opção da lista: Black Barber · Penha -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+              <section class="cartao">  <!-- Abre cartão -->
+                <h2>Sua semana</h2>  <!-- Título de seção: Sua semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Segunda-feira" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Segunda-feira</h3>  <!-- Subtítulo: Segunda-feira -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Segunda-feira" />  <!-- Campo de hora: Abertura na Segunda-feira -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="18:00" aria-label="Fechamento na Segunda-feira" />  <!-- Campo de hora: Fechamento na Segunda-feira -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Terça-feira" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Terça-feira</h3>  <!-- Subtítulo: Terça-feira -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Terça-feira" />  <!-- Campo de hora: Abertura na Terça-feira -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="18:00" aria-label="Fechamento na Terça-feira" />  <!-- Campo de hora: Fechamento na Terça-feira -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Quarta-feira" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Quarta-feira</h3>  <!-- Subtítulo: Quarta-feira -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Quarta-feira" />  <!-- Campo de hora: Abertura na Quarta-feira -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="18:00" aria-label="Fechamento na Quarta-feira" />  <!-- Campo de hora: Fechamento na Quarta-feira -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Quinta-feira" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Quinta-feira</h3>  <!-- Subtítulo: Quinta-feira -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Quinta-feira" />  <!-- Campo de hora: Abertura na Quinta-feira -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="18:00" aria-label="Fechamento na Quinta-feira" />  <!-- Campo de hora: Fechamento na Quinta-feira -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Sexta-feira" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Sexta-feira</h3>  <!-- Subtítulo: Sexta-feira -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Sexta-feira" />  <!-- Campo de hora: Abertura na Sexta-feira -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="18:00" aria-label="Fechamento na Sexta-feira" />  <!-- Campo de hora: Fechamento na Sexta-feira -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" checked aria-label="Aberto na Sábado" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Sábado</h3>  <!-- Subtítulo: Sábado -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Sábado" />  <!-- Campo de hora: Abertura na Sábado -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="14:00" aria-label="Fechamento na Sábado" />  <!-- Campo de hora: Fechamento na Sábado -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+                <div class="dia">  <!-- Abre linha de um dia da semana -->
+                  <div class="informacao-dia">  <!-- Abre nome e situação do dia -->
+                    <label class="interruptor"><input type="checkbox" aria-label="Aberto na Domingo" /><span></span></label>  <!-- Chave liga/desliga deste dia -->
+                    <div>  <!-- Abre bloco -->
+                      <h3>Domingo</h3>  <!-- Subtítulo: Domingo -->
+                      <p class="estado-aberto">Aberto</p>  <!-- Texto aberto: Aberto -->
+                      <p class="estado-fechado">Fechado</p>  <!-- Texto fechado: Fechado -->
+                    </div>  <!-- Fecha bloco -->
+                  </div>  <!-- Fecha nome e situação do dia -->
+                  <div class="horario">  <!-- Abre horários de abertura e fechamento -->
+                    <input type="time" value="08:00" aria-label="Abertura na Domingo" />  <!-- Campo de hora: Abertura na Domingo -->
+                    <span>até</span>  <!-- Trecho de texto: até -->
+                    <input type="time" value="14:00" aria-label="Fechamento na Domingo" />  <!-- Campo de hora: Fechamento na Domingo -->
+                  </div>  <!-- Fecha horários de abertura e fechamento -->
+                </div>  <!-- Fecha linha de um dia da semana -->
+              </section>  <!-- Fecha cartão -->
+
+              <section class="faixa mb-0">  <!-- Abre faixa de destaque -->
+                <div>  <!-- Abre bloco -->
+                  <h2>Intervalo entre atendimentos</h2>  <!-- Título de seção: Intervalo entre atendimentos -->
+                  <p>Tempo reservado entre um cliente e outro.</p>  <!-- Parágrafo: Tempo reservado entre um cliente e outro. -->
+                </div>  <!-- Fecha bloco -->
+                <div>  <!-- Abre bloco -->
+                  <select id="ho-intervalo" aria-label="Intervalo entre atendimentos">  <!-- Abre a lista de seleção -->
+                    <option>Sem intervalo</option>  <!-- Opção da lista: Sem intervalo -->
+                    <option>5 minutos</option>  <!-- Opção da lista: 5 minutos -->
+                    <option>10 minutos</option>  <!-- Opção da lista: 10 minutos -->
+                    <option selected>15 minutos</option>  <!-- Opção da lista: 15 minutos (já selecionada) -->
+                    <option>20 minutos</option>  <!-- Opção da lista: 20 minutos -->
+                    <option>30 minutos</option>  <!-- Opção da lista: 30 minutos -->
+                  </select>  <!-- Fecha lista de seleção -->
+                </div>  <!-- Fecha bloco -->
+              </section>  <!-- Fecha faixa de destaque -->
+
+              <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+                <a href="painel.html" class="botao-secundario">Cancelar</a>  <!-- Botão secundário “Cancelar”, que leva para painel.html -->
+                <button type="submit" class="botao">Salvar horários</button>  <!-- Botão que envia o formulário: Salvar horários -->
+              </div>  <!-- Fecha botões do formulário -->
+            </form>  <!-- Fecha bloco empilhado -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <p class="mb-14"><a href="#novo-funcionario" class="botao">Adicionar funcionário</a></p>  <!-- Parágrafo: Adicionar funcionário -->
+            <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Equipe">  <!-- Abre área com rolagem da tabela -->
+              <table>  <!-- Abre tabela -->
+                <thead>  <!-- Abre cabeçalho da tabela -->
+                  <tr><th scope="col">Nome</th><th scope="col">Especialidade</th><th scope="col">Unidade atual</th><th scope="col">Admissão</th><th scope="col">Comissão</th><th scope="col">Situação</th><th scope="col">Ações</th></tr>  <!-- Títulos das colunas: Nome, Especialidade, Unidade atual, Admissão, Comissão, Situação, Ações -->
+                </thead>  <!-- Fecha cabeçalho da tabela -->
+                <tbody>  <!-- Abre corpo da tabela -->
+                  <tr><td>Yuri</td><td>Barbeiro</td><td>Tatuapé</td><td>10/03/2025</td><td>40%</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td><td><div class="grupo-botoes"><a href="#transferir" class="botao-secundario botao-pequeno">Transferir</a><a href="#regra-comissao" class="botao-secundario botao-pequeno">Comissão</a></div></td></tr>  <!-- Linha da tabela: Yuri | Barbeiro | Tatuapé | 10/03/2025 | 40% | Ativo | Transferir Comissão -->
+                  <tr><td>Juliana</td><td>Cabeleireira</td><td>Tatuapé</td><td>22/04/2025</td><td>35%</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td><td><div class="grupo-botoes"><a href="#transferir" class="botao-secundario botao-pequeno">Transferir</a><a href="#regra-comissao" class="botao-secundario botao-pequeno">Comissão</a></div></td></tr>  <!-- Linha da tabela: Juliana | Cabeleireira | Tatuapé | 22/04/2025 | 35% | Ativo | Transferir Comiss… -->
+                  <tr><td>Israel</td><td>Barbeiro</td><td>Penha</td><td>05/08/2025</td><td>40%</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td><td><div class="grupo-botoes"><a href="#transferir" class="botao-secundario botao-pequeno">Transferir</a><a href="#regra-comissao" class="botao-secundario botao-pequeno">Comissão</a></div></td></tr>  <!-- Linha da tabela: Israel | Barbeiro | Penha | 05/08/2025 | 40% | Ativo | Transferir Comissão -->
+                  <tr><td>Ismael</td><td>Manicure</td><td>Tatuapé</td><td>12/01/2026</td><td>30%</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td><td><div class="grupo-botoes"><a href="#transferir" class="botao-secundario botao-pequeno">Transferir</a><a href="#regra-comissao" class="botao-secundario botao-pequeno">Comissão</a></div></td></tr>  <!-- Linha da tabela: Ismael | Manicure | Tatuapé | 12/01/2026 | 30% | Ativo | Transferir Comissão -->
+                </tbody>  <!-- Fecha corpo da tabela -->
+              </table>  <!-- Fecha tabela -->
+            </div>  <!-- Fecha área com rolagem da tabela -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo">Histórico de lotação</h2>  <!-- Título da seção: Histórico de lotação -->
+              <p class="secao-descricao">Transferir encerra a lotação atual e abre outra, sem apagar onde o funcionário já trabalhou. Os valores a pagar ficam em <a href="financeiro.html" class="link-azul">Comissões</a>.</p>  <!-- Descrição da seção: Transferir encerra a lotação atual e abre outra, sem apagar onde… -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Histórico de lotação">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Funcionário</th><th scope="col">Unidade</th><th scope="col">Início</th><th scope="col">Fim</th><th scope="col">Situação</th></tr>  <!-- Títulos das colunas: Funcionário, Unidade, Início, Fim, Situação -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>Israel</td><td>Black Barber · Penha</td><td>01/06/2026</td><td>—</td><td><span class="etiqueta etiqueta-ok">Vigente</span></td></tr>  <!-- Linha da tabela: Israel | Black Barber · Penha | 01/06/2026 | — | Vigente -->
+                    <tr><td>Israel</td><td>Black Barber · Tatuapé</td><td>05/08/2025</td><td>31/05/2026</td><td><span class="etiqueta">Encerrada</span></td></tr>  <!-- Linha da tabela: Israel | Black Barber · Tatuapé | 05/08/2025 | 31/05/2026 | Encerrada -->
+                    <tr><td>Yuri</td><td>Black Barber · Tatuapé</td><td>10/03/2025</td><td>—</td><td><span class="etiqueta etiqueta-ok">Vigente</span></td></tr>  <!-- Linha da tabela: Yuri | Black Barber · Tatuapé | 10/03/2025 | — | Vigente -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Serviços da equipe">  <!-- Abre área com rolagem da tabela -->
+              <table>  <!-- Abre tabela -->
+                <thead>  <!-- Abre cabeçalho da tabela -->
+                  <tr><th scope="col">Serviço</th><th scope="col">Funcionário</th><th scope="col">Unidade</th><th scope="col">Duração</th><th scope="col">Preço</th><th scope="col">Situação</th></tr>  <!-- Títulos das colunas: Serviço, Funcionário, Unidade, Duração, Preço, Situação -->
+                </thead>  <!-- Fecha cabeçalho da tabela -->
+                <tbody>  <!-- Abre corpo da tabela -->
+                  <tr><td>Corte masculino</td><td>Yuri</td><td>Tatuapé</td><td>30 min</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Corte masculino | Yuri | Tatuapé | 30 min | R$ 35,00 | Ativo -->
+                  <tr><td>Barba</td><td>Yuri</td><td>Tatuapé</td><td>20 min</td><td>R$ 25,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Barba | Yuri | Tatuapé | 20 min | R$ 25,00 | Ativo -->
+                  <tr><td>Corte + Barba</td><td>Yuri</td><td>Tatuapé</td><td>45 min</td><td>R$ 55,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Corte + Barba | Yuri | Tatuapé | 45 min | R$ 55,00 | Ativo -->
+                  <tr><td>Sobrancelha</td><td>Yuri</td><td>Tatuapé</td><td>15 min</td><td>R$ 15,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Sobrancelha | Yuri | Tatuapé | 15 min | R$ 15,00 | Ativo -->
+                  <tr><td>Corte feminino</td><td>Juliana</td><td>Tatuapé</td><td>45 min</td><td>R$ 60,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Corte feminino | Juliana | Tatuapé | 45 min | R$ 60,00 | Ativo -->
+                  <tr><td>Escova</td><td>Juliana</td><td>Tatuapé</td><td>40 min</td><td>R$ 45,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Escova | Juliana | Tatuapé | 40 min | R$ 45,00 | Ativo -->
+                  <tr><td>Coloração</td><td>Juliana</td><td>Tatuapé</td><td>60 min</td><td>R$ 120,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Coloração | Juliana | Tatuapé | 60 min | R$ 120,00 | Ativo -->
+                  <tr><td>Corte masculino</td><td>Israel</td><td>Penha</td><td>30 min</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-ok">Ativo</span></td></tr>  <!-- Linha da tabela: Corte masculino | Israel | Penha | 30 min | R$ 35,00 | Ativo -->
+                  <tr><td>Manicure</td><td>Ismael</td><td>Tatuapé</td><td>45 min</td><td>R$ 35,00</td><td><span class="etiqueta">Inativo</span></td></tr>  <!-- Linha da tabela: Manicure | Ismael | Tatuapé | 45 min | R$ 35,00 | Inativo -->
+                </tbody>  <!-- Fecha corpo da tabela -->
+              </table>  <!-- Fecha tabela -->
+            </div>  <!-- Fecha área com rolagem da tabela -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+        </div>  <!-- Fecha conteúdo das abas -->
+      </div>  <!-- Fecha grupo de abas -->
+
+      <section id="nova-unidade" class="modal" aria-label="Nova unidade">  <!-- Abre janela sobreposta (nova-unidade) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Nova unidade</h2>  <!-- Título de seção: Nova unidade -->
+          <p>Ao cadastrar, o sistema já cria o caixa e as categorias financeiras padrão.</p>  <!-- Parágrafo: Ao cadastrar, o sistema já cria o caixa e as categorias financei… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="un-nome">Nome da unidade</label>  <!-- Rótulo: Nome da unidade -->
+              <input type="text" id="un-nome" placeholder="Ex: Black Barber Tatuapé" required maxlength="100" />  <!-- Campo de texto: Nome da unidade, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cnpj">CNPJ</label>  <!-- Rótulo: CNPJ -->
+                <input type="text" id="un-cnpj" placeholder="Somente números" required pattern="[0-9]{14}" maxlength="14" inputmode="numeric" />  <!-- Campo de texto: CNPJ, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-telefone">Telefone</label>  <!-- Rótulo: Telefone -->
+                <input type="tel" id="un-telefone" placeholder="(11) 3333-0000" />  <!-- Campo de telefone: Telefone -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cep">CEP</label>  <!-- Rótulo: CEP -->
+                <input type="text" id="un-cep" placeholder="Somente números" required pattern="[0-9]{8}" maxlength="8" inputmode="numeric" />  <!-- Campo de texto: CEP, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-numero">Número</label>  <!-- Rótulo: Número -->
+                <input type="text" id="un-numero" placeholder="1200" required maxlength="10" />  <!-- Campo de texto: Número, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="un-logradouro">Logradouro</label>  <!-- Rótulo: Logradouro -->
+              <input type="text" id="un-logradouro" placeholder="Rua, avenida..." required maxlength="120" />  <!-- Campo de texto: Logradouro, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-bairro">Bairro</label>  <!-- Rótulo: Bairro -->
+                <input type="text" id="un-bairro" required maxlength="60" />  <!-- Campo de texto: Bairro, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cidade">Cidade</label>  <!-- Rótulo: Cidade -->
+                <input type="text" id="un-cidade" required maxlength="60" />  <!-- Campo de texto: Cidade, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-uf">UF</label>  <!-- Rótulo: UF -->
+                <input type="text" id="un-uf" placeholder="SP" required pattern="[A-Z]{2}" maxlength="2" />  <!-- Campo de texto: UF, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Cadastrar unidade</button>  <!-- Botão que envia o formulário: Cadastrar unidade -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="editar-unidade" class="modal" aria-label="Editar unidade">  <!-- Abre janela sobreposta (editar-unidade) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Editar unidade</h2>  <!-- Título de seção: Editar unidade -->
+          <p>Atualize os dados da unidade.</p>  <!-- Parágrafo: Atualize os dados da unidade. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="un-nome_edicao">Nome da unidade</label>  <!-- Rótulo: Nome da unidade -->
+              <input type="text" id="un-nome_edicao" placeholder="Ex: Black Barber Tatuapé" required maxlength="100" />  <!-- Campo de texto: Nome da unidade, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cnpj_edicao">CNPJ</label>  <!-- Rótulo: CNPJ -->
+                <input type="text" id="un-cnpj_edicao" placeholder="Somente números" required pattern="[0-9]{14}" maxlength="14" inputmode="numeric" />  <!-- Campo de texto: CNPJ, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-telefone_edicao">Telefone</label>  <!-- Rótulo: Telefone -->
+                <input type="tel" id="un-telefone_edicao" placeholder="(11) 3333-0000" />  <!-- Campo de telefone: Telefone -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cep_edicao">CEP</label>  <!-- Rótulo: CEP -->
+                <input type="text" id="un-cep_edicao" placeholder="Somente números" required pattern="[0-9]{8}" maxlength="8" inputmode="numeric" />  <!-- Campo de texto: CEP, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-numero_edicao">Número</label>  <!-- Rótulo: Número -->
+                <input type="text" id="un-numero_edicao" placeholder="1200" required maxlength="10" />  <!-- Campo de texto: Número, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="un-logradouro_edicao">Logradouro</label>  <!-- Rótulo: Logradouro -->
+              <input type="text" id="un-logradouro_edicao" placeholder="Rua, avenida..." required maxlength="120" />  <!-- Campo de texto: Logradouro, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-bairro_edicao">Bairro</label>  <!-- Rótulo: Bairro -->
+                <input type="text" id="un-bairro_edicao" required maxlength="60" />  <!-- Campo de texto: Bairro, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-cidade_edicao">Cidade</label>  <!-- Rótulo: Cidade -->
+                <input type="text" id="un-cidade_edicao" required maxlength="60" />  <!-- Campo de texto: Cidade, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="un-uf_edicao">UF</label>  <!-- Rótulo: UF -->
+                <input type="text" id="un-uf_edicao" placeholder="SP" required pattern="[A-Z]{2}" maxlength="2" />  <!-- Campo de texto: UF, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar</button>  <!-- Botão que envia o formulário: Salvar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="desativar-unidade" class="modal" aria-label="Desativar unidade?">  <!-- Abre janela sobreposta (desativar-unidade) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Desativar unidade?</h2>  <!-- Título de seção: Desativar unidade? -->
+          <p>A unidade deixa de receber novos agendamentos. O histórico e os agendamentos já marcados são mantidos.</p>  <!-- Parágrafo: A unidade deixa de receber novos agendamentos. O histórico e os… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao-perigo">Desativar</button>  <!-- Botão que envia o formulário: Desativar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="novo-funcionario" class="modal" aria-label="Adicionar funcionário">  <!-- Abre janela sobreposta (novo-funcionario) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Adicionar funcionário</h2>  <!-- Título de seção: Adicionar funcionário -->
+          <p>A pessoa recebe um convite para acessar a área do funcionário.</p>  <!-- Parágrafo: A pessoa recebe um convite para acessar a área do funcionário. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="eq-nome">Nome</label>  <!-- Rótulo: Nome -->
+              <input type="text" id="eq-nome" required maxlength="100" />  <!-- Campo de texto: Nome, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="eq-email">E-mail</label>  <!-- Rótulo: E-mail -->
+              <input type="email" id="eq-email" placeholder="funcionario@email.com" required />  <!-- Campo de e-mail: E-mail, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-cpf">CPF</label>  <!-- Rótulo: CPF -->
+                <input type="text" id="eq-cpf" placeholder="Somente números" required pattern="[0-9]{11}" maxlength="11" inputmode="numeric" />  <!-- Campo de texto: CPF, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-especialidade">Especialidade</label>  <!-- Rótulo: Especialidade -->
+                <input type="text" id="eq-especialidade" placeholder="Ex: Barbeiro" required maxlength="60" />  <!-- Campo de texto: Especialidade, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-data_admissao">Data de admissão</label>  <!-- Rótulo: Data de admissão -->
+                <input type="date" id="eq-data_admissao" required />  <!-- Campo de data: Data de admissão, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-id_salao">Unidade</label>  <!-- Rótulo: Unidade -->
+                <select id="eq-id_salao" required>  <!-- Abre a lista de seleção obrigatória -->
+                  <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+                  <option>Black Barber · Tatuapé</option>  <!-- Opção da lista: Black Barber · Tatuapé -->
+                  <option>Black Barber · Penha</option>  <!-- Opção da lista: Black Barber · Penha -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Adicionar</button>  <!-- Botão que envia o formulário: Adicionar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="transferir" class="modal" aria-label="Transferir funcionário">  <!-- Abre janela sobreposta (transferir) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Transferir funcionário</h2>  <!-- Título de seção: Transferir funcionário -->
+          <p>A lotação atual será encerrada na data informada.</p>  <!-- Parágrafo: A lotação atual será encerrada na data informada. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="eq-nova_unidade">Nova unidade</label>  <!-- Rótulo: Nova unidade -->
+              <select id="eq-nova_unidade" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+                <option>Black Barber · Tatuapé</option>  <!-- Opção da lista: Black Barber · Tatuapé -->
+                <option>Black Barber · Penha</option>  <!-- Opção da lista: Black Barber · Penha -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="eq-data_inicio">Início na nova unidade</label>  <!-- Rótulo: Início na nova unidade -->
+              <input type="date" id="eq-data_inicio" required />  <!-- Campo de data: Início na nova unidade, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Transferir</button>  <!-- Botão que envia o formulário: Transferir -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="regra-comissao" class="modal" aria-label="Regra de comissão">  <!-- Abre janela sobreposta (regra-comissao) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Regra de comissão</h2>  <!-- Título de seção: Regra de comissão -->
+          <p>O novo percentual vale a partir da data informada e não muda comissões passadas.</p>  <!-- Parágrafo: O novo percentual vale a partir da data informada e não muda com… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-percentual">Percentual (%)</label>  <!-- Rótulo: Percentual (%) -->
+                <input type="number" id="eq-percentual" placeholder="40" required min="0" max="100" step="0.01" />  <!-- Campo numérico: Percentual (%), obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="eq-vigencia_inicio">Vigência a partir de</label>  <!-- Rótulo: Vigência a partir de -->
+                <input type="date" id="eq-vigencia_inicio" required />  <!-- Campo de data: Vigência a partir de, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar</button>  <!-- Botão que envia o formulário: Salvar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

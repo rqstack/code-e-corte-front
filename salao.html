@@ -1,0 +1,224 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Black Barber | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para index.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="index.html" class="link-navegacao" aria-current="page">Início</a></li>  <!-- Item “Início”, que leva para index.html -->
+            <li><a href="meus-agendamentos.html" class="link-navegacao">Meus agendamentos</a></li>  <!-- Item “Meus agendamentos”, que leva para meus-agendamentos.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Cliente</summary>  <!-- Área atual, que abre o menu ao clicar: Cliente -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="index.html" aria-current="page">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="dono/painel.html">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para perfil.html -->
+          <a href="login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <p class="caminho"><a href="index.html" class="link-azul">Buscar</a> / Black Barber</p>  <!-- Caminho da página: Buscar / Black Barber -->
+      <section class="capa-salao">  <!-- Abre capa da página do salão -->
+        <div class="selo" aria-hidden="true">BB</div>  <!-- Selo com as iniciais do salão: BB -->
+        <div class="capa-info">  <!-- Abre informações da capa do salão -->
+          <h1>Black Barber</h1>  <!-- Título principal: Black Barber -->
+          <p><span class="nota">★ 4,8</span> · Tatuapé, São Paulo · 1,2 km</p>  <!-- Parágrafo: ★ 4,8 · Tatuapé, São Paulo · 1,2 km -->
+          <p>Corte, barba e mais</p>  <!-- Parágrafo: Corte, barba e mais -->
+        </div>  <!-- Fecha informações da capa do salão -->
+        <div class="grupo-botoes">  <!-- Abre grupo de botões -->
+          <a href="meus-agendamentos.html" class="botao-secundario">Favoritar</a>  <!-- Botão secundário “Favoritar”, que leva para meus-agendamentos.html -->
+          <a href="#agendar" class="botao">Agendar agora</a>  <!-- Botão principal “Agendar agora”, que abre a janela agendar -->
+        </div>  <!-- Fecha grupo de botões -->
+      </section>  <!-- Fecha capa da página do salão -->
+
+      <section class="grade-2">  <!-- Abre grade de 2 colunas -->
+        <div class="cartao">  <!-- Abre cartão -->
+          <h2>Horário de funcionamento</h2>  <!-- Título de seção: Horário de funcionamento -->
+          <ul class="lista-linhas">  <!-- Abre lista de dados em linhas -->
+            <li><span>Segunda a sexta</span><span>08:00 às 18:00</span></li>  <!-- Item da lista: Segunda a sexta 08:00 às 18:00 -->
+            <li><span>Sábado</span><span>08:00 às 14:00</span></li>  <!-- Item da lista: Sábado 08:00 às 14:00 -->
+            <li><span>Domingo</span><span>Fechado</span></li>  <!-- Item da lista: Domingo Fechado -->
+          </ul>  <!-- Fecha lista de dados em linhas -->
+        </div>  <!-- Fecha cartão -->
+        <div class="cartao">  <!-- Abre cartão -->
+          <h2>Contato e endereço</h2>  <!-- Título de seção: Contato e endereço -->
+          <ul class="lista-linhas">  <!-- Abre lista de dados em linhas -->
+            <li><span>Telefone</span><span>(11) 3333-0000</span></li>  <!-- Item da lista: Telefone (11) 3333-0000 -->
+            <li><span>Endereço</span><span>Rua Tuiuti, 1200</span></li>  <!-- Item da lista: Endereço Rua Tuiuti, 1200 -->
+            <li><span>Bairro</span><span>Tatuapé, São Paulo/SP</span></li>  <!-- Item da lista: Bairro Tatuapé, São Paulo/SP -->
+            <li><span>CEP</span><span>03307-000</span></li>  <!-- Item da lista: CEP 03307-000 -->
+          </ul>  <!-- Fecha lista de dados em linhas -->
+        </div>  <!-- Fecha cartão -->
+      </section>  <!-- Fecha grade de 2 colunas -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo">Equipe e serviços</h2>  <!-- Título da seção: Equipe e serviços -->
+        <p class="secao-descricao">Cada profissional define os próprios serviços, preços e tempo de atendimento.</p>  <!-- Descrição da seção: Cada profissional define os próprios serviços, preços e tempo de… -->
+        <div class="grade-3">  <!-- Abre grade de 3 colunas -->
+          <article class="cartao">  <!-- Abre cartão -->
+            <div class="pessoa">  <!-- Abre dados de uma pessoa -->
+              <div class="avatar" aria-hidden="true">Y</div>  <!-- Círculo com as iniciais: Y -->
+              <div>  <!-- Abre bloco -->
+                <h3>Yuri</h3>  <!-- Subtítulo: Yuri -->
+                <p>Barbeiro</p>  <!-- Parágrafo: Barbeiro -->
+              </div>  <!-- Fecha bloco -->
+            </div>  <!-- Fecha dados de uma pessoa -->
+            <p class="descricao texto-servicos">Corte masculino · Barba · Corte + Barba · Sobrancelha</p>  <!-- Descrição da página: Corte masculino · Barba · Corte + Barba · Sobrancelha -->
+            <p class="ajuda mb-14">A partir de R$ 15,00</p>  <!-- Texto de ajuda: A partir de R$ 15,00 -->
+            <a href="#agendar" class="botao botao-pequeno">Agendar com Yuri</a>  <!-- Botão principal “Agendar com Yuri”, que abre a janela agendar -->
+          </article>  <!-- Fecha cartão -->
+          <article class="cartao">  <!-- Abre cartão -->
+            <div class="pessoa">  <!-- Abre dados de uma pessoa -->
+              <div class="avatar" aria-hidden="true">J</div>  <!-- Círculo com as iniciais: J -->
+              <div>  <!-- Abre bloco -->
+                <h3>Juliana</h3>  <!-- Subtítulo: Juliana -->
+                <p>Cabeleireira</p>  <!-- Parágrafo: Cabeleireira -->
+              </div>  <!-- Fecha bloco -->
+            </div>  <!-- Fecha dados de uma pessoa -->
+            <p class="descricao texto-servicos">Corte feminino · Escova · Coloração</p>  <!-- Descrição da página: Corte feminino · Escova · Coloração -->
+            <p class="ajuda mb-14">A partir de R$ 45,00</p>  <!-- Texto de ajuda: A partir de R$ 45,00 -->
+            <a href="#agendar" class="botao botao-pequeno">Agendar com Juliana</a>  <!-- Botão principal “Agendar com Juliana”, que abre a janela agendar -->
+          </article>  <!-- Fecha cartão -->
+          <article class="cartao">  <!-- Abre cartão -->
+            <div class="pessoa">  <!-- Abre dados de uma pessoa -->
+              <div class="avatar" aria-hidden="true">I</div>  <!-- Círculo com as iniciais: I -->
+              <div>  <!-- Abre bloco -->
+                <h3>Israel</h3>  <!-- Subtítulo: Israel -->
+                <p>Barbeiro</p>  <!-- Parágrafo: Barbeiro -->
+              </div>  <!-- Fecha bloco -->
+            </div>  <!-- Fecha dados de uma pessoa -->
+            <p class="descricao texto-servicos">Corte masculino · Barba</p>  <!-- Descrição da página: Corte masculino · Barba -->
+            <p class="ajuda mb-14">A partir de R$ 25,00</p>  <!-- Texto de ajuda: A partir de R$ 25,00 -->
+            <a href="#agendar" class="botao botao-pequeno">Agendar com Israel</a>  <!-- Botão principal “Agendar com Israel”, que abre a janela agendar -->
+          </article>  <!-- Fecha cartão -->
+        </div>  <!-- Fecha grade de 3 colunas -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-16">Avaliações</h2>  <!-- Título da seção: Avaliações -->
+        <div class="grade-3">  <!-- Abre grade de 3 colunas -->
+          <article class="cartao avaliacao">  <!-- Abre cartão -->
+            <div class="avaliacao-topo"><span>João Silva</span><span class="nota" aria-label="Nota 5 de 5">★★★★★</span></div>  <!-- Topo da avaliação (nome e nota): João Silva ★★★★★ -->
+            <p>Atendimento pontual e corte impecável.</p>  <!-- Parágrafo: Atendimento pontual e corte impecável. -->
+            <p class="ajuda">15/10</p>  <!-- Texto de ajuda: 15/10 -->
+          </article>  <!-- Fecha cartão -->
+          <article class="cartao avaliacao">  <!-- Abre cartão -->
+            <div class="avaliacao-topo"><span>Pedro Santos</span><span class="nota" aria-label="Nota 5 de 5">★★★★★</span></div>  <!-- Topo da avaliação (nome e nota): Pedro Santos ★★★★★ -->
+            <p>Ótimo ambiente, voltarei com certeza.</p>  <!-- Parágrafo: Ótimo ambiente, voltarei com certeza. -->
+            <p class="ajuda">30/10</p>  <!-- Texto de ajuda: 30/10 -->
+          </article>  <!-- Fecha cartão -->
+          <article class="cartao avaliacao">  <!-- Abre cartão -->
+            <div class="avaliacao-topo"><span>Lucas Oliveira</span><span class="nota" aria-label="Nota 4 de 5">★★★★</span></div>  <!-- Topo da avaliação (nome e nota): Lucas Oliveira ★★★★ -->
+            <p>Muito bom. A espera foi curta.</p>  <!-- Parágrafo: Muito bom. A espera foi curta. -->
+            <p class="ajuda">04/11</p>  <!-- Texto de ajuda: 04/11 -->
+          </article>  <!-- Fecha cartão -->
+        </div>  <!-- Fecha grade de 3 colunas -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao" id="agendar">  <!-- Abre seção (agendar) -->
+        <h2 class="secao-titulo mb-16">Agendar com Yuri</h2>  <!-- Título da seção: Agendar com Yuri -->
+        <form class="layout-agendar" action="meus-agendamentos.html#agendado">  <!-- Abre o formulário, que envia para meus-agendamentos.html#agendado -->
+          <div class="empilhado">  <!-- Abre bloco empilhado -->
+            <section class="cartao">  <!-- Abre cartão -->
+              <h2>Serviços</h2>  <!-- Título de seção: Serviços -->
+              <div class="empilhado gap-10">  <!-- Abre bloco empilhado -->
+                <label class="opcao">  <!-- Rótulo de opção -->
+                  <input type="checkbox" id="sv-corte" checked />  <!-- Caixa de marcar: serviço corte, já marcada -->
+                  <span class="opcao-texto">Corte masculino<small>30 min</small></span>  <!-- Texto da opção: Corte masculino 30 min -->
+                  <span class="opcao-preco">R$ 35,00</span>  <!-- Preço da opção: R$ 35,00 -->
+                </label>  <!-- Fecha opção selecionável -->
+                <label class="opcao">  <!-- Rótulo de opção -->
+                  <input type="checkbox" id="sv-barba" />  <!-- Caixa de marcar: serviço barba -->
+                  <span class="opcao-texto">Barba<small>20 min</small></span>  <!-- Texto da opção: Barba 20 min -->
+                  <span class="opcao-preco">R$ 25,00</span>  <!-- Preço da opção: R$ 25,00 -->
+                </label>  <!-- Fecha opção selecionável -->
+                <label class="opcao">  <!-- Rótulo de opção -->
+                  <input type="checkbox" id="sv-combo" />  <!-- Caixa de marcar: serviço combo -->
+                  <span class="opcao-texto">Corte + Barba<small>45 min</small></span>  <!-- Texto da opção: Corte + Barba 45 min -->
+                  <span class="opcao-preco">R$ 55,00</span>  <!-- Preço da opção: R$ 55,00 -->
+                </label>  <!-- Fecha opção selecionável -->
+                <label class="opcao">  <!-- Rótulo de opção -->
+                  <input type="checkbox" id="sv-sobrancelha" />  <!-- Caixa de marcar: serviço sobrancelha -->
+                  <span class="opcao-texto">Sobrancelha<small>15 min</small></span>  <!-- Texto da opção: Sobrancelha 15 min -->
+                  <span class="opcao-preco">R$ 15,00</span>  <!-- Preço da opção: R$ 15,00 -->
+                </label>  <!-- Fecha opção selecionável -->
+              </div>  <!-- Fecha bloco empilhado -->
+            </section>  <!-- Fecha cartão -->
+
+            <section class="cartao">  <!-- Abre cartão -->
+              <h2>Dia e horário</h2>  <!-- Título de seção: Dia e horário -->
+              <div class="formulario">  <!-- Abre formulário -->
+                <div class="campo">  <!-- Abre campo de formulário -->
+                  <label for="data">Data</label>  <!-- Rótulo: Data -->
+                  <input type="date" id="data" required />  <!-- Campo de data: Data, obrigatório -->
+                </div>  <!-- Fecha campo de formulário -->
+                <p class="rotulo">Horários disponíveis</p>  <!-- Rótulo: Horários disponíveis -->
+                <div class="horarios-livres">  <!-- Abre grade de horários disponíveis -->
+                  <label><input type="radio" name="horario" value="08:00" required /><span>08:00</span></label>  <!-- Opção 08:00 -->
+                  <label><input type="radio" name="horario" value="08:30" /><span>08:30</span></label>  <!-- Opção 08:30 -->
+                  <label><input type="radio" name="horario" value="09:00" disabled /><span>09:00</span></label>  <!-- Opção 09:00, ocupada -->
+                  <label><input type="radio" name="horario" value="09:30" /><span>09:30</span></label>  <!-- Opção 09:30 -->
+                  <label><input type="radio" name="horario" value="10:00" /><span>10:00</span></label>  <!-- Opção 10:00 -->
+                  <label><input type="radio" name="horario" value="10:30" disabled /><span>10:30</span></label>  <!-- Opção 10:30, ocupada -->
+                  <label><input type="radio" name="horario" value="11:00" /><span>11:00</span></label>  <!-- Opção 11:00 -->
+                  <label><input type="radio" name="horario" value="13:30" /><span>13:30</span></label>  <!-- Opção 13:30 -->
+                  <label><input type="radio" name="horario" value="14:00" disabled /><span>14:00</span></label>  <!-- Opção 14:00, ocupada -->
+                  <label><input type="radio" name="horario" value="14:30" /><span>14:30</span></label>  <!-- Opção 14:30 -->
+                  <label><input type="radio" name="horario" value="15:00" /><span>15:00</span></label>  <!-- Opção 15:00 -->
+                  <label><input type="radio" name="horario" value="15:30" /><span>15:30</span></label>  <!-- Opção 15:30 -->
+                  <label><input type="radio" name="horario" value="16:00" /><span>16:00</span></label>  <!-- Opção 16:00 -->
+                  <label><input type="radio" name="horario" value="16:30" disabled /><span>16:30</span></label>  <!-- Opção 16:30, ocupada -->
+                  <label><input type="radio" name="horario" value="17:00" /><span>17:00</span></label>  <!-- Opção 17:00 -->
+                </div>  <!-- Fecha grade de horários disponíveis -->
+                <p class="ajuda">Horários riscados já estão ocupados. Cancelamento gratuito até 2 horas antes.</p>  <!-- Texto de ajuda: Horários riscados já estão ocupados. Cancelamento gratuito até 2… -->
+              </div>  <!-- Fecha formulário -->
+            </section>  <!-- Fecha cartão -->
+
+            <section class="cartao">  <!-- Abre cartão -->
+              <h2>Observação</h2>  <!-- Título de seção: Observação -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="observacao">Observação (opcional)</label>  <!-- Rótulo: Observação (opcional) -->
+                <textarea id="observacao" rows="3" placeholder="Digite aqui alguma observação"></textarea>  <!-- Área para digitar um texto maior: Digite aqui alguma observação -->
+              </div>  <!-- Fecha campo de formulário -->
+            </section>  <!-- Fecha cartão -->
+          </div>  <!-- Fecha bloco empilhado -->
+
+          <aside class="cartao resumo-lateral">  <!-- Abre cartão -->
+            <h2>Resumo</h2>  <!-- Título de seção: Resumo -->
+            <ul class="lista-linhas">  <!-- Abre lista de dados em linhas -->
+              <li><span>Salão</span><span>Black Barber</span></li>  <!-- Item da lista: Salão Black Barber -->
+              <li><span>Profissional</span><span>Yuri</span></li>  <!-- Item da lista: Profissional Yuri -->
+              <li><span>Duração</span><span class="total-duracao"></span></li>  <!-- Item da lista: Duração -->
+              <li><span>Total</span><span class="total-preco"></span></li>  <!-- Item da lista: Total -->
+            </ul>  <!-- Fecha lista de dados em linhas -->
+            <button type="submit" class="botao botao-largo mt-16">Confirmar agendamento</button>  <!-- Botão que envia o formulário: Confirmar agendamento -->
+            <p class="ajuda mt-10">O pagamento é feito depois do atendimento.</p>  <!-- Texto de ajuda: O pagamento é feito depois do atendimento. -->
+          </aside>  <!-- Fecha cartão -->
+        </form>  <!-- Fecha layout da tela de agendar -->
+      </section>  <!-- Fecha seção -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

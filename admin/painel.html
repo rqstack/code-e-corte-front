@@ -1,0 +1,167 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Administração | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="../admin/painel.html" class="logo"><img src="../img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para admin/painel.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="../admin/painel.html" class="link-navegacao" aria-current="page">Painel</a></li>  <!-- Item “Painel”, que leva para admin/painel.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Administração</summary>  <!-- Área atual, que abre o menu ao clicar: Administração -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="../index.html">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="../funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="../dono/painel.html">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="../admin/painel.html" aria-current="page">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="../admin/perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para admin/perfil.html -->
+          <a href="../login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Administração</p>  <!-- Caminho da página: Administração -->
+          <h1 class="titulo">Painel da administração</h1>  <!-- Título da página: Painel da administração -->
+          <p class="descricao">Área exclusiva de quem administra o Code &amp; Corte. Acompanhe as assinaturas dos donos.</p>  <!-- Descrição da página: Área exclusiva de quem administra o Code & Corte. Acompanhe as a… -->
+        </div>  <!-- Fecha bloco -->
+      </section>  <!-- Fecha topo da página -->
+
+      <section class="grade-4">  <!-- Abre grade de 4 colunas -->
+        <div class="caixa"><p>Assinantes ativos</p><strong>86</strong></div>  <!-- Caixa de resumo com número: Assinantes ativos 86 -->
+        <div class="caixa"><p>Receita de outubro</p><strong class="cor-azul">R$ 17.280</strong></div>  <!-- Caixa de resumo com número: Receita de outubro R$ 17.280 -->
+        <div class="caixa"><p>Novos assinantes</p><strong class="cor-azul">9</strong></div>  <!-- Caixa de resumo com número: Novos assinantes 9 -->
+        <div class="caixa"><p>Cancelamentos</p><strong class="cor-vermelho">3</strong></div>  <!-- Caixa de resumo com número: Cancelamentos 3 -->
+      </section>  <!-- Fecha grade de 4 colunas -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-14">Assinantes por plano</h2>  <!-- Título da seção: Assinantes por plano -->
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Assinantes por plano">  <!-- Abre área com rolagem da tabela -->
+          <table>  <!-- Abre tabela -->
+            <thead>  <!-- Abre cabeçalho da tabela -->
+              <tr><th scope="col">Plano</th><th scope="col">Preço</th><th scope="col">Limite semanal</th><th scope="col">Assinantes</th><th scope="col">Receita mensal</th></tr>  <!-- Títulos das colunas: Plano, Preço, Limite semanal, Assinantes, Receita mensal -->
+            </thead>  <!-- Fecha cabeçalho da tabela -->
+            <tbody>  <!-- Abre corpo da tabela -->
+              <tr><td>Inicial</td><td>R$ 150</td><td>10</td><td>52</td><td>R$ 7.800</td></tr>  <!-- Linha da tabela: Inicial | R$ 150 | 10 | 52 | R$ 7.800 -->
+              <tr><td>Intermediário</td><td>R$ 270</td><td>15</td><td>24</td><td>R$ 6.480</td></tr>  <!-- Linha da tabela: Intermediário | R$ 270 | 15 | 24 | R$ 6.480 -->
+              <tr><td>Ilimitado</td><td>R$ 300</td><td>Sem limite</td><td>10</td><td>R$ 3.000</td></tr>  <!-- Linha da tabela: Ilimitado | R$ 300 | Sem limite | 10 | R$ 3.000 -->
+            </tbody>  <!-- Fecha corpo da tabela -->
+          </table>  <!-- Fecha tabela -->
+        </div>  <!-- Fecha área com rolagem da tabela -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-14">Receita mensal</h2>  <!-- Título da seção: Receita mensal -->
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Receita mensal">  <!-- Abre área com rolagem da tabela -->
+          <table>  <!-- Abre tabela -->
+            <thead>  <!-- Abre cabeçalho da tabela -->
+              <tr><th scope="col">Mês</th><th scope="col">Gráfico</th><th scope="col">Ativos</th><th scope="col">Novos</th><th scope="col">Saídas</th><th scope="col">Receita</th></tr>  <!-- Títulos das colunas: Mês, Gráfico, Ativos, Novos, Saídas, Receita -->
+            </thead>  <!-- Fecha cabeçalho da tabela -->
+            <tbody>  <!-- Abre corpo da tabela -->
+              <tr><td>Maio</td><td><div class="fundo-barra"><div class="barra l-65"></div></div></td><td>58</td><td><span class="cor-azul">8</span></td><td><span class="cor-vermelho">2</span></td><td>R$ 11.280</td></tr>  <!-- Linha da tabela: Maio | 58 | 8 | 2 | R$ 11.280 -->
+              <tr><td>Junho</td><td><div class="fundo-barra"><div class="barra l-70"></div></div></td><td>62</td><td><span class="cor-azul">7</span></td><td><span class="cor-vermelho">3</span></td><td>R$ 12.120</td></tr>  <!-- Linha da tabela: Junho | 62 | 7 | 3 | R$ 12.120 -->
+              <tr><td>Julho</td><td><div class="fundo-barra"><div class="barra l-78"></div></div></td><td>69</td><td><span class="cor-azul">9</span></td><td><span class="cor-vermelho">2</span></td><td>R$ 13.560</td></tr>  <!-- Linha da tabela: Julho | 69 | 9 | 2 | R$ 13.560 -->
+              <tr><td>Agosto</td><td><div class="fundo-barra"><div class="barra l-81"></div></div></td><td>71</td><td><span class="cor-azul">6</span></td><td><span class="cor-vermelho">4</span></td><td>R$ 13.980</td></tr>  <!-- Linha da tabela: Agosto | 71 | 6 | 4 | R$ 13.980 -->
+              <tr><td>Setembro</td><td><div class="fundo-barra"><div class="barra l-93"></div></div></td><td>80</td><td><span class="cor-azul">11</span></td><td><span class="cor-vermelho">2</span></td><td>R$ 15.990</td></tr>  <!-- Linha da tabela: Setembro | 80 | 11 | 2 | R$ 15.990 -->
+              <tr><td>Outubro</td><td><div class="fundo-barra"><div class="barra l-100"></div></div></td><td>86</td><td><span class="cor-azul">9</span></td><td><span class="cor-vermelho">3</span></td><td>R$ 17.280</td></tr>  <!-- Linha da tabela: Outubro | 86 | 9 | 3 | R$ 17.280 -->
+            </tbody>  <!-- Fecha corpo da tabela -->
+          </table>  <!-- Fecha tabela -->
+        </div>  <!-- Fecha área com rolagem da tabela -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-14">Assinantes</h2>  <!-- Título da seção: Assinantes -->
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Assinantes">  <!-- Abre área com rolagem da tabela -->
+          <table>  <!-- Abre tabela -->
+            <thead>  <!-- Abre cabeçalho da tabela -->
+              <tr><th scope="col">Nome</th><th scope="col">Tipo</th><th scope="col">Plano</th><th scope="col">Vencimento</th><th scope="col">Situação</th><th scope="col">Unidades</th></tr>  <!-- Títulos das colunas: Nome, Tipo, Plano, Vencimento, Situação, Unidades -->
+            </thead>  <!-- Fecha cabeçalho da tabela -->
+            <tbody>  <!-- Abre corpo da tabela -->
+              <tr><td><a href="../dono/painel.html" class="link-azul">Dono 1</a></td><td>Barbearia</td><td>Intermediário</td><td>05/12</td><td><span class="etiqueta etiqueta-ok">Em dia</span></td><td><span class="etiqueta">Normal</span></td></tr>  <!-- Linha da tabela: Dono 1 | Barbearia | Intermediário | 05/12 | Em dia | Normal -->
+              <tr><td><a href="../dono/painel.html" class="link-azul">Dono 2</a></td><td>Salão</td><td>Inicial</td><td>08/12</td><td><span class="etiqueta etiqueta-ok">Em dia</span></td><td><span class="etiqueta">Normal</span></td></tr>  <!-- Linha da tabela: Dono 2 | Salão | Inicial | 08/12 | Em dia | Normal -->
+              <tr><td><a href="../dono/painel.html" class="link-azul">Dono 3</a></td><td>Estética</td><td>Inicial</td><td>12/10</td><td><span class="etiqueta etiqueta-erro">Atrasado</span></td><td><span class="etiqueta etiqueta-erro">Suspensa</span></td></tr>  <!-- Linha da tabela: Dono 3 | Estética | Inicial | 12/10 | Atrasado | Suspensa -->
+              <tr><td><a href="../dono/painel.html" class="link-azul">Dono 4</a></td><td>Manicure e pedicure</td><td>Ilimitado</td><td>20/11</td><td><span class="etiqueta etiqueta-ok">Em dia</span></td><td><span class="etiqueta">Normal</span></td></tr>  <!-- Linha da tabela: Dono 4 | Manicure e pedicure | Ilimitado | 20/11 | Em dia | Normal -->
+            </tbody>  <!-- Fecha corpo da tabela -->
+          </table>  <!-- Fecha tabela -->
+        </div>  <!-- Fecha área com rolagem da tabela -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <div class="cabecalho-pagina mb-14">  <!-- Abre topo da página -->
+          <div>  <!-- Abre bloco -->
+            <h2 class="secao-titulo">Ajustes de semanas fechadas</h2>  <!-- Título da seção: Ajustes de semanas fechadas -->
+            <p class="secao-descricao m-0">Correções nunca apagam a apuração original.</p>  <!-- Descrição da seção: Correções nunca apagam a apuração original. -->
+          </div>  <!-- Fecha bloco -->
+          <a href="#novo-ajuste" class="botao-secundario">Registrar ajuste</a>  <!-- Botão secundário “Registrar ajuste”, que abre a janela novo-ajuste -->
+        </div>  <!-- Fecha topo da página -->
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Ajustes">  <!-- Abre área com rolagem da tabela -->
+          <table>  <!-- Abre tabela -->
+            <thead>  <!-- Abre cabeçalho da tabela -->
+              <tr><th scope="col">Data</th><th scope="col">Dono</th><th scope="col">Semana</th><th scope="col">Tipo</th><th scope="col">De → para</th><th scope="col">Responsável</th><th scope="col">Justificativa</th></tr>  <!-- Títulos das colunas: Data, Dono, Semana, Tipo, De → para, Responsável, Justificativa -->
+            </thead>  <!-- Fecha cabeçalho da tabela -->
+            <tbody>  <!-- Abre corpo da tabela -->
+              <tr><td>03/11</td><td>Dono 2</td><td>19/10 a 25/10</td><td>Correção</td><td>10 → 9</td><td>Equipe Code &amp; Corte</td><td>Atendimento concluído por engano</td></tr>  <!-- Linha da tabela: 03/11 | Dono 2 | 19/10 a 25/10 | Correção | 10 → 9 | Equipe Code & Corte | Aten… -->
+            </tbody>  <!-- Fecha corpo da tabela -->
+          </table>  <!-- Fecha tabela -->
+        </div>  <!-- Fecha área com rolagem da tabela -->
+      </section>  <!-- Fecha seção -->
+
+      <section id="novo-ajuste" class="modal" aria-label="Registrar ajuste">  <!-- Abre janela sobreposta (novo-ajuste) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Registrar ajuste</h2>  <!-- Título de seção: Registrar ajuste -->
+          <p>Informe a correção da semana fechada.</p>  <!-- Parágrafo: Informe a correção da semana fechada. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="tipo">Tipo</label>  <!-- Rótulo: Tipo -->
+              <select id="tipo" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+                <option>Inclusão</option>  <!-- Opção da lista: Inclusão -->
+                <option>Exclusão</option>  <!-- Opção da lista: Exclusão -->
+                <option>Correção</option>  <!-- Opção da lista: Correção -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="quantidade_anterior">Quantidade anterior</label>  <!-- Rótulo: Quantidade anterior -->
+                <input type="number" id="quantidade_anterior" required min="0" />  <!-- Campo numérico: Quantidade anterior, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="quantidade_corrigida">Quantidade corrigida</label>  <!-- Rótulo: Quantidade corrigida -->
+                <input type="number" id="quantidade_corrigida" required min="0" />  <!-- Campo numérico: Quantidade corrigida, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="justificativa">Justificativa</label>  <!-- Rótulo: Justificativa -->
+              <textarea id="justificativa" rows="3" placeholder="Explique o motivo da correção" required></textarea>  <!-- Área para digitar um texto maior: Explique o motivo da correção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Registrar ajuste</button>  <!-- Botão que envia o formulário: Registrar ajuste -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

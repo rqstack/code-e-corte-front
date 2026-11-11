@@ -1,0 +1,152 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Perfil | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="../dono/painel.html" class="logo"><img src="../img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para dono/painel.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="../dono/painel.html" class="link-navegacao">Painel</a></li>  <!-- Item “Painel”, que leva para dono/painel.html -->
+            <li><a href="../dono/salao.html" class="link-navegacao">Meu salão</a></li>  <!-- Item “Meu salão”, que leva para dono/salao.html -->
+            <li><a href="../dono/financeiro.html" class="link-navegacao">Financeiro</a></li>  <!-- Item “Financeiro”, que leva para dono/financeiro.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Dono</summary>  <!-- Área atual, que abre o menu ao clicar: Dono -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="../index.html">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="../funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="../dono/painel.html" aria-current="page">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="../admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="../dono/perfil.html" class="perfil" aria-current="page">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para dono/perfil.html -->
+          <a href="../login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Área do dono / Perfil</p>  <!-- Caminho da página: Área do dono / Perfil -->
+          <h1 class="titulo">Opções da conta</h1>  <!-- Título da página: Opções da conta -->
+          <p class="descricao">Gerencie seus dados e preferências.</p>  <!-- Descrição da página: Gerencie seus dados e preferências. -->
+        </div>  <!-- Fecha bloco -->
+      </section>  <!-- Fecha topo da página -->
+
+      <section class="grade-2">  <!-- Abre grade de 2 colunas -->
+        <div class="cartao perfil-cartao">  <!-- Abre cartão -->
+          <div class="avatar avatar-grande" aria-hidden="true">CM</div>  <!-- Círculo com as iniciais: CM -->
+          <h2 class="nome-perfil">Carlos Mendes</h2>  <!-- Nome no perfil: Carlos Mendes -->
+          <p class="ajuda">(11) 97777-4444</p>  <!-- Texto de ajuda: (11) 97777-4444 -->
+          <p class="ajuda">carlos@email.com</p>  <!-- Texto de ajuda: carlos@email.com -->
+        </div>  <!-- Fecha cartão -->
+        <div class="cartao">  <!-- Abre cartão -->
+          <h2>Configurações</h2>  <!-- Título de seção: Configurações -->
+          <div class="empilhado gap-10">  <!-- Abre bloco empilhado -->
+            <a href="#verificar-email" class="botao-secundario botao-largo">Verificar e-mail</a>  <!-- Botão secundário “Verificar e-mail”, que abre a janela verificar-email -->
+            <a href="#trocar-senha" class="botao-secundario botao-largo">Trocar senha</a>  <!-- Botão secundário “Trocar senha”, que abre a janela trocar-senha -->
+            <a href="#alterar-numero" class="botao-secundario botao-largo">Alterar número</a>  <!-- Botão secundário “Alterar número”, que abre a janela alterar-numero -->
+            <a href="#regionais" class="botao-secundario botao-largo">Configurações regionais</a>  <!-- Botão secundário “Configurações regionais”, que abre a janela regionais -->
+          </div>  <!-- Fecha bloco empilhado -->
+        </div>  <!-- Fecha cartão -->
+      </section>  <!-- Fecha grade de 2 colunas -->
+
+      <section id="verificar-email" class="modal" aria-label="Verificar e-mail">  <!-- Abre janela sobreposta (verificar-email) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Verificar e-mail</h2>  <!-- Título de seção: Verificar e-mail -->
+          <p>Vamos enviar um link de confirmação para carlos@email.com.</p>  <!-- Parágrafo: Vamos enviar um link de confirmação para carlos@email.com. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Enviar link</button>  <!-- Botão que envia o formulário: Enviar link -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="trocar-senha" class="modal" aria-label="Trocar senha">  <!-- Abre janela sobreposta (trocar-senha) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Trocar senha</h2>  <!-- Título de seção: Trocar senha -->
+          <p>Use pelo menos 8 caracteres.</p>  <!-- Parágrafo: Use pelo menos 8 caracteres. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="senha_atual">Senha atual</label>  <!-- Rótulo: Senha atual -->
+              <input type="password" id="senha_atual" required autocomplete="current-password" />  <!-- Campo de senha: Senha atual, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="nova_senha">Nova senha</label>  <!-- Rótulo: Nova senha -->
+              <input type="password" id="nova_senha" required minlength="8" autocomplete="new-password" />  <!-- Campo de senha: Nova senha, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar</button>  <!-- Botão que envia o formulário: Salvar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="alterar-numero" class="modal" aria-label="Alterar número">  <!-- Abre janela sobreposta (alterar-numero) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Alterar número</h2>  <!-- Título de seção: Alterar número -->
+          <p>Informe o novo telefone com DDD.</p>  <!-- Parágrafo: Informe o novo telefone com DDD. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="telefone">Telefone</label>  <!-- Rótulo: Telefone -->
+              <input type="tel" id="telefone" placeholder="(11) 99999-0000" required autocomplete="tel" />  <!-- Campo de telefone: Telefone, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar</button>  <!-- Botão que envia o formulário: Salvar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="regionais" class="modal" aria-label="Configurações regionais">  <!-- Abre janela sobreposta (regionais) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Configurações regionais</h2>  <!-- Título de seção: Configurações regionais -->
+          <p>Escolha idioma e fuso horário.</p>  <!-- Parágrafo: Escolha idioma e fuso horário. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="idioma">Idioma</label>  <!-- Rótulo: Idioma -->
+              <select id="idioma" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option>Português (Brasil)</option>  <!-- Opção da lista: Português (Brasil) -->
+                <option>English</option>  <!-- Opção da lista: English -->
+                <option>Español</option>  <!-- Opção da lista: Español -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fuso">Fuso horário</label>  <!-- Rótulo: Fuso horário -->
+              <select id="fuso" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option>Brasília (UTC-3)</option>  <!-- Opção da lista: Brasília (UTC-3) -->
+                <option>Manaus (UTC-4)</option>  <!-- Opção da lista: Manaus (UTC-4) -->
+                <option>Rio Branco (UTC-5)</option>  <!-- Opção da lista: Rio Branco (UTC-5) -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar</button>  <!-- Botão que envia o formulário: Salvar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

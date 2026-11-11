@@ -1,0 +1,271 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Painel do dono | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="../dono/painel.html" class="logo"><img src="../img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para dono/painel.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="../dono/painel.html" class="link-navegacao" aria-current="page">Painel</a></li>  <!-- Item “Painel”, que leva para dono/painel.html -->
+            <li><a href="../dono/salao.html" class="link-navegacao">Meu salão</a></li>  <!-- Item “Meu salão”, que leva para dono/salao.html -->
+            <li><a href="../dono/financeiro.html" class="link-navegacao">Financeiro</a></li>  <!-- Item “Financeiro”, que leva para dono/financeiro.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Dono</summary>  <!-- Área atual, que abre o menu ao clicar: Dono -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="../index.html">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="../funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="../dono/painel.html" aria-current="page">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="../admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="../dono/perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para dono/perfil.html -->
+          <a href="../login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Área do dono</p>  <!-- Caminho da página: Área do dono -->
+          <h1 class="titulo">Seu painel</h1>  <!-- Título da página: Seu painel -->
+          <p class="descricao">Bem-vindo de volta! Acompanhe clientes, agenda, lucros e prejuízos.</p>  <!-- Descrição da página: Bem-vindo de volta! Acompanhe clientes, agenda, lucros e prejuíz… -->
+        </div>  <!-- Fecha bloco -->
+      </section>  <!-- Fecha topo da página -->
+      <div class="abas">  <!-- Abre grupo de abas -->
+        <input type="radio" name="secao" id="secao-0" checked aria-label="Resumo" />  <!-- Opção de escolha única: Resumo, já marcada -->
+        <input type="radio" name="secao" id="secao-1" aria-label="Agenda" />  <!-- Opção de escolha única: Agenda -->
+        <input type="radio" name="secao" id="secao-2" aria-label="Clientes" />  <!-- Opção de escolha única: Clientes -->
+        <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+          <label for="secao-0">Resumo</label>  <!-- Rótulo: Resumo -->
+          <label for="secao-1">Agenda</label>  <!-- Rótulo: Agenda -->
+          <label for="secao-2">Clientes</label>  <!-- Rótulo: Clientes -->
+        </div>  <!-- Fecha linha com os botões das abas -->
+        <div class="paineis">  <!-- Abre conteúdo das abas -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <section class="faixa">  <!-- Abre faixa de destaque -->
+              <div>  <!-- Abre bloco -->
+                <h2>Assinatura ativa <span class="etiqueta etiqueta-ok">Ativa</span></h2>  <!-- Título de seção: Assinatura ativa Ativa -->
+                <p>Plano Ilimitado · próxima cobrança em 07/12</p>  <!-- Parágrafo: Plano Ilimitado · próxima cobrança em 07/12 -->
+              </div>  <!-- Fecha bloco -->
+              <a href="financeiro.html" class="botao-secundario">Gerenciar assinatura</a>  <!-- Botão secundário “Gerenciar assinatura”, que leva para financeiro.html -->
+            </section>  <!-- Fecha faixa de destaque -->
+
+            <section class="faixa">  <!-- Abre faixa de destaque -->
+              <div>  <!-- Abre bloco -->
+                <h2>Configure os horários de funcionamento</h2>  <!-- Título de seção: Configure os horários de funcionamento -->
+                <p>Defina os dias e horários em que cada unidade atende.</p>  <!-- Parágrafo: Defina os dias e horários em que cada unidade atende. -->
+              </div>  <!-- Fecha bloco -->
+              <a href="salao.html" class="botao">Configurar horários</a>  <!-- Botão principal “Configurar horários”, que leva para salao.html -->
+            </section>  <!-- Fecha faixa de destaque -->
+
+
+            <section class="grade-4">  <!-- Abre grade de 4 colunas -->
+              <div class="caixa"><p>Atendimentos em outubro</p><strong>400</strong></div>  <!-- Caixa de resumo com número: Atendimentos em outubro 400 -->
+              <div class="caixa"><p>Receita</p><strong>R$ 26.000</strong></div>  <!-- Caixa de resumo com número: Receita R$ 26.000 -->
+              <div class="caixa"><p>Despesas</p><strong>R$ 22.500</strong></div>  <!-- Caixa de resumo com número: Despesas R$ 22.500 -->
+              <div class="caixa"><p>Resultado</p><strong class="cor-verde">R$ 3.500</strong></div>  <!-- Caixa de resumo com número: Resultado R$ 3.500 -->
+            </section>  <!-- Fecha grade de 4 colunas -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo">Fluxo de clientes</h2>  <!-- Título da seção: Fluxo de clientes -->
+              <p class="secao-descricao">Atendimentos em outubro, por dia da semana.</p>  <!-- Descrição da seção: Atendimentos em outubro, por dia da semana. -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Fluxo de clientes">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Dia</th><th scope="col">Gráfico</th><th scope="col">Clientes</th></tr>  <!-- Títulos das colunas: Dia, Gráfico, Clientes -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>Seg</td><td><div class="fundo-barra"><div class="barra l-33"></div></div></td><td>30</td></tr>  <!-- Linha da tabela: Seg | 30 -->
+                    <tr><td>Ter</td><td><div class="fundo-barra"><div class="barra l-58"></div></div></td><td>52</td></tr>  <!-- Linha da tabela: Ter | 52 -->
+                    <tr><td>Qua</td><td><div class="fundo-barra"><div class="barra l-62"></div></div></td><td>56</td></tr>  <!-- Linha da tabela: Qua | 56 -->
+                    <tr><td>Qui</td><td><div class="fundo-barra"><div class="barra l-80"></div></div></td><td>72</td></tr>  <!-- Linha da tabela: Qui | 72 -->
+                    <tr><td>Sex</td><td><div class="fundo-barra"><div class="barra l-100"></div></div></td><td>90</td></tr>  <!-- Linha da tabela: Sex | 90 -->
+                    <tr><td>Sáb</td><td><div class="fundo-barra"><div class="barra l-98"></div></div></td><td>88</td></tr>  <!-- Linha da tabela: Sáb | 88 -->
+                    <tr><td>Dom</td><td><div class="fundo-barra"><div class="barra l-13"></div></div></td><td>12</td></tr>  <!-- Linha da tabela: Dom | 12 -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo">Lucros e prejuízos</h2>  <!-- Título da seção: Lucros e prejuízos -->
+              <p class="secao-descricao">Receita = atendimentos × R$ 65 (média por atendimento).</p>  <!-- Descrição da seção: Receita = atendimentos × R$ 65 (média por atendimento). -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Lucros e prejuízos">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Mês</th><th scope="col">Receita</th><th scope="col">Despesas</th><th scope="col">Resultado</th></tr>  <!-- Títulos das colunas: Mês, Receita, Despesas, Resultado -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>Maio</td><td>R$ 23.400</td><td>R$ 21.000</td><td><span class="cor-verde">Lucro R$ 2.400</span></td></tr>  <!-- Linha da tabela: Maio | R$ 23.400 | R$ 21.000 | Lucro R$ 2.400 -->
+                    <tr><td>Junho</td><td>R$ 21.450</td><td>R$ 21.800</td><td><span class="cor-vermelho">Prejuízo R$ 350</span></td></tr>  <!-- Linha da tabela: Junho | R$ 21.450 | R$ 21.800 | Prejuízo R$ 350 -->
+                    <tr><td>Julho</td><td>R$ 25.350</td><td>R$ 22.000</td><td><span class="cor-verde">Lucro R$ 3.350</span></td></tr>  <!-- Linha da tabela: Julho | R$ 25.350 | R$ 22.000 | Lucro R$ 3.350 -->
+                    <tr><td>Agosto</td><td>R$ 26.325</td><td>R$ 22.300</td><td><span class="cor-verde">Lucro R$ 4.025</span></td></tr>  <!-- Linha da tabela: Agosto | R$ 26.325 | R$ 22.300 | Lucro R$ 4.025 -->
+                    <tr><td>Setembro</td><td>R$ 24.050</td><td>R$ 24.800</td><td><span class="cor-vermelho">Prejuízo R$ 750</span></td></tr>  <!-- Linha da tabela: Setembro | R$ 24.050 | R$ 24.800 | Prejuízo R$ 750 -->
+                    <tr><td>Outubro</td><td>R$ 26.000</td><td>R$ 22.500</td><td><span class="cor-verde">Lucro R$ 3.500</span></td></tr>  <!-- Linha da tabela: Outubro | R$ 26.000 | R$ 22.500 | Lucro R$ 3.500 -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="unidade">Unidade</label>  <!-- Rótulo: Unidade -->
+                <select id="unidade">  <!-- Abre a lista de seleção -->
+                  <option>Todas as unidades</option>  <!-- Opção da lista: Todas as unidades -->
+                  <option>Black Barber · Tatuapé</option>  <!-- Opção da lista: Black Barber · Tatuapé -->
+                  <option>Black Barber · Penha</option>  <!-- Opção da lista: Black Barber · Penha -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="funcionario">Funcionário</label>  <!-- Rótulo: Funcionário -->
+                <select id="funcionario">  <!-- Abre a lista de seleção -->
+                  <option>Todos</option>  <!-- Opção da lista: Todos -->
+                  <option>Yuri</option>  <!-- Opção da lista: Yuri -->
+                  <option>Juliana</option>  <!-- Opção da lista: Juliana -->
+                  <option>Israel</option>  <!-- Opção da lista: Israel -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="espaco"></div>  <!-- Bloco -->
+            <div class="abas">  <!-- Abre grupo de abas -->
+              <input type="radio" name="periodo" id="periodo-0" checked aria-label="Hoje" />  <!-- Opção de escolha única: Hoje, já marcada -->
+              <input type="radio" name="periodo" id="periodo-1" aria-label="Semana" />  <!-- Opção de escolha única: Semana -->
+              <input type="radio" name="periodo" id="periodo-2" aria-label="Mês" />  <!-- Opção de escolha única: Mês -->
+              <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+                <label for="periodo-0">Hoje</label>  <!-- Rótulo: Hoje -->
+                <label for="periodo-1">Semana</label>  <!-- Rótulo: Semana -->
+                <label for="periodo-2">Mês</label>  <!-- Rótulo: Mês -->
+              </div>  <!-- Fecha linha com os botões das abas -->
+              <div class="paineis">  <!-- Abre conteúdo das abas -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Agenda de hoje">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Horário</th><th scope="col">Funcionário</th><th scope="col">Unidade</th><th scope="col">Cliente</th><th scope="col">Serviços</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Horário, Funcionário, Unidade, Cliente, Serviços, Valor, Situação, Ação -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>08:30 – 09:15</td><td>Yuri</td><td>Tatuapé</td><td>Ana Costa</td><td>Corte + Barba</td><td>R$ 55,00</td><td><span class="etiqueta etiqueta-ok">Concluído</span></td><td>—</td></tr>  <!-- Linha da tabela: 08:30 – 09:15 | Yuri | Tatuapé | Ana Costa | Corte + Barba | R$ 55,00 | Concluí… -->
+                        <tr><td>10:00 – 10:30</td><td>Yuri</td><td>Tatuapé</td><td>Pedro Santos</td><td>Corte masculino</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-info">Confirmado</span></td><td><a href="#concluir" class="botao-secundario botao-pequeno">Concluir</a></td></tr>  <!-- Linha da tabela: 10:00 – 10:30 | Yuri | Tatuapé | Pedro Santos | Corte masculino | R$ 35,00 | Co… -->
+                        <tr><td>11:00 – 11:20</td><td>Yuri</td><td>Tatuapé</td><td>Lucas Oliveira</td><td>Barba</td><td>R$ 25,00</td><td><span class="etiqueta etiqueta-alerta">Agendado</span></td><td><a href="#concluir" class="botao-secundario botao-pequeno">Concluir</a></td></tr>  <!-- Linha da tabela: 11:00 – 11:20 | Yuri | Tatuapé | Lucas Oliveira | Barba | R$ 25,00 | Agendado |… -->
+                        <tr><td>14:00 – 14:45</td><td>Yuri</td><td>Tatuapé</td><td>Marina Alves</td><td>Corte + Barba</td><td>R$ 55,00</td><td><span class="etiqueta etiqueta-alerta">Agendado</span></td><td><a href="#concluir" class="botao-secundario botao-pequeno">Concluir</a></td></tr>  <!-- Linha da tabela: 14:00 – 14:45 | Yuri | Tatuapé | Marina Alves | Corte + Barba | R$ 55,00 | Agen… -->
+                        <tr><td>16:00 – 16:15</td><td>Yuri</td><td>Tatuapé</td><td>Rafael Souza</td><td>Sobrancelha</td><td>R$ 15,00</td><td><span class="etiqueta etiqueta-erro">Cancelado</span></td><td>—</td></tr>  <!-- Linha da tabela: 16:00 – 16:15 | Yuri | Tatuapé | Rafael Souza | Sobrancelha | R$ 15,00 | Cancel… -->
+                        <tr><td>09:00 – 10:00</td><td>Juliana</td><td>Tatuapé</td><td>Carla Dias</td><td>Coloração</td><td>R$ 120,00</td><td><span class="etiqueta etiqueta-info">Confirmado</span></td><td><a href="#concluir" class="botao-secundario botao-pequeno">Concluir</a></td></tr>  <!-- Linha da tabela: 09:00 – 10:00 | Juliana | Tatuapé | Carla Dias | Coloração | R$ 120,00 | Confir… -->
+                        <tr><td>13:00 – 13:30</td><td>Israel</td><td>Penha</td><td>Bruno Lima</td><td>Corte masculino</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-alerta">Agendado</span></td><td><a href="#concluir" class="botao-secundario botao-pequeno">Concluir</a></td></tr>  <!-- Linha da tabela: 13:00 – 13:30 | Israel | Penha | Bruno Lima | Corte masculino | R$ 35,00 | Agen… -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Agenda da semana">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Dia</th><th scope="col">Agendamentos</th><th scope="col">Previsto</th><th scope="col">Ocupação</th></tr>  <!-- Títulos das colunas: Dia, Agendamentos, Previsto, Ocupação -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>Seg, 09/11</td><td>6</td><td>R$ 240,00</td><td><div class="fundo-barra"><div class="barra l-60"></div></div></td></tr>  <!-- Linha da tabela: Seg, 09/11 | 6 | R$ 240,00 -->
+                        <tr><td>Ter, 10/11</td><td>8</td><td>R$ 330,00</td><td><div class="fundo-barra"><div class="barra l-80"></div></div></td></tr>  <!-- Linha da tabela: Ter, 10/11 | 8 | R$ 330,00 -->
+                        <tr><td>Qua, 11/11</td><td>5</td><td>R$ 200,00</td><td><div class="fundo-barra"><div class="barra l-50"></div></div></td></tr>  <!-- Linha da tabela: Qua, 11/11 | 5 | R$ 200,00 -->
+                        <tr><td>Qui, 12/11</td><td>9</td><td>R$ 385,00</td><td><div class="fundo-barra"><div class="barra l-90"></div></div></td></tr>  <!-- Linha da tabela: Qui, 12/11 | 9 | R$ 385,00 -->
+                        <tr><td>Sex, 13/11</td><td>10</td><td>R$ 430,00</td><td><div class="fundo-barra"><div class="barra l-100"></div></div></td></tr>  <!-- Linha da tabela: Sex, 13/11 | 10 | R$ 430,00 -->
+                        <tr><td>Sáb, 14/11</td><td>7</td><td>R$ 290,00</td><td><div class="fundo-barra"><div class="barra l-70"></div></div></td></tr>  <!-- Linha da tabela: Sáb, 14/11 | 7 | R$ 290,00 -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Agenda do mês">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Período</th><th scope="col">Agendamentos</th><th scope="col">Previsto</th></tr>  <!-- Títulos das colunas: Período, Agendamentos, Previsto -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>Semana 1 (02 a 08/11)</td><td>38</td><td>R$ 1.540,00</td></tr>  <!-- Linha da tabela: Semana 1 (02 a 08/11) | 38 | R$ 1.540,00 -->
+                        <tr><td>Semana 2 (09 a 15/11)</td><td>45</td><td>R$ 1.875,00</td></tr>  <!-- Linha da tabela: Semana 2 (09 a 15/11) | 45 | R$ 1.875,00 -->
+                        <tr><td>Semana 3 (16 a 22/11)</td><td>21</td><td>R$ 860,00</td></tr>  <!-- Linha da tabela: Semana 3 (16 a 22/11) | 21 | R$ 860,00 -->
+                        <tr><td>Semana 4 (23 a 29/11)</td><td>9</td><td>R$ 365,00</td></tr>  <!-- Linha da tabela: Semana 4 (23 a 29/11) | 9 | R$ 365,00 -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+              </div>  <!-- Fecha conteúdo das abas -->
+            </div>  <!-- Fecha grupo de abas -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <form class="busca-linha" action="painel.html" role="search">  <!-- Abre o formulário, que envia para painel.html -->
+              <input type="search" id="pesquisa-cliente" placeholder="Nome, telefone ou e-mail" aria-label="Pesquisar cliente" />  <!-- Campo de busca: Pesquisar cliente -->
+              <button type="submit" class="botao">Pesquisar</button>  <!-- Botão que envia o formulário: Pesquisar -->
+            </form>  <!-- Fecha linha de busca -->
+
+            <div class="empilhado">  <!-- Abre bloco empilhado -->
+              <article class="linha-cliente">  <!-- Abre linha de cliente -->
+                <div>  <!-- Abre bloco -->
+                  <h2>João Silva</h2>  <!-- Título de seção: João Silva -->
+                  <p>(11) 99999-0000 · joao@email.com</p>  <!-- Parágrafo: (11) 99999-0000 · joao@email.com -->
+                </div>  <!-- Fecha bloco -->
+                <div>  <!-- Abre bloco -->
+                  <p><strong>8 atendimentos</strong></p>  <!-- Parágrafo: 8 atendimentos -->
+                  <p>Último atendimento: 31/10</p>  <!-- Parágrafo: Último atendimento: 31/10 -->
+                </div>  <!-- Fecha bloco -->
+                <a href="painel.html" class="botao-secundario botao-pequeno">Ver agendamentos</a>  <!-- Botão secundário “Ver agendamentos”, que leva para painel.html -->
+              </article>  <!-- Fecha linha de cliente -->
+              <article class="linha-cliente">  <!-- Abre linha de cliente -->
+                <div>  <!-- Abre bloco -->
+                  <h2>Pedro Santos</h2>  <!-- Título de seção: Pedro Santos -->
+                  <p>(11) 98888-1111 · pedro@email.com</p>  <!-- Parágrafo: (11) 98888-1111 · pedro@email.com -->
+                </div>  <!-- Fecha bloco -->
+                <div>  <!-- Abre bloco -->
+                  <p><strong>5 atendimentos</strong></p>  <!-- Parágrafo: 5 atendimentos -->
+                  <p>Último atendimento: 30/10</p>  <!-- Parágrafo: Último atendimento: 30/10 -->
+                </div>  <!-- Fecha bloco -->
+                <a href="painel.html" class="botao-secundario botao-pequeno">Ver agendamentos</a>  <!-- Botão secundário “Ver agendamentos”, que leva para painel.html -->
+              </article>  <!-- Fecha linha de cliente -->
+              <article class="linha-cliente">  <!-- Abre linha de cliente -->
+                <div>  <!-- Abre bloco -->
+                  <h2>Lucas Oliveira</h2>  <!-- Título de seção: Lucas Oliveira -->
+                  <p>(11) 97777-2222 · lucas@email.com</p>  <!-- Parágrafo: (11) 97777-2222 · lucas@email.com -->
+                </div>  <!-- Fecha bloco -->
+                <div>  <!-- Abre bloco -->
+                  <p><strong>12 atendimentos</strong></p>  <!-- Parágrafo: 12 atendimentos -->
+                  <p>Último atendimento: 04/11</p>  <!-- Parágrafo: Último atendimento: 04/11 -->
+                </div>  <!-- Fecha bloco -->
+                <a href="painel.html" class="botao-secundario botao-pequeno">Ver agendamentos</a>  <!-- Botão secundário “Ver agendamentos”, que leva para painel.html -->
+              </article>  <!-- Fecha linha de cliente -->
+            </div>  <!-- Fecha bloco empilhado -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+        </div>  <!-- Fecha conteúdo das abas -->
+      </div>  <!-- Fecha grupo de abas -->
+
+      <section id="concluir" class="modal" aria-label="Concluir atendimento?">  <!-- Abre janela sobreposta (concluir) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Concluir atendimento?</h2>  <!-- Título de seção: Concluir atendimento? -->
+          <p>Depois de concluído, o atendimento conta no limite semanal do plano e o pagamento pode ser registrado.</p>  <!-- Parágrafo: Depois de concluído, o atendimento conta no limite semanal do pl… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Concluir atendimento</button>  <!-- Botão que envia o formulário: Concluir atendimento -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

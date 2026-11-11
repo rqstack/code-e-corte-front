@@ -1,0 +1,187 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Meus agendamentos | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para index.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="index.html" class="link-navegacao">Início</a></li>  <!-- Item “Início”, que leva para index.html -->
+            <li><a href="meus-agendamentos.html" class="link-navegacao" aria-current="page">Meus agendamentos</a></li>  <!-- Item “Meus agendamentos”, que leva para meus-agendamentos.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Cliente</summary>  <!-- Área atual, que abre o menu ao clicar: Cliente -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="index.html" aria-current="page">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="dono/painel.html">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para perfil.html -->
+          <a href="login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <p id="agendado" class="aviso aviso-ok aviso-salvo" role="status">Agendamento marcado com sucesso!</p>  <!-- Caixa de aviso: Agendamento marcado com sucesso! -->
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Início / Meus agendamentos</p>  <!-- Caminho da página: Início / Meus agendamentos -->
+          <h1 class="titulo">Meus agendamentos</h1>  <!-- Título da página: Meus agendamentos -->
+          <p class="descricao">Acompanhe seus horários, pague, avalie e veja seus salões favoritos.</p>  <!-- Descrição da página: Acompanhe seus horários, pague, avalie e veja seus salões favori… -->
+        </div>  <!-- Fecha bloco -->
+        <a href="index.html" class="botao">Novo agendamento</a>  <!-- Botão principal “Novo agendamento”, que leva para index.html -->
+      </section>  <!-- Fecha topo da página -->
+      <div class="abas">  <!-- Abre grupo de abas -->
+        <input type="radio" name="lista" id="lista-0" checked aria-label="Próximos" />  <!-- Opção de escolha única: Próximos, já marcada -->
+        <input type="radio" name="lista" id="lista-1" aria-label="Histórico" />  <!-- Opção de escolha única: Histórico -->
+        <input type="radio" name="lista" id="lista-2" aria-label="Favoritos" />  <!-- Opção de escolha única: Favoritos -->
+        <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+          <label for="lista-0">Próximos</label>  <!-- Rótulo: Próximos -->
+          <label for="lista-1">Histórico</label>  <!-- Rótulo: Histórico -->
+          <label for="lista-2">Favoritos</label>  <!-- Rótulo: Favoritos -->
+        </div>  <!-- Fecha linha com os botões das abas -->
+        <div class="paineis">  <!-- Abre conteúdo das abas -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Próximos agendamentos">  <!-- Abre área com rolagem da tabela -->
+              <table>  <!-- Abre tabela -->
+                <thead>  <!-- Abre cabeçalho da tabela -->
+                  <tr><th scope="col">Data</th><th scope="col">Salão</th><th scope="col">Profissional</th><th scope="col">Serviços</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Data, Salão, Profissional, Serviços, Valor, Situação, Ação -->
+                </thead>  <!-- Fecha cabeçalho da tabela -->
+                <tbody>  <!-- Abre corpo da tabela -->
+                  <tr><td>12/11 · 14:00</td><td><a href="salao.html" class="link-azul">Black Barber</a></td><td>Yuri</td><td>Corte masculino</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-info">Confirmado</span></td><td><a href="#cancelar" class="botao-perigo botao-pequeno">Cancelar</a></td></tr>  <!-- Linha da tabela: 12/11 · 14:00 | Black Barber | Yuri | Corte masculino | R$ 35,00 | Confirmado |… -->
+                  <tr><td>20/11 · 10:00</td><td><a href="salao.html" class="link-azul">Style Hair</a></td><td>Juliana</td><td>Escova</td><td>R$ 45,00</td><td><span class="etiqueta etiqueta-alerta">Agendado</span></td><td><a href="#cancelar" class="botao-perigo botao-pequeno">Cancelar</a></td></tr>  <!-- Linha da tabela: 20/11 · 10:00 | Style Hair | Juliana | Escova | R$ 45,00 | Agendado | Cancelar -->
+                </tbody>  <!-- Fecha corpo da tabela -->
+              </table>  <!-- Fecha tabela -->
+            </div>  <!-- Fecha área com rolagem da tabela -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Histórico de agendamentos">  <!-- Abre área com rolagem da tabela -->
+              <table>  <!-- Abre tabela -->
+                <thead>  <!-- Abre cabeçalho da tabela -->
+                  <tr><th scope="col">Data</th><th scope="col">Salão</th><th scope="col">Profissional</th><th scope="col">Serviços</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Data, Salão, Profissional, Serviços, Valor, Situação, Ação -->
+                </thead>  <!-- Fecha cabeçalho da tabela -->
+                <tbody>  <!-- Abre corpo da tabela -->
+                  <tr><td>31/10 · 09:00</td><td><a href="salao.html" class="link-azul">Black Barber</a></td><td>Yuri</td><td>Corte + Barba</td><td>R$ 55,00</td><td><span class="etiqueta etiqueta-ok">Concluído</span></td><td><div class="grupo-botoes"><a href="#pagar" class="botao botao-pequeno">Pagar</a><a href="#avaliar" class="botao-secundario botao-pequeno">Avaliar</a></div></td></tr>  <!-- Linha da tabela: 31/10 · 09:00 | Black Barber | Yuri | Corte + Barba | R$ 55,00 | Concluído | Pa… -->
+                  <tr><td>15/10 · 16:00</td><td><a href="salao.html" class="link-azul">Black Barber</a></td><td>Yuri</td><td>Corte masculino</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-ok">Concluído</span></td><td><span class="nota" aria-label="Nota 5 de 5">★★★★★</span></td></tr>  <!-- Linha da tabela: 15/10 · 16:00 | Black Barber | Yuri | Corte masculino | R$ 35,00 | Concluído |… -->
+                  <tr><td>02/10 · 11:00</td><td><a href="salao.html" class="link-azul">Top Barber</a></td><td>Diego</td><td>Barba</td><td>R$ 25,00</td><td><span class="etiqueta etiqueta-erro">Não compareceu</span></td><td>—</td></tr>  <!-- Linha da tabela: 02/10 · 11:00 | Top Barber | Diego | Barba | R$ 25,00 | Não compareceu | — -->
+                  <tr><td>18/09 · 15:30</td><td><a href="salao.html" class="link-azul">Black Barber</a></td><td>Israel</td><td>Corte masculino</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-erro">Cancelado</span></td><td>—</td></tr>  <!-- Linha da tabela: 18/09 · 15:30 | Black Barber | Israel | Corte masculino | R$ 35,00 | Cancelado… -->
+                </tbody>  <!-- Fecha corpo da tabela -->
+              </table>  <!-- Fecha tabela -->
+            </div>  <!-- Fecha área com rolagem da tabela -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <div class="grade-3">  <!-- Abre grade de 3 colunas -->
+              <article class="salao-cartao tipo-barbearia">  <!-- Abre cartão de salão -->
+                <div class="capa" aria-hidden="true">BB</div>  <!-- Capa do cartão do salão: BB -->
+                <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                  <h3>Black Barber</h3>  <!-- Subtítulo: Black Barber -->
+                  <p>Tatuapé · São Paulo</p>  <!-- Parágrafo: Tatuapé · São Paulo -->
+                  <p>Corte, barba e mais</p>  <!-- Parágrafo: Corte, barba e mais -->
+                  <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                    <span><span class="nota">★ 4,8</span> · 1,2 km</span>  <!-- Trecho de texto: ★ 4,8 · 1,2 km -->
+                    <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                  </div>  <!-- Fecha rodapé do cartão de salão -->
+                </div>  <!-- Fecha informações do cartão de salão -->
+              </article>  <!-- Fecha cartão de salão -->
+              <article class="salao-cartao tipo-estetica">  <!-- Abre cartão de salão -->
+                <div class="capa" aria-hidden="true">BE</div>  <!-- Capa do cartão do salão: BE -->
+                <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                  <h3>Bella Estética</h3>  <!-- Subtítulo: Bella Estética -->
+                  <p>Vila Formosa · São Paulo</p>  <!-- Parágrafo: Vila Formosa · São Paulo -->
+                  <p>Limpeza de pele e sobrancelha</p>  <!-- Parágrafo: Limpeza de pele e sobrancelha -->
+                  <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                    <span><span class="nota">★ 4,9</span> · 3,9 km</span>  <!-- Trecho de texto: ★ 4,9 · 3,9 km -->
+                    <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                  </div>  <!-- Fecha rodapé do cartão de salão -->
+                </div>  <!-- Fecha informações do cartão de salão -->
+              </article>  <!-- Fecha cartão de salão -->
+            </div>  <!-- Fecha grade de 3 colunas -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+        </div>  <!-- Fecha conteúdo das abas -->
+      </div>  <!-- Fecha grupo de abas -->
+
+      <section id="cancelar" class="modal" aria-label="Cancelar agendamento?">  <!-- Abre janela sobreposta (cancelar) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Cancelar agendamento?</h2>  <!-- Título de seção: Cancelar agendamento? -->
+          <p>O cancelamento é permitido até 2 horas antes do horário marcado. Depois disso, o agendamento fica como “não compareceu”.</p>  <!-- Parágrafo: O cancelamento é permitido até 2 horas antes do horário marcado.… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao-perigo">Cancelar agendamento</button>  <!-- Botão que envia o formulário: Cancelar agendamento -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="pagar" class="modal" aria-label="Pagamento">  <!-- Abre janela sobreposta (pagar) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Pagamento</h2>  <!-- Título de seção: Pagamento -->
+          <p>Corte + Barba com Yuri, na Black Barber, em 31/10.</p>  <!-- Parágrafo: Corte + Barba com Yuri, na Black Barber, em 31/10. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="empilhado gap-10">  <!-- Abre bloco empilhado -->
+              <label class="opcao"><input type="radio" name="forma_pagamento" value="pix" required /><span class="opcao-texto">Pix</span></label>  <!-- Opção pix -->
+              <label class="opcao"><input type="radio" name="forma_pagamento" value="credito" /><span class="opcao-texto">Cartão de crédito</span></label>  <!-- Opção credito -->
+              <label class="opcao"><input type="radio" name="forma_pagamento" value="debito" /><span class="opcao-texto">Cartão de débito</span></label>  <!-- Opção debito -->
+              <label class="opcao"><input type="radio" name="forma_pagamento" value="dinheiro" /><span class="opcao-texto">Dinheiro</span></label>  <!-- Opção dinheiro -->
+            </div>  <!-- Fecha bloco empilhado -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="valor">Valor (R$)</label>  <!-- Rótulo: Valor (R$) -->
+              <input type="number" id="valor" placeholder="55.00" required min="0.01" max="55" step="0.01" value="55.00" />  <!-- Campo numérico: Valor (R$), obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <p class="ajuda">Total R$ 55,00. Você pode pagar uma parte agora e o restante depois.</p>  <!-- Texto de ajuda: Total R$ 55,00. Você pode pagar uma parte agora e o restante dep… -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Pagar</button>  <!-- Botão que envia o formulário: Pagar -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="avaliar" class="modal" aria-label="Avaliar atendimento">  <!-- Abre janela sobreposta (avaliar) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Avaliar atendimento</h2>  <!-- Título de seção: Avaliar atendimento -->
+          <p>Corte + Barba com Yuri, na Black Barber, em 31/10.</p>  <!-- Parágrafo: Corte + Barba com Yuri, na Black Barber, em 31/10. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div>  <!-- Abre bloco -->
+              <p class="rotulo mb-8" id="rotulo-nota">Sua nota</p>  <!-- Rótulo: Sua nota -->
+              <div class="estrelas" role="radiogroup" aria-labelledby="rotulo-nota">  <!-- Abre estrelas da nota -->
+                <input type="radio" name="nota" id="nota-5" value="5" required /><label for="nota-5" aria-label="5 estrelas">★</label>  <!-- Opção de escolha única: nota-5, obrigatório -->
+                <input type="radio" name="nota" id="nota-4" value="4" /><label for="nota-4" aria-label="4 estrelas">★</label>  <!-- Opção de escolha única: nota-4 -->
+                <input type="radio" name="nota" id="nota-3" value="3" /><label for="nota-3" aria-label="3 estrelas">★</label>  <!-- Opção de escolha única: nota-3 -->
+                <input type="radio" name="nota" id="nota-2" value="2" /><label for="nota-2" aria-label="2 estrelas">★</label>  <!-- Opção de escolha única: nota-2 -->
+                <input type="radio" name="nota" id="nota-1" value="1" /><label for="nota-1" aria-label="1 estrela">★</label>  <!-- Opção de escolha única: nota-1 -->
+              </div>  <!-- Fecha estrelas da nota -->
+            </div>  <!-- Fecha bloco -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="comentario">Comentário (opcional)</label>  <!-- Rótulo: Comentário (opcional) -->
+              <textarea id="comentario" rows="4" placeholder="Conte como foi o atendimento"></textarea>  <!-- Área para digitar um texto maior: Conte como foi o atendimento -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Enviar avaliação</button>  <!-- Botão que envia o formulário: Enviar avaliação -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

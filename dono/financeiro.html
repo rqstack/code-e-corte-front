@@ -1,0 +1,465 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Financeiro | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="../css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="../dono/painel.html" class="logo"><img src="../img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para dono/painel.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="../dono/painel.html" class="link-navegacao">Painel</a></li>  <!-- Item “Painel”, que leva para dono/painel.html -->
+            <li><a href="../dono/salao.html" class="link-navegacao">Meu salão</a></li>  <!-- Item “Meu salão”, que leva para dono/salao.html -->
+            <li><a href="../dono/financeiro.html" class="link-navegacao" aria-current="page">Financeiro</a></li>  <!-- Item “Financeiro”, que leva para dono/financeiro.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Dono</summary>  <!-- Área atual, que abre o menu ao clicar: Dono -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="../index.html">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="../funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="../dono/painel.html" aria-current="page">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="../admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="../dono/perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para dono/perfil.html -->
+          <a href="../login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="cabecalho-pagina">  <!-- Abre topo da página -->
+        <div>  <!-- Abre bloco -->
+          <p class="caminho">Área do dono / Financeiro</p>  <!-- Caminho da página: Área do dono / Financeiro -->
+          <h1 class="titulo">Financeiro</h1>  <!-- Título da página: Financeiro -->
+          <p class="descricao">Movimentações, ganhos, comissões e assinatura. A mensalidade da plataforma é separada do caixa do salão.</p>  <!-- Descrição da página: Movimentações, ganhos, comissões e assinatura. A mensalidade da… -->
+        </div>  <!-- Fecha bloco -->
+      </section>  <!-- Fecha topo da página -->
+      <div class="abas">  <!-- Abre grupo de abas -->
+        <input type="radio" name="secao" id="secao-0" checked aria-label="Movimentações" />  <!-- Opção de escolha única: Movimentações, já marcada -->
+        <input type="radio" name="secao" id="secao-1" aria-label="Ganhos" />  <!-- Opção de escolha única: Ganhos -->
+        <input type="radio" name="secao" id="secao-2" aria-label="Comissões" />  <!-- Opção de escolha única: Comissões -->
+        <input type="radio" name="secao" id="secao-3" aria-label="Assinatura" />  <!-- Opção de escolha única: Assinatura -->
+        <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+          <label for="secao-0">Movimentações</label>  <!-- Rótulo: Movimentações -->
+          <label for="secao-1">Ganhos</label>  <!-- Rótulo: Ganhos -->
+          <label for="secao-2">Comissões</label>  <!-- Rótulo: Comissões -->
+          <label for="secao-3">Assinatura</label>  <!-- Rótulo: Assinatura -->
+        </div>  <!-- Fecha linha com os botões das abas -->
+        <div class="paineis">  <!-- Abre conteúdo das abas -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <p class="mb-14"><a href="#novo-lancamento" class="botao">Novo lançamento</a></p>  <!-- Parágrafo: Novo lançamento -->
+            <section class="grade-4 mb-26">  <!-- Abre grade de 4 colunas -->
+              <div class="caixa"><p>Recebido em novembro</p><strong class="cor-verde">R$ 6.240</strong></div>  <!-- Caixa de resumo com número: Recebido em novembro R$ 6.240 -->
+              <div class="caixa"><p>Pago em novembro</p><strong class="cor-vermelho">R$ 4.660</strong></div>  <!-- Caixa de resumo com número: Pago em novembro R$ 4.660 -->
+              <div class="caixa"><p>A receber</p><strong>R$ 90</strong></div>  <!-- Caixa de resumo com número: A receber R$ 90 -->
+              <div class="caixa"><p>A pagar</p><strong>R$ 1.500</strong></div>  <!-- Caixa de resumo com número: A pagar R$ 1.500 -->
+            </section>  <!-- Fecha grade de 4 colunas -->
+
+            <div class="abas">  <!-- Abre grupo de abas -->
+              <input type="radio" name="financeiro" id="fi-financeiro-0" checked aria-label="Realizados" />  <!-- Opção de escolha única: Realizados, já marcada -->
+              <input type="radio" name="financeiro" id="fi-financeiro-1" aria-label="A pagar" />  <!-- Opção de escolha única: A pagar -->
+              <input type="radio" name="financeiro" id="fi-financeiro-2" aria-label="A receber" />  <!-- Opção de escolha única: A receber -->
+              <input type="radio" name="financeiro" id="fi-financeiro-3" aria-label="Fluxo de caixa" />  <!-- Opção de escolha única: Fluxo de caixa -->
+              <div class="abas-rotulos">  <!-- Abre linha com os botões das abas -->
+                <label for="fi-financeiro-0">Realizados</label>  <!-- Rótulo: Realizados -->
+                <label for="fi-financeiro-1">A pagar</label>  <!-- Rótulo: A pagar -->
+                <label for="fi-financeiro-2">A receber</label>  <!-- Rótulo: A receber -->
+                <label for="fi-financeiro-3">Fluxo de caixa</label>  <!-- Rótulo: Fluxo de caixa -->
+              </div>  <!-- Fecha linha com os botões das abas -->
+              <div class="paineis">  <!-- Abre conteúdo das abas -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Lançamentos realizados">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Vencimento</th><th scope="col">Descrição</th><th scope="col">Categoria</th><th scope="col">Conta</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Vencimento, Descrição, Categoria, Conta, Valor, Situação, Ação -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>05/11</td><td>Aluguel</td><td>Aluguel · fixa</td><td>Banco</td><td><span class="cor-vermelho">− R$ 3.200,00</span></td><td><span class="etiqueta etiqueta-ok">Conferido</span></td><td>—</td></tr>  <!-- Linha da tabela: 05/11 | Aluguel | Aluguel · fixa | Banco | − R$ 3.200,00 | Conferido | — -->
+                        <tr><td>05/11</td><td>Conta de energia</td><td>Água e energia · fixa</td><td>Banco</td><td><span class="cor-vermelho">− R$ 480,00</span></td><td><span class="etiqueta etiqueta-alerta">A conferir</span></td><td><a href="#conferir" class="botao-secundario botao-pequeno">Conferir</a></td></tr>  <!-- Linha da tabela: 05/11 | Conta de energia | Água e energia · fixa | Banco | − R$ 480,00 | A conf… -->
+                        <tr><td>05/11</td><td>Comissão de outubro · Juliana</td><td>Comissões</td><td>Banco</td><td><span class="cor-vermelho">− R$ 980,00</span></td><td><span class="etiqueta etiqueta-alerta">A conferir</span></td><td><a href="#conferir" class="botao-secundario botao-pequeno">Conferir</a></td></tr>  <!-- Linha da tabela: 05/11 | Comissão de outubro · Juliana | Comissões | Banco | − R$ 980,00 | A con… -->
+                        <tr><td>03/11</td><td>Pagamento do agendamento 1031</td><td>Serviços</td><td>Caixa</td><td><span class="cor-verde">+ R$ 55,00</span></td><td><span class="etiqueta etiqueta-ok">Conferido</span></td><td>—</td></tr>  <!-- Linha da tabela: 03/11 | Pagamento do agendamento 1031 | Serviços | Caixa | + R$ 55,00 | Conferi… -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Contas a pagar">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Vencimento</th><th scope="col">Descrição</th><th scope="col">Categoria</th><th scope="col">Conta</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Vencimento, Descrição, Categoria, Conta, Valor, Situação, Ação -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>10/11</td><td>Produtos de higiene</td><td>Produtos de higiene · variável</td><td>Caixa</td><td>R$ 260,00</td><td><span class="etiqueta etiqueta-alerta">Pendente</span></td><td><a href="#marcar-pago" class="botao-secundario botao-pequeno">Marcar como pago</a></td></tr>  <!-- Linha da tabela: 10/11 | Produtos de higiene | Produtos de higiene · variável | Caixa | R$ 260,0… -->
+                        <tr><td>10/11</td><td>Comissão de outubro · Yuri</td><td>Comissões</td><td>Banco</td><td>R$ 1.240,00</td><td><span class="etiqueta etiqueta-alerta">Pendente</span></td><td><a href="#marcar-pago" class="botao-secundario botao-pequeno">Marcar como pago</a></td></tr>  <!-- Linha da tabela: 10/11 | Comissão de outubro · Yuri | Comissões | Banco | R$ 1.240,00 | Pendente… -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Contas a receber">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Vencimento</th><th scope="col">Descrição</th><th scope="col">Categoria</th><th scope="col">Conta</th><th scope="col">Valor</th><th scope="col">Situação</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Vencimento, Descrição, Categoria, Conta, Valor, Situação, Ação -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>09/11</td><td>Pagamento do agendamento 1042</td><td>Serviços</td><td>Caixa</td><td>R$ 55,00</td><td><span class="etiqueta etiqueta-alerta">Pendente</span></td><td>—</td></tr>  <!-- Linha da tabela: 09/11 | Pagamento do agendamento 1042 | Serviços | Caixa | R$ 55,00 | Pendente… -->
+                        <tr><td>09/11</td><td>Pagamento do agendamento 1043</td><td>Serviços</td><td>Caixa</td><td>R$ 35,00</td><td><span class="etiqueta etiqueta-alerta">Pendente</span></td><td>—</td></tr>  <!-- Linha da tabela: 09/11 | Pagamento do agendamento 1043 | Serviços | Caixa | R$ 35,00 | Pendente… -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+                <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+                  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Fluxo de caixa">  <!-- Abre área com rolagem da tabela -->
+                    <table>  <!-- Abre tabela -->
+                      <thead>  <!-- Abre cabeçalho da tabela -->
+                        <tr><th scope="col">Mês</th><th scope="col">Entradas</th><th scope="col">Saídas</th><th scope="col">Saldo</th></tr>  <!-- Títulos das colunas: Mês, Entradas, Saídas, Saldo -->
+                      </thead>  <!-- Fecha cabeçalho da tabela -->
+                      <tbody>  <!-- Abre corpo da tabela -->
+                        <tr><td>Maio</td><td>R$ 23.400</td><td>R$ 21.000</td><td><span class="cor-verde">Lucro R$ 2.400</span></td></tr>  <!-- Linha da tabela: Maio | R$ 23.400 | R$ 21.000 | Lucro R$ 2.400 -->
+                        <tr><td>Junho</td><td>R$ 21.450</td><td>R$ 21.800</td><td><span class="cor-vermelho">Prejuízo R$ 350</span></td></tr>  <!-- Linha da tabela: Junho | R$ 21.450 | R$ 21.800 | Prejuízo R$ 350 -->
+                        <tr><td>Julho</td><td>R$ 25.350</td><td>R$ 22.000</td><td><span class="cor-verde">Lucro R$ 3.350</span></td></tr>  <!-- Linha da tabela: Julho | R$ 25.350 | R$ 22.000 | Lucro R$ 3.350 -->
+                        <tr><td>Agosto</td><td>R$ 26.325</td><td>R$ 22.300</td><td><span class="cor-verde">Lucro R$ 4.025</span></td></tr>  <!-- Linha da tabela: Agosto | R$ 26.325 | R$ 22.300 | Lucro R$ 4.025 -->
+                        <tr><td>Setembro</td><td>R$ 24.050</td><td>R$ 24.800</td><td><span class="cor-vermelho">Prejuízo R$ 750</span></td></tr>  <!-- Linha da tabela: Setembro | R$ 24.050 | R$ 24.800 | Prejuízo R$ 750 -->
+                        <tr><td>Outubro</td><td>R$ 26.000</td><td>R$ 22.500</td><td><span class="cor-verde">Lucro R$ 3.500</span></td></tr>  <!-- Linha da tabela: Outubro | R$ 26.000 | R$ 22.500 | Lucro R$ 3.500 -->
+                      </tbody>  <!-- Fecha corpo da tabela -->
+                    </table>  <!-- Fecha tabela -->
+                  </div>  <!-- Fecha área com rolagem da tabela -->
+                </div>  <!-- Fecha conteúdo de uma aba -->
+              </div>  <!-- Fecha conteúdo das abas -->
+            </div>  <!-- Fecha grupo de abas -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <p class="secao-descricao">Soma dos pagamentos aprovados de outubro, por profissional.</p>  <!-- Descrição da seção: Soma dos pagamentos aprovados de outubro, por profissional. -->
+            <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Ganhos por profissional">  <!-- Abre área com rolagem da tabela -->
+              <table>  <!-- Abre tabela -->
+                <thead>  <!-- Abre cabeçalho da tabela -->
+                  <tr><th scope="col">Profissional</th><th scope="col">Atendimentos</th><th scope="col">Ganhos</th></tr>  <!-- Títulos das colunas: Profissional, Atendimentos, Ganhos -->
+                </thead>  <!-- Fecha cabeçalho da tabela -->
+                <tbody>  <!-- Abre corpo da tabela -->
+                  <tr><td>Yuri</td><td>160</td><td>R$ 10.400,00</td></tr>  <!-- Linha da tabela: Yuri | 160 | R$ 10.400,00 -->
+                  <tr><td>Juliana</td><td>130</td><td>R$ 8.450,00</td></tr>  <!-- Linha da tabela: Juliana | 130 | R$ 8.450,00 -->
+                  <tr><td>Israel</td><td>110</td><td>R$ 7.150,00</td></tr>  <!-- Linha da tabela: Israel | 110 | R$ 7.150,00 -->
+                  <tr><td><strong>Total do salão</strong></td><td><strong>400</strong></td><td><strong>R$ 26.000,00</strong></td></tr>  <!-- Linha da tabela: Total do salão | 400 | R$ 26.000,00 -->
+                </tbody>  <!-- Fecha corpo da tabela -->
+              </table>  <!-- Fecha tabela -->
+            </div>  <!-- Fecha área com rolagem da tabela -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <p class="mb-14"><a href="#fechar-mes" class="botao">Fechar mês</a></p>  <!-- Parágrafo: Fechar mês -->
+            <section>  <!-- Abre seção -->
+              <h2 class="secao-titulo mb-14">Fechamentos</h2>  <!-- Título da seção: Fechamentos -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Fechamentos de comissão">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Mês</th><th scope="col">Funcionário</th><th scope="col">Unidade</th><th scope="col">Total</th><th scope="col">Situação</th><th scope="col">Pago em</th><th scope="col">Ação</th></tr>  <!-- Títulos das colunas: Mês, Funcionário, Unidade, Total, Situação, Pago em, Ação -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>Outubro</td><td>Yuri</td><td>Tatuapé</td><td>R$ 1.240,00</td><td><span class="etiqueta etiqueta-alerta">Fechado</span></td><td>—</td><td><a href="#pagar-fechamento" class="botao botao-pequeno">Pagar</a></td></tr>  <!-- Linha da tabela: Outubro | Yuri | Tatuapé | R$ 1.240,00 | Fechado | — | Pagar -->
+                    <tr><td>Outubro</td><td>Juliana</td><td>Tatuapé</td><td>R$ 980,00</td><td><span class="etiqueta etiqueta-ok">Pago</span></td><td>05/11</td><td>—</td></tr>  <!-- Linha da tabela: Outubro | Juliana | Tatuapé | R$ 980,00 | Pago | 05/11 | — -->
+                    <tr><td>Setembro</td><td>Yuri</td><td>Tatuapé</td><td>R$ 1.140,00</td><td><span class="etiqueta etiqueta-ok">Pago</span></td><td>05/10</td><td>—</td></tr>  <!-- Linha da tabela: Setembro | Yuri | Tatuapé | R$ 1.140,00 | Pago | 05/10 | — -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo">Comissões em aberto</h2>  <!-- Título da seção: Comissões em aberto -->
+              <p class="secao-descricao">Geradas quando o atendimento é quitado. Um estorno recalcula o valor até o fechamento do mês.</p>  <!-- Descrição da seção: Geradas quando o atendimento é quitado. Um estorno recalcula o v… -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Comissões em aberto">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Data</th><th scope="col">Funcionário</th><th scope="col">Cliente</th><th scope="col">Base</th><th scope="col">Percentual</th><th scope="col">Comissão</th></tr>  <!-- Títulos das colunas: Data, Funcionário, Cliente, Base, Percentual, Comissão -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>05/11</td><td>Yuri</td><td>Marina Alves</td><td>R$ 55,00</td><td>40%</td><td>R$ 22,00</td></tr>  <!-- Linha da tabela: 05/11 | Yuri | Marina Alves | R$ 55,00 | 40% | R$ 22,00 -->
+                    <tr><td>04/11</td><td>Yuri</td><td>Lucas Oliveira</td><td>R$ 25,00</td><td>40%</td><td>R$ 10,00</td></tr>  <!-- Linha da tabela: 04/11 | Yuri | Lucas Oliveira | R$ 25,00 | 40% | R$ 10,00 -->
+                    <tr><td>03/11</td><td>Yuri</td><td>Ana Costa</td><td>R$ 55,00</td><td>40%</td><td>R$ 22,00</td></tr>  <!-- Linha da tabela: 03/11 | Yuri | Ana Costa | R$ 55,00 | 40% | R$ 22,00 -->
+                    <tr><td>02/11</td><td>Juliana</td><td>Carla Dias</td><td>R$ 120,00</td><td>35%</td><td>R$ 42,00</td></tr>  <!-- Linha da tabela: 02/11 | Juliana | Carla Dias | R$ 120,00 | 35% | R$ 42,00 -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+          <div class="painel-aba">  <!-- Abre conteúdo de uma aba -->
+            <section class="grade-3 mb-26">  <!-- Abre grade de 3 colunas -->
+              <div class="caixa"><p>Plano atual</p><strong>Ilimitado</strong></div>  <!-- Caixa de resumo com número: Plano atual Ilimitado -->
+              <div class="caixa"><p>Próxima cobrança</p><strong>07/12 · R$ 300</strong></div>  <!-- Caixa de resumo com número: Próxima cobrança 07/12 · R$ 300 -->
+              <div class="caixa"><p>Atendimentos nesta semana</p><strong>38 <small>sem limite</small></strong></div>  <!-- Caixa de resumo com número: Atendimentos nesta semana 38 sem limite -->
+            </section>  <!-- Fecha grade de 3 colunas -->
+
+            <section>  <!-- Abre seção -->
+              <h2 class="secao-titulo mb-14">Planos</h2>  <!-- Título da seção: Planos -->
+              <div class="grade-3">  <!-- Abre grade de 3 colunas -->
+                <article class="plano">  <!-- Abre cartão de plano -->
+                  <h2>Inicial</h2>  <!-- Título de seção: Inicial -->
+                  <p class="plano-preco">R$ 150 <small>por mês</small></p>  <!-- Preço do plano: R$ 150 por mês -->
+                  <ul>  <!-- Abre lista -->
+                    <li>10 atendimentos por semana</li>  <!-- Item da lista: 10 atendimentos por semana -->
+                  </ul>  <!-- Fecha lista -->
+                  <a href="#trocar-plano" class="botao-secundario botao-largo">Trocar para Inicial</a>  <!-- Botão secundário “Trocar para Inicial”, que abre a janela trocar-plano -->
+                </article>  <!-- Fecha cartão de plano -->
+                <article class="plano">  <!-- Abre cartão de plano -->
+                  <h2>Intermediário</h2>  <!-- Título de seção: Intermediário -->
+                  <p class="plano-preco">R$ 270 <small>por mês</small></p>  <!-- Preço do plano: R$ 270 por mês -->
+                  <ul>  <!-- Abre lista -->
+                    <li>15 atendimentos por semana</li>  <!-- Item da lista: 15 atendimentos por semana -->
+                  </ul>  <!-- Fecha lista -->
+                  <a href="#trocar-plano" class="botao-secundario botao-largo">Trocar para Intermediário</a>  <!-- Botão secundário “Trocar para Intermediário”, que abre a janela trocar-plano -->
+                </article>  <!-- Fecha cartão de plano -->
+                <article class="plano plano-atual">  <!-- Abre cartão de plano -->
+                  <h2>Ilimitado <span class="etiqueta etiqueta-ok">Ativa</span></h2>  <!-- Título de seção: Ilimitado Ativa -->
+                  <p class="plano-preco">R$ 300 <small>por mês</small></p>  <!-- Preço do plano: R$ 300 por mês -->
+                  <ul>  <!-- Abre lista -->
+                    <li>Atendimentos sem limite</li>  <!-- Item da lista: Atendimentos sem limite -->
+                  </ul>  <!-- Fecha lista -->
+                  <a href="#cancelar-assinatura" class="botao-perigo botao-largo">Cancelar assinatura</a>  <!-- Botão de ação perigosa “Cancelar assinatura”, que abre a janela cancelar-assinatura -->
+                </article>  <!-- Fecha cartão de plano -->
+              </div>  <!-- Fecha grade de 3 colunas -->
+              <p class="aviso aviso-alerta aviso-colado"><strong>Exemplo do aviso nos planos com limite:</strong> faltam 2 atendimentos para o limite desta semana. O upgrade vale na hora e cobra a diferença proporcional aos dias restantes do mês.</p>  <!-- Caixa de aviso: Exemplo do aviso nos planos com limite: faltam 2 atendimentos pa… -->
+            </section>  <!-- Fecha seção -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo mb-14">Mensalidades</h2>  <!-- Título da seção: Mensalidades -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Mensalidades">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Ciclo</th><th scope="col">Plano</th><th scope="col">Upgrade</th><th scope="col">Total</th><th scope="col">Vencimento</th><th scope="col">Pagamento</th><th scope="col">Situação</th></tr>  <!-- Títulos das colunas: Ciclo, Plano, Upgrade, Total, Vencimento, Pagamento, Situação -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>07/11 a 06/12</td><td>R$ 300,00</td><td>R$ 0,00</td><td>R$ 300,00</td><td>07/12</td><td>—</td><td><span class="etiqueta etiqueta-alerta">Pendente</span></td></tr>  <!-- Linha da tabela: 07/11 a 06/12 | R$ 300,00 | R$ 0,00 | R$ 300,00 | 07/12 | — | Pendente -->
+                    <tr><td>07/10 a 06/11</td><td>R$ 300,00</td><td>R$ 0,00</td><td>R$ 300,00</td><td>07/11</td><td>06/11 · Pix</td><td><span class="etiqueta etiqueta-ok">Paga</span></td></tr>  <!-- Linha da tabela: 07/10 a 06/11 | R$ 300,00 | R$ 0,00 | R$ 300,00 | 07/11 | 06/11 · Pix | Paga -->
+                    <tr><td>07/09 a 06/10</td><td>R$ 270,00</td><td>R$ 12,00</td><td>R$ 282,00</td><td>07/10</td><td>07/10 · Boleto</td><td><span class="etiqueta etiqueta-ok">Paga</span></td></tr>  <!-- Linha da tabela: 07/09 a 06/10 | R$ 270,00 | R$ 12,00 | R$ 282,00 | 07/10 | 07/10 · Boleto | Paga -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+
+            <section class="secao">  <!-- Abre seção -->
+              <h2 class="secao-titulo mb-14">Semanas fechadas</h2>  <!-- Título da seção: Semanas fechadas -->
+              <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Semanas fechadas">  <!-- Abre área com rolagem da tabela -->
+                <table>  <!-- Abre tabela -->
+                  <thead>  <!-- Abre cabeçalho da tabela -->
+                    <tr><th scope="col">Semana</th><th scope="col">Plano</th><th scope="col">Limite</th><th scope="col">Atendimentos</th><th scope="col">Situação</th></tr>  <!-- Títulos das colunas: Semana, Plano, Limite, Atendimentos, Situação -->
+                  </thead>  <!-- Fecha cabeçalho da tabela -->
+                  <tbody>  <!-- Abre corpo da tabela -->
+                    <tr><td>26/10 a 01/11</td><td>Ilimitado</td><td>Sem limite</td><td>96</td><td><span class="etiqueta etiqueta-alerta">Fechado</span></td></tr>  <!-- Linha da tabela: 26/10 a 01/11 | Ilimitado | Sem limite | 96 | Fechado -->
+                    <tr><td>19/10 a 25/10</td><td>Ilimitado</td><td>Sem limite</td><td>102</td><td><span class="etiqueta etiqueta-alerta">Fechado</span></td></tr>  <!-- Linha da tabela: 19/10 a 25/10 | Ilimitado | Sem limite | 102 | Fechado -->
+                    <tr><td>14/09 a 20/09</td><td>Intermediário</td><td>15</td><td>15</td><td><span class="etiqueta etiqueta-alerta">Fechado</span></td></tr>  <!-- Linha da tabela: 14/09 a 20/09 | Intermediário | 15 | 15 | Fechado -->
+                  </tbody>  <!-- Fecha corpo da tabela -->
+                </table>  <!-- Fecha tabela -->
+              </div>  <!-- Fecha área com rolagem da tabela -->
+            </section>  <!-- Fecha seção -->
+
+            <p class="aviso aviso-alerta mt-26">Com mais de 15 dias de atraso na mensalidade, as unidades ficam suspensas para novos agendamentos. O histórico é mantido e tudo volta ao normal após o pagamento.</p>  <!-- Caixa de aviso: Com mais de 15 dias de atraso na mensalidade, as unidades ficam… -->
+          </div>  <!-- Fecha conteúdo de uma aba -->
+        </div>  <!-- Fecha conteúdo das abas -->
+      </div>  <!-- Fecha grupo de abas -->
+
+      <section id="novo-lancamento" class="modal" aria-label="Novo lançamento">  <!-- Abre janela sobreposta (novo-lancamento) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Novo lançamento</h2>  <!-- Título de seção: Novo lançamento -->
+          <p>Registre uma entrada ou uma saída da unidade.</p>  <!-- Parágrafo: Registre uma entrada ou uma saída da unidade. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-id_salao">Unidade</label>  <!-- Rótulo: Unidade -->
+              <select id="fi-id_salao" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option>Black Barber · Tatuapé</option>  <!-- Opção da lista: Black Barber · Tatuapé -->
+                <option>Black Barber · Penha</option>  <!-- Opção da lista: Black Barber · Penha -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="fi-tipo">Tipo</label>  <!-- Rótulo: Tipo -->
+                <select id="fi-tipo" required>  <!-- Abre a lista de seleção obrigatória -->
+                  <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+                  <option>Entrada</option>  <!-- Opção da lista: Entrada -->
+                  <option>Saída</option>  <!-- Opção da lista: Saída -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="fi-natureza">Natureza da despesa</label>  <!-- Rótulo: Natureza da despesa -->
+                <select id="fi-natureza">  <!-- Abre a lista de seleção -->
+                  <option>Não se aplica</option>  <!-- Opção da lista: Não se aplica -->
+                  <option>Fixa</option>  <!-- Opção da lista: Fixa -->
+                  <option>Variável</option>  <!-- Opção da lista: Variável -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-id_categoria">Categoria</label>  <!-- Rótulo: Categoria -->
+              <select id="fi-id_categoria" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+                <option>Serviços</option>  <!-- Opção da lista: Serviços -->
+                <option>Outras receitas</option>  <!-- Opção da lista: Outras receitas -->
+                <option>Aluguel</option>  <!-- Opção da lista: Aluguel -->
+                <option>Água e energia</option>  <!-- Opção da lista: Água e energia -->
+                <option>Internet</option>  <!-- Opção da lista: Internet -->
+                <option>Produtos de higiene</option>  <!-- Opção da lista: Produtos de higiene -->
+                <option>Materiais de trabalho</option>  <!-- Opção da lista: Materiais de trabalho -->
+                <option>Salários</option>  <!-- Opção da lista: Salários -->
+                <option>Comissões</option>  <!-- Opção da lista: Comissões -->
+                <option>Impostos</option>  <!-- Opção da lista: Impostos -->
+                <option>Manutenção de equipamentos</option>  <!-- Opção da lista: Manutenção de equipamentos -->
+                <option>Marketing</option>  <!-- Opção da lista: Marketing -->
+                <option>Outros</option>  <!-- Opção da lista: Outros -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-descricao">Descrição</label>  <!-- Rótulo: Descrição -->
+              <input type="text" id="fi-descricao" placeholder="Ex: Conta de internet" required maxlength="150" />  <!-- Campo de texto: Descrição, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="fi-valor">Valor (R$)</label>  <!-- Rótulo: Valor (R$) -->
+                <input type="number" id="fi-valor" placeholder="0.00" required min="0.01" step="0.01" />  <!-- Campo numérico: Valor (R$), obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="fi-vencimento">Vencimento</label>  <!-- Rótulo: Vencimento -->
+                <input type="date" id="fi-vencimento" required />  <!-- Campo de data: Vencimento, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-id_conta">Conta</label>  <!-- Rótulo: Conta -->
+              <select id="fi-id_conta" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option>Caixa</option>  <!-- Opção da lista: Caixa -->
+                <option>Banco</option>  <!-- Opção da lista: Banco -->
+                <option>Digital</option>  <!-- Opção da lista: Digital -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-boleto_codigo">Código do boleto (opcional)</label>  <!-- Rótulo: Código do boleto (opcional) -->
+              <input type="text" id="fi-boleto_codigo" placeholder="Linha digitável" maxlength="60" />  <!-- Campo de texto: Código do boleto (opcional) -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Salvar lançamento</button>  <!-- Botão que envia o formulário: Salvar lançamento -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="marcar-pago" class="modal" aria-label="Marcar como pago?">  <!-- Abre janela sobreposta (marcar-pago) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Marcar como pago?</h2>  <!-- Título de seção: Marcar como pago? -->
+          <p>O valor entra no fluxo de caixa na data informada.</p>  <!-- Parágrafo: O valor entra no fluxo de caixa na data informada. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="fi-data_pagamento">Data do pagamento</label>  <!-- Rótulo: Data do pagamento -->
+              <input type="date" id="fi-data_pagamento" required />  <!-- Campo de data: Data do pagamento, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Marcar como pago</button>  <!-- Botão que envia o formulário: Marcar como pago -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="conferir" class="modal" aria-label="Conferir movimentação?">  <!-- Abre janela sobreposta (conferir) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Conferir movimentação?</h2>  <!-- Título de seção: Conferir movimentação? -->
+          <p>Confirme que o valor aparece no extrato da conta.</p>  <!-- Parágrafo: Confirme que o valor aparece no extrato da conta. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Confirmar conferência</button>  <!-- Botão que envia o formulário: Confirmar conferência -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="fechar-mes" class="modal" aria-label="Fechar comissões do mês">  <!-- Abre janela sobreposta (fechar-mes) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Fechar comissões do mês</h2>  <!-- Título de seção: Fechar comissões do mês -->
+          <p>Reúne as comissões em aberto, por funcionário e unidade. Depois do fechamento, elas não mudam.</p>  <!-- Parágrafo: Reúne as comissões em aberto, por funcionário e unidade. Depois… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="co-mes_referencia">Mês de referência</label>  <!-- Rótulo: Mês de referência -->
+              <input type="month" id="co-mes_referencia" required />  <!-- Campo de mês: Mês de referência, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Fechar mês</button>  <!-- Botão que envia o formulário: Fechar mês -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="pagar-fechamento" class="modal" aria-label="Pagar comissão">  <!-- Abre janela sobreposta (pagar-fechamento) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Pagar comissão</h2>  <!-- Título de seção: Pagar comissão -->
+          <p>O pagamento vira uma saída financeira na categoria Comissões.</p>  <!-- Parágrafo: O pagamento vira uma saída financeira na categoria Comissões. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="linha">  <!-- Abre linha de campos -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="co-data_pagamento">Data do pagamento</label>  <!-- Rótulo: Data do pagamento -->
+                <input type="date" id="co-data_pagamento" required />  <!-- Campo de data: Data do pagamento, obrigatório -->
+              </div>  <!-- Fecha campo de formulário -->
+              <div class="campo">  <!-- Abre campo de formulário -->
+                <label for="co-id_conta">Conta</label>  <!-- Rótulo: Conta -->
+                <select id="co-id_conta" required>  <!-- Abre a lista de seleção obrigatória -->
+                  <option>Banco</option>  <!-- Opção da lista: Banco -->
+                  <option>Caixa</option>  <!-- Opção da lista: Caixa -->
+                  <option>Digital</option>  <!-- Opção da lista: Digital -->
+                </select>  <!-- Fecha lista de seleção -->
+              </div>  <!-- Fecha campo de formulário -->
+            </div>  <!-- Fecha linha de campos -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Registrar pagamento</button>  <!-- Botão que envia o formulário: Registrar pagamento -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="trocar-plano" class="modal" aria-label="Trocar de plano">  <!-- Abre janela sobreposta (trocar-plano) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Trocar de plano</h2>  <!-- Título de seção: Trocar de plano -->
+          <p>A troca fica registrada no histórico da assinatura.</p>  <!-- Parágrafo: A troca fica registrada no histórico da assinatura. -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="as-id_plano">Novo plano</label>  <!-- Rótulo: Novo plano -->
+              <select id="as-id_plano" required>  <!-- Abre a lista de seleção obrigatória -->
+                <option>Inicial — R$ 150/mês</option>  <!-- Opção da lista: Inicial — R$ 150/mês -->
+                <option>Intermediário — R$ 270/mês</option>  <!-- Opção da lista: Intermediário — R$ 270/mês -->
+                <option>Ilimitado — R$ 300/mês</option>  <!-- Opção da lista: Ilimitado — R$ 300/mês -->
+              </select>  <!-- Fecha lista de seleção -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao">Confirmar troca</button>  <!-- Botão que envia o formulário: Confirmar troca -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+      <section id="cancelar-assinatura" class="modal" aria-label="Cancelar assinatura?">  <!-- Abre janela sobreposta (cancelar-assinatura) -->
+        <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+          <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+          <h2>Cancelar assinatura?</h2>  <!-- Título de seção: Cancelar assinatura? -->
+          <p>Suas unidades deixam de receber novos atendimentos ao fim do ciclo atual.</p>  <!-- Parágrafo: Suas unidades deixam de receber novos atendimentos ao fim do cic… -->
+          <form class="formulario" action="#salvo">  <!-- Abre o formulário, que mostra o aviso de salvo nesta tela -->
+            <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+              <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+              <button type="submit" class="botao-perigo">Cancelar assinatura</button>  <!-- Botão que envia o formulário: Cancelar assinatura -->
+            </div>  <!-- Fecha botões do formulário -->
+          </form>  <!-- Fecha formulário -->
+        </div>  <!-- Fecha caixa da janela sobreposta -->
+      </section>  <!-- Fecha janela sobreposta -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

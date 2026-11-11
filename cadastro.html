@@ -1,0 +1,63 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Criar conta | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body class="pagina-acesso">  <!-- Abre o corpo da página, o que aparece na tela -->
+    <main class="acesso acesso-largo">  <!-- Abre caixa das telas de acesso -->
+      <img src="img/logo.jpg" alt="Code &amp; Corte" class="acesso-logo" />  <!-- Imagem: Code & Corte -->
+      <div class="cartao">  <!-- Abre cartão -->
+        <h1>Criar conta</h1>  <!-- Título principal: Criar conta -->
+        <form class="formulario" action="index.html">  <!-- Abre o formulário, que envia para index.html -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="tipo">Tipo de conta</label>  <!-- Rótulo: Tipo de conta -->
+            <select id="tipo" required>  <!-- Abre a lista de seleção obrigatória -->
+              <option value="">Selecione</option>  <!-- Opção da lista: Selecione -->
+              <option>Cliente</option>  <!-- Opção da lista: Cliente -->
+              <option>Funcionário</option>  <!-- Opção da lista: Funcionário -->
+              <option>Dono do salão</option>  <!-- Opção da lista: Dono do salão -->
+            </select>  <!-- Fecha lista de seleção -->
+          </div>  <!-- Fecha campo de formulário -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="nome">Nome completo</label>  <!-- Rótulo: Nome completo -->
+            <input type="text" id="nome" placeholder="Digite seu nome" required maxlength="100" autocomplete="name" />  <!-- Campo de texto: Nome completo, obrigatório -->
+          </div>  <!-- Fecha campo de formulário -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="email">E-mail</label>  <!-- Rótulo: E-mail -->
+            <input type="email" id="email" placeholder="voce@email.com" required maxlength="100" autocomplete="email" />  <!-- Campo de e-mail: E-mail, obrigatório -->
+          </div>  <!-- Fecha campo de formulário -->
+          <div class="linha">  <!-- Abre linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="telefone">Telefone</label>  <!-- Rótulo: Telefone -->
+              <input type="tel" id="telefone" placeholder="(11) 99999-0000" autocomplete="tel" />  <!-- Campo de telefone: Telefone -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="data_nascimento">Data de nascimento</label>  <!-- Rótulo: Data de nascimento -->
+              <input type="date" id="data_nascimento" />  <!-- Campo de data: Data de nascimento -->
+            </div>  <!-- Fecha campo de formulário -->
+          </div>  <!-- Fecha linha de campos -->
+          <div class="linha">  <!-- Abre linha de campos -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="senha">Senha</label>  <!-- Rótulo: Senha -->
+              <input type="password" id="senha" required minlength="8" autocomplete="new-password" />  <!-- Campo de senha: Senha, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+            <div class="campo">  <!-- Abre campo de formulário -->
+              <label for="confirmar_senha">Confirmar senha</label>  <!-- Rótulo: Confirmar senha -->
+              <input type="password" id="confirmar_senha" required minlength="8" autocomplete="new-password" />  <!-- Campo de senha: Confirmar senha, obrigatório -->
+            </div>  <!-- Fecha campo de formulário -->
+          </div>  <!-- Fecha linha de campos -->
+          <button type="submit" class="botao botao-largo">Criar conta</button>  <!-- Botão que envia o formulário: Criar conta -->
+        </form>  <!-- Fecha formulário -->
+        <hr class="separador" />  <!-- Linha horizontal que separa os blocos -->
+        <p class="texto-centro">Tem um salão? <a href="perfil.html#contratar" class="link-azul">Conheça os planos</a></p>  <!-- Texto centralizado: Tem um salão? Conheça os planos -->
+        <p class="texto-centro mt-8">Já tem conta? <a href="login.html" class="link-azul">Entrar</a></p>  <!-- Texto centralizado: Já tem conta? Entrar -->
+      </div>  <!-- Fecha cartão -->
+    </main>  <!-- Fecha caixa das telas de acesso -->
+  </body>  <!-- Fecha página de acesso -->
+</html>  <!-- Fecha documento HTML -->

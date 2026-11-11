@@ -1,0 +1,1776 @@
+/* =========================================================
+   CODE & CORTE — folha de estilo única do site
+   Baseada no visual da área do profissional (fundo escuro,
+   azul elétrico e fonte Montserrat), que combina com a logo.
+   ========================================================= */
+
+:root {  /* Regra para: Raiz da página, onde ficam as cores */
+  --fundo: #050b14;  /* Cor de fundo do site */
+  --fundo-cabecalho: #070f1c;  /* Cor de fundo do cabeçalho e do rodapé */
+  --painel: #0a1626;  /* Cor de fundo dos painéis */
+  --painel-escuro: #08111e;  /* Tom mais escuro dos painéis */
+  --campo: #050d18;  /* Cor de fundo dos campos */
+
+  --borda: #123b69;  /* Cor padrão das bordas */
+  --borda-forte: #1c5fa8;  /* Cor das bordas em destaque */
+
+  --azul: #008cff;  /* Azul principal da marca */
+  --azul-claro: #35b8ff;  /* Azul-claro de destaques e foco */
+
+  --texto: #ffffff;  /* Cor principal do texto */
+  --texto-suave: #c3cddb;  /* Cor do texto secundário */
+  --texto-apagado: #8d9bad;  /* Cor do texto de menor importância */
+
+  --verde: #41d99b;  /* Verde de sucesso */
+  --verde-fundo: #0c2e26;  /* Fundo das mensagens de sucesso */
+  --amarelo: #ffc266;  /* Amarelo de alerta */
+  --amarelo-fundo: #33260f;  /* Fundo das mensagens de alerta */
+  --vermelho: #ff8078;  /* Vermelho de erro */
+  --vermelho-fundo: #351719;  /* Fundo das mensagens de erro */
+  --cinza-fundo: #162233;  /* Fundo neutro de etiquetas e trilhos */
+}  /* Fim de regra de Raiz da página, onde ficam as cores */
+
+/* ---------- Base ---------- */
+
+* {  /* Regra para: Todos os elementos */
+  margin: 0;  /* Margem externa: 0 */
+  padding: 0;  /* Espaço interno: 0 */
+  box-sizing: border-box;  /* Inclui borda e preenchimento no tamanho total */
+}  /* Fim de regra de Todos os elementos */
+
+html {  /* Regra para: Documento */
+  scroll-behavior: smooth;  /* Rolagem suave ao ir para âncoras */
+}  /* Fim de regra de Documento */
+
+body {  /* Regra para: Corpo da página */
+  min-height: 100vh;  /* Altura mínima: 100vh */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  background-color: var(--fundo);  /* Cor de fundo: fundo do site */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;  /* Fonte Montserrat, com alternativas se não carregar */
+  font-size: 15px;  /* Tamanho da letra: 15px */
+  line-height: 1.5;  /* Altura da linha de 1,5 vez a letra */
+}  /* Fim de regra de Corpo da página */
+
+a {  /* Regra para: Links */
+  color: inherit;  /* Cor do texto: herdada do elemento pai */
+  text-decoration: none;  /* Tira o sublinhado */
+}  /* Fim de regra de Links */
+
+ul {  /* Regra para: Listas */
+  list-style: none;  /* Tira os marcadores da lista */
+}  /* Fim de regra de Listas */
+
+img {  /* Regra para: Imagens */
+  max-width: 100%;  /* Largura máxima: 100% */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+}  /* Fim de regra de Imagens */
+
+h1,  /* Regra para: Títulos h1 */
+h2,  /* Regra para: Títulos h2 */
+h3 {  /* Regra para: Títulos h3 */
+  line-height: 1.2;  /* Altura da linha de 1,2 vez a letra */
+}  /* Fim de regra de Títulos h1 */
+
+fieldset {  /* Regra para: Grupos de campos */
+  border: 0;  /* Borda removida */
+}  /* Fim de regra de Grupos de campos */
+
+:focus-visible {  /* Regra para: Qualquer elemento com foco do teclado */
+  outline: 2px solid var(--azul-claro);  /* Contorno azul para quem navega pelo teclado */
+  outline-offset: 2px;  /* Afasta o contorno em 2px */
+}  /* Fim de regra de Qualquer elemento com foco do teclado */
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {  /* Regra para: Cabeçalho do site */
+  background-color: var(--fundo-cabecalho);  /* Cor de fundo: fundo do cabeçalho */
+  border-bottom: 1px solid var(--borda);  /* Borda inferior de 1px na cor azul da borda */
+}  /* Fim de regra de Cabeçalho do site */
+
+.navegacao {  /* Regra para: Barra de navegação */
+  max-width: 1300px;  /* Largura máxima: 1300px */
+  min-height: 76px;  /* Altura mínima: 76px */
+  margin: 0 auto;  /* Margem externa: 0 auto */
+  padding: 8px 40px;  /* Espaço interno: 8px 40px */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 24px;  /* Espaço entre os filhos: 24px */
+}  /* Fim de regra de Barra de navegação */
+
+.logo img {  /* Regra para: Imagens dentro do contexto: logo */
+  width: 64px;  /* Largura: 64px */
+  height: 64px;  /* Altura: 64px */
+  border-radius: 8px;  /* Cantos arredondados de 8px */
+}  /* Fim de regra de Imagens dentro do contexto: logo */
+
+.lista-navegacao {  /* Regra para: Lista do menu */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 26px;  /* Espaço entre os filhos: 26px */
+}  /* Fim de regra de Lista do menu */
+
+.link-navegacao {  /* Regra para: Link do menu */
+  position: relative;  /* Serve de referência para filhos posicionados */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  padding: 10px 0;  /* Espaço interno: 10px 0 */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+  transition: color 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Link do menu */
+
+.link-navegacao::after {  /* Regra para: Link do menu pseudoelemento depois do conteúdo */
+  content: "";  /* Cria o pseudoelemento vazio */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  left: 0;  /* Distância da esquerda: 0 */
+  bottom: 0;  /* Distância da base: 0 */
+  width: 0;  /* Largura: 0 */
+  height: 2px;  /* Altura: 2px */
+  background-color: var(--azul);  /* Cor de fundo: azul principal */
+  box-shadow: 0 0 8px var(--azul);  /* Brilho azul em volta do elemento */
+  transition: width 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Link do menu pseudoelemento depois do conteúdo */
+
+.link-navegacao:hover,  /* Regra para: Link do menu ao passar o mouse */
+.link-navegacao[aria-current="page"] {  /* Regra para: Link do menu da página atual */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Link do menu ao passar o mouse */
+
+.link-navegacao:hover::after,  /* Regra para: Link do menu ao passar o mouse pseudoelemento depois do conteúdo */
+.link-navegacao[aria-current="page"]::after {  /* Regra para: Link do menu pseudoelemento depois do conteúdo da página atual */
+  width: 100%;  /* Largura: 100% */
+}  /* Fim de regra de Link do menu ao passar o mouse pseudoelemento depois do conteúdo */
+
+.acoes-cabecalho {  /* Regra para: Ações do cabeçalho */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+}  /* Fim de regra de Ações do cabeçalho */
+
+.perfil {  /* Regra para: Botão Perfil */
+  padding: 9px 18px;  /* Espaço interno: 9px 18px */
+  border: 1px solid var(--borda-forte);  /* Borda de 1px na cor azul de borda forte */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+  transition: border-color 0.2s, box-shadow 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Botão Perfil */
+
+.perfil:hover,  /* Regra para: Botão Perfil ao passar o mouse */
+.perfil[aria-current="page"] {  /* Regra para: Botão Perfil da página atual */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.35);  /* Brilho azul em volta do elemento */
+}  /* Fim de regra de Botão Perfil ao passar o mouse */
+
+.sair {  /* Regra para: Link Sair */
+  padding: 9px 4px;  /* Espaço interno: 9px 4px */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+}  /* Fim de regra de Link Sair */
+
+.sair:hover {  /* Regra para: Link Sair ao passar o mouse */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Link Sair ao passar o mouse */
+
+/* ---------- Estrutura da página ---------- */
+
+.principal {  /* Regra para: Conteúdo principal */
+  flex: 1;  /* Ocupa o espaço disponível */
+  width: 100%;  /* Largura: 100% */
+  max-width: 1300px;  /* Largura máxima: 1300px */
+  margin: 0 auto;  /* Margem externa: 0 auto */
+  padding: 44px 40px 72px;  /* Espaço interno: 44px 40px 72px */
+}  /* Fim de regra de Conteúdo principal */
+
+.rodape {  /* Regra para: Rodapé */
+  padding: 22px 40px;  /* Espaço interno: 22px 40px */
+  border-top: 1px solid var(--borda);  /* Borda superior de 1px na cor azul da borda */
+  background-color: var(--fundo-cabecalho);  /* Cor de fundo: fundo do cabeçalho */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Rodapé */
+
+.cabecalho-pagina {  /* Regra para: Topo da página */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  align-items: flex-end;  /* Alinha os filhos no final no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 18px;  /* Espaço entre os filhos: 18px */
+  margin-bottom: 30px;  /* Margem inferior: 30px */
+}  /* Fim de regra de Topo da página */
+
+.caminho {  /* Regra para: Caminho da página */
+  margin-bottom: 8px;  /* Margem inferior: 8px */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Caminho da página */
+
+.titulo {  /* Regra para: Título da página */
+  font-size: 34px;  /* Tamanho da letra: 34px */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+  letter-spacing: -0.5px;  /* Espaço entre as letras: -0.5px */
+}  /* Fim de regra de Título da página */
+
+.descricao {  /* Regra para: Descrição da página */
+  max-width: 70ch;  /* Largura máxima: 70ch */
+  margin-top: 8px;  /* Margem superior: 8px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+}  /* Fim de regra de Descrição da página */
+
+.secao {  /* Regra para: Seção */
+  margin-top: 34px;  /* Margem superior: 34px */
+}  /* Fim de regra de Seção */
+
+.secao-titulo {  /* Regra para: Título da seção */
+  margin-bottom: 6px;  /* Margem inferior: 6px */
+  font-size: 20px;  /* Tamanho da letra: 20px */
+}  /* Fim de regra de Título da seção */
+
+.secao-descricao {  /* Regra para: Descrição da seção */
+  margin-bottom: 16px;  /* Margem inferior: 16px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Descrição da seção */
+
+.grade-2,  /* Regra para: Grade de 2 colunas */
+.grade-3,  /* Regra para: Grade de 3 colunas */
+.grade-4 {  /* Regra para: Grade de 4 colunas */
+  display: grid;  /* Organiza os filhos em grade */
+  gap: 18px;  /* Espaço entre os filhos: 18px */
+}  /* Fim de regra de Grade de 2 colunas */
+
+.grade-2 {  /* Regra para: Grade de 2 colunas */
+  grid-template-columns: repeat(2, minmax(0, 1fr));  /* Cria 2 colunas de mesma largura */
+}  /* Fim de regra de Grade de 2 colunas */
+
+.grade-3 {  /* Regra para: Grade de 3 colunas */
+  grid-template-columns: repeat(3, minmax(0, 1fr));  /* Cria 3 colunas de mesma largura */
+}  /* Fim de regra de Grade de 3 colunas */
+
+.grade-4 {  /* Regra para: Grade de 4 colunas */
+  grid-template-columns: repeat(4, minmax(0, 1fr));  /* Cria 4 colunas de mesma largura */
+}  /* Fim de regra de Grade de 4 colunas */
+
+.empilhado {  /* Regra para: Bloco empilhado */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  gap: 18px;  /* Espaço entre os filhos: 18px */
+}  /* Fim de regra de Bloco empilhado */
+
+/* ---------- Cartões ---------- */
+
+.cartao {  /* Regra para: Cartão */
+  padding: 24px;  /* Espaço interno: 24px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background: linear-gradient(110deg, var(--painel) 0%, var(--painel-escuro) 100%);  /* Fundo em degradê linear */
+}  /* Fim de regra de Cartão */
+
+.cartao h2 {  /* Regra para: Títulos h2 dentro do contexto: cartão */
+  margin-bottom: 14px;  /* Margem inferior: 14px */
+  font-size: 18px;  /* Tamanho da letra: 18px */
+}  /* Fim de regra de Títulos h2 dentro do contexto: cartão */
+
+.faixa {  /* Regra para: Faixa de destaque */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 16px;  /* Espaço entre os filhos: 16px */
+  padding: 22px 24px;  /* Espaço interno: 22px 24px */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background: linear-gradient(110deg, var(--painel) 0%, var(--painel-escuro) 100%);  /* Fundo em degradê linear */
+}  /* Fim de regra de Faixa de destaque */
+
+.faixa h2 {  /* Regra para: Títulos h2 dentro do contexto: faixa de destaque */
+  margin-bottom: 4px;  /* Margem inferior: 4px */
+  font-size: 18px;  /* Tamanho da letra: 18px */
+}  /* Fim de regra de Títulos h2 dentro do contexto: faixa de destaque */
+
+.faixa p {  /* Regra para: Parágrafo dentro do contexto: faixa de destaque */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Parágrafo dentro do contexto: faixa de destaque */
+
+.caixa {  /* Regra para: Caixa de resumo com número */
+  padding: 18px 20px;  /* Espaço interno: 18px 20px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-top: 3px solid var(--azul);  /* Borda superior de 3px na cor azul principal */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+}  /* Fim de regra de Caixa de resumo com número */
+
+.caixa p {  /* Regra para: Parágrafo dentro do contexto: caixa de resumo com número */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Parágrafo dentro do contexto: caixa de resumo com número */
+
+.caixa strong {  /* Regra para: Texto em destaque dentro do contexto: caixa de resumo com número */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  margin-top: 6px;  /* Margem superior: 6px */
+  font-size: 24px;  /* Tamanho da letra: 24px */
+  font-variant-numeric: tabular-nums;  /* Números com a mesma largura, para alinhar */
+}  /* Fim de regra de Texto em destaque dentro do contexto: caixa de resumo com número */
+
+.cor-verde {  /* Regra para: Texto verde */
+  color: var(--verde);  /* Cor do texto: verde */
+}  /* Fim de regra de Texto verde */
+
+.cor-vermelho {  /* Regra para: Texto vermelho */
+  color: var(--vermelho);  /* Cor do texto: vermelho */
+}  /* Fim de regra de Texto vermelho */
+
+.cor-azul {  /* Regra para: Texto azul */
+  color: var(--azul-claro);  /* Cor do texto: azul-claro */
+}  /* Fim de regra de Texto azul */
+
+/* ---------- Botões ---------- */
+
+.botao,  /* Regra para: Botão principal */
+.botao-secundario,  /* Regra para: Botão secundário */
+.botao-perigo {  /* Regra para: Botão de ação perigosa */
+  display: inline-block;  /* Fica na linha do texto, aceitando largura e altura */
+  padding: 11px 20px;  /* Espaço interno: 11px 20px */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  font-family: inherit;  /* Usa a mesma fonte do elemento pai */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 700;  /* Peso da letra: negrito */
+  text-align: center;  /* Alinha o texto ao centro */
+  cursor: pointer;  /* Cursor de mãozinha */
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Botão principal */
+
+.botao {  /* Regra para: Botão principal */
+  border: 1px solid #24b5ff;  /* Borda de 1px na cor código #24b5ff */
+  background: linear-gradient(135deg, #006cff, #0090e8);  /* Fundo em degradê linear */
+  color: #ffffff;  /* Cor do texto: branco */
+}  /* Fim de regra de Botão principal */
+
+.botao:hover {  /* Regra para: Botão principal ao passar o mouse */
+  transform: translateY(-1px);  /* Move 1px para cima */
+  box-shadow: 0 0 22px rgba(0, 150, 255, 0.45);  /* Brilho azul em volta do elemento */
+}  /* Fim de regra de Botão principal ao passar o mouse */
+
+.botao-secundario {  /* Regra para: Botão secundário */
+  border: 1px solid var(--borda-forte);  /* Borda de 1px na cor azul de borda forte */
+  background-color: transparent;  /* Cor de fundo: transparente */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Botão secundário */
+
+.botao-secundario:hover {  /* Regra para: Botão secundário ao passar o mouse */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Botão secundário ao passar o mouse */
+
+.botao-perigo {  /* Regra para: Botão de ação perigosa */
+  border: 1px solid var(--vermelho);  /* Borda de 1px na cor vermelho */
+  background-color: transparent;  /* Cor de fundo: transparente */
+  color: var(--vermelho);  /* Cor do texto: vermelho */
+}  /* Fim de regra de Botão de ação perigosa */
+
+.botao-perigo:hover {  /* Regra para: Botão de ação perigosa ao passar o mouse */
+  background-color: var(--vermelho-fundo);  /* Cor de fundo: vermelho-escuro */
+}  /* Fim de regra de Botão de ação perigosa ao passar o mouse */
+
+.botao-pequeno {  /* Regra para: Botão pequeno */
+  padding: 6px 12px;  /* Espaço interno: 6px 12px */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Botão pequeno */
+
+.botao-largo {  /* Regra para: Botão de largura total */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  width: 100%;  /* Largura: 100% */
+}  /* Fim de regra de Botão de largura total */
+
+.grupo-botoes {  /* Regra para: Grupo de botões */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+}  /* Fim de regra de Grupo de botões */
+
+.link-azul {  /* Regra para: Link azul */
+  color: var(--azul-claro);  /* Cor do texto: azul-claro */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+}  /* Fim de regra de Link azul */
+
+.link-azul:hover {  /* Regra para: Link azul ao passar o mouse */
+  text-decoration: underline;  /* Sublinha o texto */
+}  /* Fim de regra de Link azul ao passar o mouse */
+
+/* ---------- Etiquetas de situação ---------- */
+
+.etiqueta {  /* Regra para: Etiqueta de situação */
+  display: inline-block;  /* Fica na linha do texto, aceitando largura e altura */
+  padding: 3px 10px;  /* Espaço interno: 3px 10px */
+  border-radius: 999px;  /* Deixa os cantos em formato de pílula */
+  background-color: var(--cinza-fundo);  /* Cor de fundo: cinza-azulado */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 12px;  /* Tamanho da letra: 12px */
+  font-weight: 700;  /* Peso da letra: negrito */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+}  /* Fim de regra de Etiqueta de situação */
+
+.etiqueta-ok {  /* Regra para: Etiqueta verde */
+  background-color: var(--verde-fundo);  /* Cor de fundo: verde-escuro */
+  color: var(--verde);  /* Cor do texto: verde */
+}  /* Fim de regra de Etiqueta verde */
+
+.etiqueta-alerta {  /* Regra para: Etiqueta amarela */
+  background-color: var(--amarelo-fundo);  /* Cor de fundo: marrom-escuro de alerta */
+  color: var(--amarelo);  /* Cor do texto: amarelo */
+}  /* Fim de regra de Etiqueta amarela */
+
+.etiqueta-erro {  /* Regra para: Etiqueta vermelha */
+  background-color: var(--vermelho-fundo);  /* Cor de fundo: vermelho-escuro */
+  color: var(--vermelho);  /* Cor do texto: vermelho */
+}  /* Fim de regra de Etiqueta vermelha */
+
+.etiqueta-info {  /* Regra para: Etiqueta azul */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--azul-claro);  /* Cor do texto: azul-claro */
+}  /* Fim de regra de Etiqueta azul */
+
+/* ---------- Avisos ---------- */
+
+.aviso {  /* Regra para: Caixa de aviso */
+  padding: 13px 16px;  /* Espaço interno: 13px 16px */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+  border-radius: 8px;  /* Cantos arredondados de 8px */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: #cfe8ff;  /* Cor do texto: código #cfe8ff */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Caixa de aviso */
+
+.aviso-alerta {  /* Regra para: Aviso amarelo */
+  background-color: var(--amarelo-fundo);  /* Cor de fundo: marrom-escuro de alerta */
+  color: #ffe0ad;  /* Cor do texto: código #ffe0ad */
+}  /* Fim de regra de Aviso amarelo */
+
+.aviso-erro {  /* Regra para: Aviso vermelho */
+  background-color: var(--vermelho-fundo);  /* Cor de fundo: vermelho-escuro */
+  color: #ffd2ce;  /* Cor do texto: código #ffd2ce */
+}  /* Fim de regra de Aviso vermelho */
+
+.aviso-ok {  /* Regra para: Aviso verde */
+  background-color: var(--verde-fundo);  /* Cor de fundo: verde-escuro */
+  color: #c4f5df;  /* Cor do texto: código #c4f5df */
+}  /* Fim de regra de Aviso verde */
+
+/* Aparece quando um formulário envia para #salvo */
+.aviso-salvo {  /* Regra para: Aviso de que salvou */
+  display: none;  /* Esconde o elemento */
+}  /* Fim de regra de Aviso de que salvou */
+
+.aviso-salvo:target {  /* Regra para: Aviso de que salvou quando é o alvo do link */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+}  /* Fim de regra de Aviso de que salvou quando é o alvo do link */
+
+/* ---------- Tabelas ---------- */
+
+.tabela-rolagem {  /* Regra para: Área com rolagem da tabela */
+  overflow-x: auto;  /* Mostra rolagem horizontal se precisar */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+}  /* Fim de regra de Área com rolagem da tabela */
+
+table {  /* Regra para: Tabelas */
+  width: 100%;  /* Largura: 100% */
+  border-collapse: collapse;  /* Junta as bordas das células */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Tabelas */
+
+th,  /* Regra para: Títulos das colunas */
+td {  /* Regra para: Células */
+  padding: 12px 14px;  /* Espaço interno: 12px 14px */
+  border-bottom: 1px solid var(--borda);  /* Borda inferior de 1px na cor azul da borda */
+  text-align: left;  /* Alinha o texto à esquerda */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+}  /* Fim de regra de Títulos das colunas */
+
+td.quebra {  /* Regra para: Células com texto longo */
+  min-width: 220px;  /* Largura mínima: 220px */
+  white-space: normal;  /* Permite quebrar o texto em várias linhas */
+}  /* Fim de regra de Células com texto longo */
+
+th {  /* Regra para: Títulos das colunas */
+  background-color: #0d2138;  /* Cor de fundo: código #0d2138 */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 12px;  /* Tamanho da letra: 12px */
+  letter-spacing: 0.04em;  /* Espaço entre as letras: 0.04em */
+  text-transform: uppercase;  /* Deixa o texto em maiúsculas */
+}  /* Fim de regra de Títulos das colunas */
+
+tr:last-child td {  /* Regra para: Células dentro do contexto: linhas da tabela último do grupo */
+  border-bottom: 0;  /* Borda inferior removida */
+}  /* Fim de regra de Células dentro do contexto: linhas da tabela último do grupo */
+
+.fundo-barra {  /* Regra para: Trilho da barra do gráfico */
+  min-width: 140px;  /* Largura mínima: 140px */
+  height: 12px;  /* Altura: 12px */
+  border-radius: 4px;  /* Cantos arredondados de 4px */
+  background-color: var(--cinza-fundo);  /* Cor de fundo: cinza-azulado */
+}  /* Fim de regra de Trilho da barra do gráfico */
+
+.barra {  /* Regra para: Barra preenchida do gráfico */
+  height: 100%;  /* Altura: 100% */
+  border-radius: 4px;  /* Cantos arredondados de 4px */
+  background: linear-gradient(90deg, #006cff, #00a8ff);  /* Fundo em degradê linear */
+}  /* Fim de regra de Barra preenchida do gráfico */
+
+.barra-alerta {  /* Regra para: Barra amarela do gráfico */
+  background: linear-gradient(90deg, #e08a00, #ffc266);  /* Fundo em degradê linear */
+}  /* Fim de regra de Barra amarela do gráfico */
+
+/* ---------- Formulários ---------- */
+
+.formulario {  /* Regra para: Formulário */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  gap: 16px;  /* Espaço entre os filhos: 16px */
+}  /* Fim de regra de Formulário */
+
+.campo {  /* Regra para: Campo de formulário */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex: 1;  /* Ocupa o espaço disponível */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  gap: 6px;  /* Espaço entre os filhos: 6px */
+  min-width: 0;  /* Largura mínima: 0 */
+}  /* Fim de regra de Campo de formulário */
+
+.campo label,  /* Regra para: Rótulos dentro do contexto: campo de formulário */
+.rotulo {  /* Regra para: Rótulo */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+}  /* Fim de regra de Rótulos dentro do contexto: campo de formulário */
+
+input,  /* Regra para: Campos */
+select,  /* Regra para: Listas de seleção */
+textarea {  /* Regra para: Áreas de texto */
+  width: 100%;  /* Largura: 100% */
+  padding: 11px 12px;  /* Espaço interno: 11px 12px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  background-color: var(--campo);  /* Cor de fundo: azul quase preto dos campos */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+  color-scheme: dark;  /* Usa controles nativos em tema escuro */
+  font-family: inherit;  /* Usa a mesma fonte do elemento pai */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Campos */
+
+input::placeholder,  /* Regra para: Campos texto de exemplo */
+textarea::placeholder {  /* Regra para: Áreas de texto texto de exemplo */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+}  /* Fim de regra de Campos texto de exemplo */
+
+input:hover,  /* Regra para: Campos ao passar o mouse */
+select:hover,  /* Regra para: Listas de seleção ao passar o mouse */
+textarea:hover {  /* Regra para: Áreas de texto ao passar o mouse */
+  border-color: var(--borda-forte);  /* Cor da borda: azul de borda forte */
+}  /* Fim de regra de Campos ao passar o mouse */
+
+.linha {  /* Regra para: Linha de campos */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+}  /* Fim de regra de Linha de campos */
+
+.linha .campo {  /* Regra para: Campo de formulário dentro do contexto: linha de campos */
+  flex: 1 1 170px;  /* Cresce a partir da largura base de 170px */
+}  /* Fim de regra de Campo de formulário dentro do contexto: linha de campos */
+
+.acoes-formulario {  /* Regra para: Botões do formulário */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  justify-content: flex-end;  /* Distribui os filhos no final */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+}  /* Fim de regra de Botões do formulário */
+
+.ajuda {  /* Regra para: Texto de ajuda */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 12px;  /* Tamanho da letra: 12px */
+}  /* Fim de regra de Texto de ajuda */
+
+.opcao {  /* Regra para: Opção selecionável */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 12px;  /* Espaço entre os filhos: 12px */
+  padding: 12px 14px;  /* Espaço interno: 12px 14px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 8px;  /* Cantos arredondados de 8px */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Opção selecionável */
+
+.opcao:hover {  /* Regra para: Opção selecionável ao passar o mouse */
+  border-color: var(--borda-forte);  /* Cor da borda: azul de borda forte */
+}  /* Fim de regra de Opção selecionável ao passar o mouse */
+
+.opcao:has(input:checked) {  /* Regra para: Opção selecionável quando está marcada */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  background-color: #0b2340;  /* Cor de fundo: código #0b2340 */
+}  /* Fim de regra de Opção selecionável quando está marcada */
+
+.opcao input {  /* Regra para: Campos dentro do contexto: opção selecionável */
+  width: 18px;  /* Largura: 18px */
+  height: 18px;  /* Altura: 18px */
+  flex: none;  /* Não cresce nem encolhe */
+  accent-color: var(--azul);  /* Cor do controle marcado: azul principal */
+}  /* Fim de regra de Campos dentro do contexto: opção selecionável */
+
+.opcao-texto {  /* Regra para: Texto da opção */
+  flex: 1;  /* Ocupa o espaço disponível */
+}  /* Fim de regra de Texto da opção */
+
+.opcao-texto small {  /* Regra para: Texto menor dentro do contexto: texto da opção */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 12px;  /* Tamanho da letra: 12px */
+}  /* Fim de regra de Texto menor dentro do contexto: texto da opção */
+
+.opcao-preco {  /* Regra para: Preço da opção */
+  font-weight: 700;  /* Peso da letra: negrito */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+}  /* Fim de regra de Preço da opção */
+
+/* ---------- Abas (só CSS, com botões de opção) ---------- */
+
+.abas > input {  /* Regra para: Campos dentro do contexto: grupo de abas */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  width: 1px;  /* Largura: 1px */
+  height: 1px;  /* Altura: 1px */
+  opacity: 0;  /* Deixa o elemento invisível */
+}  /* Fim de regra de Campos dentro do contexto: grupo de abas */
+
+.abas-rotulos {  /* Regra para: Linha com os botões das abas */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+}  /* Fim de regra de Linha com os botões das abas */
+
+.abas-rotulos label {  /* Regra para: Rótulos dentro do contexto: linha com os botões das abas */
+  padding: 9px 18px;  /* Espaço interno: 9px 18px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  background-color: var(--painel-escuro);  /* Cor de fundo: fundo escuro dos painéis */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Rótulos dentro do contexto: linha com os botões das abas */
+
+.abas-rotulos label:hover {  /* Regra para: Rótulos ao passar o mouse dentro do contexto: linha com os botões das abas */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Rótulos ao passar o mouse dentro do contexto: linha com os botões das abas */
+
+.painel-aba {  /* Regra para: Conteúdo de uma aba */
+  display: none;  /* Esconde o elemento */
+}  /* Fim de regra de Conteúdo de uma aba */
+
+.abas > input:nth-of-type(1):checked ~ .abas-rotulos label:nth-child(1),  /* Regra para: Rótulos número 1 dentro do contexto: grupo de abas, campos número 1 marcado, linha com os botões das abas */
+.abas > input:nth-of-type(2):checked ~ .abas-rotulos label:nth-child(2),  /* Regra para: Rótulos número 2 dentro do contexto: grupo de abas, campos número 2 marcado, linha com os botões das abas */
+.abas > input:nth-of-type(3):checked ~ .abas-rotulos label:nth-child(3),  /* Regra para: Rótulos número 3 dentro do contexto: grupo de abas, campos número 3 marcado, linha com os botões das abas */
+.abas > input:nth-of-type(4):checked ~ .abas-rotulos label:nth-child(4) {  /* Regra para: Rótulos número 4 dentro do contexto: grupo de abas, campos número 4 marcado, linha com os botões das abas */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Rótulos número 1 dentro do contexto: grupo de abas, campos número 1 marcado, linha com os botões das abas */
+
+.abas > input:nth-of-type(1):focus-visible ~ .abas-rotulos label:nth-child(1),  /* Regra para: Rótulos número 1 dentro do contexto: grupo de abas, campos número 1 com foco do teclado, linha com os botões das abas */
+.abas > input:nth-of-type(2):focus-visible ~ .abas-rotulos label:nth-child(2),  /* Regra para: Rótulos número 2 dentro do contexto: grupo de abas, campos número 2 com foco do teclado, linha com os botões das abas */
+.abas > input:nth-of-type(3):focus-visible ~ .abas-rotulos label:nth-child(3),  /* Regra para: Rótulos número 3 dentro do contexto: grupo de abas, campos número 3 com foco do teclado, linha com os botões das abas */
+.abas > input:nth-of-type(4):focus-visible ~ .abas-rotulos label:nth-child(4) {  /* Regra para: Rótulos número 4 dentro do contexto: grupo de abas, campos número 4 com foco do teclado, linha com os botões das abas */
+  outline: 2px solid var(--azul-claro);  /* Contorno azul para quem navega pelo teclado */
+  outline-offset: 2px;  /* Afasta o contorno em 2px */
+}  /* Fim de regra de Rótulos número 1 dentro do contexto: grupo de abas, campos número 1 com foco do teclado, linha com os botões das abas */
+
+.abas > input:nth-of-type(1):checked ~ .paineis > .painel-aba:nth-child(1),  /* Regra para: Conteúdo de uma aba número 1 dentro do contexto: grupo de abas, campos número 1 marcado, conteúdo das abas */
+.abas > input:nth-of-type(2):checked ~ .paineis > .painel-aba:nth-child(2),  /* Regra para: Conteúdo de uma aba número 2 dentro do contexto: grupo de abas, campos número 2 marcado, conteúdo das abas */
+.abas > input:nth-of-type(3):checked ~ .paineis > .painel-aba:nth-child(3),  /* Regra para: Conteúdo de uma aba número 3 dentro do contexto: grupo de abas, campos número 3 marcado, conteúdo das abas */
+.abas > input:nth-of-type(4):checked ~ .paineis > .painel-aba:nth-child(4) {  /* Regra para: Conteúdo de uma aba número 4 dentro do contexto: grupo de abas, campos número 4 marcado, conteúdo das abas */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+}  /* Fim de regra de Conteúdo de uma aba número 1 dentro do contexto: grupo de abas, campos número 1 marcado, conteúdo das abas */
+
+/* Sub-menu dentro de uma área */
+
+.submenu {  /* Regra para: Submenu */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-bottom: 24px;  /* Margem inferior: 24px */
+}  /* Fim de regra de Submenu */
+
+.submenu a {  /* Regra para: Links dentro do contexto: submenu */
+  padding: 8px 16px;  /* Espaço interno: 8px 16px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Links dentro do contexto: submenu */
+
+.submenu a:hover {  /* Regra para: Links ao passar o mouse dentro do contexto: submenu */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Links ao passar o mouse dentro do contexto: submenu */
+
+.submenu a[aria-current="page"] {  /* Regra para: Links da página atual dentro do contexto: submenu */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Links da página atual dentro do contexto: submenu */
+
+/* ---------- Janela sobreposta (abre com :target) ---------- */
+
+.modal {  /* Regra para: Janela sobreposta */
+  position: fixed;  /* Fica fixo em relação à janela */
+  z-index: 10;  /* Ordem de sobreposição: 10 */
+  inset: 0;  /* Encosta nos quatro lados */
+  display: none;  /* Esconde o elemento */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  padding: 20px;  /* Espaço interno: 20px */
+  background-color: rgba(2, 6, 12, 0.8);  /* Cor de fundo: preto com 80% de opacidade */
+}  /* Fim de regra de Janela sobreposta */
+
+.modal:target {  /* Regra para: Janela sobreposta quando é o alvo do link */
+  display: flex;  /* Organiza os filhos com flexbox */
+}  /* Fim de regra de Janela sobreposta quando é o alvo do link */
+
+.modal-caixa {  /* Regra para: Caixa da janela sobreposta */
+  position: relative;  /* Serve de referência para filhos posicionados */
+  width: 100%;  /* Largura: 100% */
+  max-width: 560px;  /* Largura máxima: 560px */
+  max-height: 100%;  /* Altura máxima: 100% */
+  overflow-y: auto;  /* Mostra rolagem vertical se precisar */
+  padding: 26px;  /* Espaço interno: 26px */
+  border: 1px solid var(--borda-forte);  /* Borda de 1px na cor azul de borda forte */
+  border-radius: 12px;  /* Cantos arredondados de 12px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+}  /* Fim de regra de Caixa da janela sobreposta */
+
+.modal-caixa h2 {  /* Regra para: Títulos h2 dentro do contexto: caixa da janela sobreposta */
+  margin-bottom: 6px;  /* Margem inferior: 6px */
+  padding-right: 34px;  /* Espaço interno à direita: 34px */
+  font-size: 20px;  /* Tamanho da letra: 20px */
+}  /* Fim de regra de Títulos h2 dentro do contexto: caixa da janela sobreposta */
+
+.modal-caixa > p {  /* Regra para: Parágrafo dentro do contexto: caixa da janela sobreposta */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Parágrafo dentro do contexto: caixa da janela sobreposta */
+
+.fechar {  /* Regra para: Botão X de fechar */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  top: 16px;  /* Distância do topo: 16px */
+  right: 18px;  /* Distância da direita: 18px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 26px;  /* Tamanho da letra: 26px */
+  line-height: 1;  /* Altura da linha igual à da letra */
+}  /* Fim de regra de Botão X de fechar */
+
+.fechar:hover {  /* Regra para: Botão X de fechar ao passar o mouse */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Botão X de fechar ao passar o mouse */
+
+/* ---------- Página inicial e busca ---------- */
+
+.destaque-inicial {  /* Regra para: Destaque da página inicial */
+  padding: 56px 40px;  /* Espaço interno: 56px 40px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 14px;  /* Cantos arredondados de 14px */
+  background: radial-gradient(circle at 50% 0%, #0d3564 0%, var(--painel-escuro) 70%);  /* Fundo em degradê circular */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Destaque da página inicial */
+
+.destaque-inicial h1 {  /* Regra para: Títulos h1 dentro do contexto: destaque da página inicial */
+  font-size: clamp(30px, 4.4vw, 50px);  /* Tamanho da letra entre 30px e 50px, conforme a tela */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+  letter-spacing: -0.5px;  /* Espaço entre as letras: -0.5px */
+}  /* Fim de regra de Títulos h1 dentro do contexto: destaque da página inicial */
+
+.destaque-inicial p {  /* Regra para: Parágrafo dentro do contexto: destaque da página inicial */
+  margin: 12px 0 26px;  /* Margem externa: 12px 0 26px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 17px;  /* Tamanho da letra: 17px */
+}  /* Fim de regra de Parágrafo dentro do contexto: destaque da página inicial */
+
+.busca-principal {  /* Regra para: Busca da página inicial */
+  display: flex;  /* Organiza os filhos com flexbox */
+  max-width: 660px;  /* Largura máxima: 660px */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin: 0 auto;  /* Margem externa: 0 auto */
+}  /* Fim de regra de Busca da página inicial */
+
+.lista-categorias {  /* Regra para: Lista de categorias de serviço */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+}  /* Fim de regra de Lista de categorias de serviço */
+
+.lista-categorias a {  /* Regra para: Links dentro do contexto: lista de categorias de serviço */
+  flex: 1 1 130px;  /* Cresce a partir da largura base de 130px */
+  padding: 16px;  /* Espaço interno: 16px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+  text-align: center;  /* Alinha o texto ao centro */
+  transition: border-color 0.2s, transform 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Links dentro do contexto: lista de categorias de serviço */
+
+.lista-categorias a:hover {  /* Regra para: Links ao passar o mouse dentro do contexto: lista de categorias de serviço */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  transform: translateY(-3px);  /* Move 3px para cima */
+}  /* Fim de regra de Links ao passar o mouse dentro do contexto: lista de categorias de serviço */
+
+.salao-cartao {  /* Regra para: Cartão de salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  overflow: hidden;  /* Corta o que passar da caixa */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+  transition: border-color 0.2s, transform 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Cartão de salão */
+
+.salao-cartao:hover {  /* Regra para: Cartão de salão ao passar o mouse */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  transform: translateY(-3px);  /* Move 3px para cima */
+}  /* Fim de regra de Cartão de salão ao passar o mouse */
+
+.capa {  /* Regra para: Capa do cartão do salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  height: 110px;  /* Altura: 110px */
+  background: linear-gradient(135deg, #0d3564, #071a33);  /* Fundo em degradê linear */
+  color: #7cc4ff;  /* Cor do texto: código #7cc4ff */
+  font-size: 34px;  /* Tamanho da letra: 34px */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+}  /* Fim de regra de Capa do cartão do salão */
+
+.salao-corpo {  /* Regra para: Informações do cartão de salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex: 1;  /* Ocupa o espaço disponível */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  gap: 4px;  /* Espaço entre os filhos: 4px */
+  padding: 18px;  /* Espaço interno: 18px */
+}  /* Fim de regra de Informações do cartão de salão */
+
+.salao-corpo h3 {  /* Regra para: Títulos h3 dentro do contexto: informações do cartão de salão */
+  font-size: 18px;  /* Tamanho da letra: 18px */
+}  /* Fim de regra de Títulos h3 dentro do contexto: informações do cartão de salão */
+
+.salao-corpo p {  /* Regra para: Parágrafo dentro do contexto: informações do cartão de salão */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Parágrafo dentro do contexto: informações do cartão de salão */
+
+.salao-rodape {  /* Regra para: Rodapé do cartão de salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-top: auto;  /* Margem superior: auto */
+  padding-top: 12px;  /* Espaço interno superior: 12px */
+}  /* Fim de regra de Rodapé do cartão de salão */
+
+.nota {  /* Regra para: Nota em estrelas */
+  color: var(--amarelo);  /* Cor do texto: amarelo */
+  font-weight: 700;  /* Peso da letra: negrito */
+}  /* Fim de regra de Nota em estrelas */
+
+/* Filtro da busca: esconde os cartões de outras categorias */
+
+.filtros > input {  /* Regra para: Campos dentro do contexto: filtro por tipo de salão */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  width: 1px;  /* Largura: 1px */
+  height: 1px;  /* Altura: 1px */
+  opacity: 0;  /* Deixa o elemento invisível */
+}  /* Fim de regra de Campos dentro do contexto: filtro por tipo de salão */
+
+.filtros-rotulos {  /* Regra para: Botões do filtro */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-bottom: 20px;  /* Margem inferior: 20px */
+}  /* Fim de regra de Botões do filtro */
+
+.filtros-rotulos label {  /* Regra para: Rótulos dentro do contexto: botões do filtro */
+  padding: 8px 16px;  /* Espaço interno: 8px 16px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 999px;  /* Deixa os cantos em formato de pílula */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Rótulos dentro do contexto: botões do filtro */
+
+.filtros-rotulos label:hover {  /* Regra para: Rótulos ao passar o mouse dentro do contexto: botões do filtro */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Rótulos ao passar o mouse dentro do contexto: botões do filtro */
+
+#f-todos:checked ~ .filtros-rotulos [for="f-todos"],  /* Regra para: Rótulo do filtro todos dentro do contexto: opção todos marcado, botões do filtro */
+#f-barbearia:checked ~ .filtros-rotulos [for="f-barbearia"],  /* Regra para: Rótulo do filtro barbearia dentro do contexto: opção barbearia marcado, botões do filtro */
+#f-salao:checked ~ .filtros-rotulos [for="f-salao"],  /* Regra para: Rótulo do filtro salao dentro do contexto: opção salao marcado, botões do filtro */
+#f-estetica:checked ~ .filtros-rotulos [for="f-estetica"],  /* Regra para: Rótulo do filtro estetica dentro do contexto: opção estetica marcado, botões do filtro */
+#f-manicure:checked ~ .filtros-rotulos [for="f-manicure"] {  /* Regra para: Rótulo do filtro manicure dentro do contexto: opção manicure marcado, botões do filtro */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Rótulo do filtro todos dentro do contexto: opção todos marcado, botões do filtro */
+
+#f-barbearia:checked ~ .grade-3 .salao-cartao:not(.tipo-barbearia),  /* Regra para: Cartão de salão que não é do tipo barbearia dentro do contexto: opção barbearia marcado, grade de 3 colunas */
+#f-salao:checked ~ .grade-3 .salao-cartao:not(.tipo-salao),  /* Regra para: Cartão de salão que não é do tipo salao dentro do contexto: opção salao marcado, grade de 3 colunas */
+#f-estetica:checked ~ .grade-3 .salao-cartao:not(.tipo-estetica),  /* Regra para: Cartão de salão que não é do tipo estetica dentro do contexto: opção estetica marcado, grade de 3 colunas */
+#f-manicure:checked ~ .grade-3 .salao-cartao:not(.tipo-manicure) {  /* Regra para: Cartão de salão que não é do tipo manicure dentro do contexto: opção manicure marcado, grade de 3 colunas */
+  display: none;  /* Esconde o elemento */
+}  /* Fim de regra de Cartão de salão que não é do tipo barbearia dentro do contexto: opção barbearia marcado, grade de 3 colunas */
+
+/* ---------- Página do salão ---------- */
+
+.capa-salao {  /* Regra para: Capa da página do salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 24px;  /* Espaço entre os filhos: 24px */
+  padding: 28px;  /* Espaço interno: 28px */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 12px;  /* Cantos arredondados de 12px */
+  background: linear-gradient(110deg, #0d3564 0%, var(--painel-escuro) 100%);  /* Fundo em degradê linear */
+}  /* Fim de regra de Capa da página do salão */
+
+.selo {  /* Regra para: Selo com as iniciais do salão */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  flex: none;  /* Não cresce nem encolhe */
+  width: 84px;  /* Largura: 84px */
+  height: 84px;  /* Altura: 84px */
+  border-radius: 14px;  /* Cantos arredondados de 14px */
+  background-color: var(--campo);  /* Cor de fundo: azul quase preto dos campos */
+  color: #7cc4ff;  /* Cor do texto: código #7cc4ff */
+  font-size: 30px;  /* Tamanho da letra: 30px */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+}  /* Fim de regra de Selo com as iniciais do salão */
+
+.capa-info {  /* Regra para: Informações da capa do salão */
+  flex: 1 1 280px;  /* Cresce a partir da largura base de 280px */
+}  /* Fim de regra de Informações da capa do salão */
+
+.capa-info h1 {  /* Regra para: Títulos h1 dentro do contexto: informações da capa do salão */
+  font-size: 30px;  /* Tamanho da letra: 30px */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+}  /* Fim de regra de Títulos h1 dentro do contexto: informações da capa do salão */
+
+.capa-info p {  /* Regra para: Parágrafo dentro do contexto: informações da capa do salão */
+  margin-top: 4px;  /* Margem superior: 4px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+}  /* Fim de regra de Parágrafo dentro do contexto: informações da capa do salão */
+
+.lista-linhas li {  /* Regra para: Itens da lista dentro do contexto: lista de dados em linhas */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+  padding: 11px 0;  /* Espaço interno: 11px 0 */
+  border-top: 1px solid var(--borda);  /* Borda superior de 1px na cor azul da borda */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Itens da lista dentro do contexto: lista de dados em linhas */
+
+.lista-linhas li:first-child {  /* Regra para: Itens da lista primeiro do grupo dentro do contexto: lista de dados em linhas */
+  border-top: 0;  /* Borda superior removida */
+}  /* Fim de regra de Itens da lista primeiro do grupo dentro do contexto: lista de dados em linhas */
+
+.lista-linhas span:last-child {  /* Regra para: Trecho de texto último do grupo dentro do contexto: lista de dados em linhas */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  text-align: right;  /* Alinha o texto à direita */
+}  /* Fim de regra de Trecho de texto último do grupo dentro do contexto: lista de dados em linhas */
+
+.pessoa {  /* Regra para: Dados de uma pessoa */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 12px;  /* Espaço entre os filhos: 12px */
+  margin-bottom: 12px;  /* Margem inferior: 12px */
+}  /* Fim de regra de Dados de uma pessoa */
+
+.avatar {  /* Regra para: Círculo com as iniciais */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  flex: none;  /* Não cresce nem encolhe */
+  width: 44px;  /* Largura: 44px */
+  height: 44px;  /* Altura: 44px */
+  border-radius: 50%;  /* Deixa o elemento em círculo */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--azul-claro);  /* Cor do texto: azul-claro */
+  font-weight: 700;  /* Peso da letra: negrito */
+}  /* Fim de regra de Círculo com as iniciais */
+
+.avatar-grande {  /* Regra para: Círculo grande com as iniciais */
+  width: 120px;  /* Largura: 120px */
+  height: 120px;  /* Altura: 120px */
+  font-size: 40px;  /* Tamanho da letra: 40px */
+}  /* Fim de regra de Círculo grande com as iniciais */
+
+.pessoa h3 {  /* Regra para: Títulos h3 dentro do contexto: dados de uma pessoa */
+  font-size: 16px;  /* Tamanho da letra: 16px */
+}  /* Fim de regra de Títulos h3 dentro do contexto: dados de uma pessoa */
+
+.pessoa p {  /* Regra para: Parágrafo dentro do contexto: dados de uma pessoa */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Parágrafo dentro do contexto: dados de uma pessoa */
+
+.avaliacao p {  /* Regra para: Parágrafo dentro do contexto: avaliação de cliente */
+  margin-top: 6px;  /* Margem superior: 6px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Parágrafo dentro do contexto: avaliação de cliente */
+
+.avaliacao-topo {  /* Regra para: Topo da avaliação (nome e nota) */
+  display: flex;  /* Organiza os filhos com flexbox */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+}  /* Fim de regra de Topo da avaliação (nome e nota) */
+
+/* ---------- Agendar ---------- */
+
+.layout-agendar {  /* Regra para: Layout da tela de agendar */
+  display: grid;  /* Organiza os filhos em grade */
+  grid-template-columns: minmax(0, 1fr) 340px;  /* Define as colunas da grade: minmax(0, 1fr) 340px */
+  align-items: start;  /* Alinha os filhos no início no eixo cruzado */
+  gap: 18px;  /* Espaço entre os filhos: 18px */
+  /* Soma de preço e duração feita só com contadores de CSS */
+  counter-reset: preco duracao;  /* Zera os contadores de preço e duração */
+}  /* Fim de regra de Layout da tela de agendar */
+
+#sv-corte:checked {  /* Regra para: Opção corte marcado */
+  counter-increment: preco 35 duracao 30;  /* Soma R$ 35 ao preço e 30 minutos à duração */
+}  /* Fim de regra de Opção corte marcado */
+
+#sv-barba:checked {  /* Regra para: Opção barba marcado */
+  counter-increment: preco 25 duracao 20;  /* Soma R$ 25 ao preço e 20 minutos à duração */
+}  /* Fim de regra de Opção barba marcado */
+
+#sv-combo:checked {  /* Regra para: Opção combo marcado */
+  counter-increment: preco 55 duracao 45;  /* Soma R$ 55 ao preço e 45 minutos à duração */
+}  /* Fim de regra de Opção combo marcado */
+
+#sv-sobrancelha:checked {  /* Regra para: Opção sobrancelha marcado */
+  counter-increment: preco 15 duracao 15;  /* Soma R$ 15 ao preço e 15 minutos à duração */
+}  /* Fim de regra de Opção sobrancelha marcado */
+
+.total-preco::after {  /* Regra para: Preço total pseudoelemento depois do conteúdo */
+  content: "R$ " counter(preco) ",00";  /* Escreve o preço somado pelos contadores */
+}  /* Fim de regra de Preço total pseudoelemento depois do conteúdo */
+
+.total-duracao::after {  /* Regra para: Duração total pseudoelemento depois do conteúdo */
+  content: counter(duracao) " min";  /* Escreve a duração somada pelos contadores */
+}  /* Fim de regra de Duração total pseudoelemento depois do conteúdo */
+
+.resumo-lateral {  /* Regra para: Resumo lateral */
+  position: sticky;  /* Acompanha a rolagem da tela */
+  top: 20px;  /* Distância do topo: 20px */
+}  /* Fim de regra de Resumo lateral */
+
+.horarios-livres {  /* Regra para: Grade de horários disponíveis */
+  display: grid;  /* Organiza os filhos em grade */
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));  /* Cria quantas colunas de no mínimo 78px couberem */
+  gap: 8px;  /* Espaço entre os filhos: 8px */
+}  /* Fim de regra de Grade de horários disponíveis */
+
+.horarios-livres label {  /* Regra para: Rótulos dentro do contexto: grade de horários disponíveis */
+  position: relative;  /* Serve de referência para filhos posicionados */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Rótulos dentro do contexto: grade de horários disponíveis */
+
+.horarios-livres input {  /* Regra para: Campos dentro do contexto: grade de horários disponíveis */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  width: 1px;  /* Largura: 1px */
+  height: 1px;  /* Altura: 1px */
+  opacity: 0;  /* Deixa o elemento invisível */
+}  /* Fim de regra de Campos dentro do contexto: grade de horários disponíveis */
+
+.horarios-livres span {  /* Regra para: Trecho de texto dentro do contexto: grade de horários disponíveis */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  padding: 9px 0;  /* Espaço interno: 9px 0 */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-variant-numeric: tabular-nums;  /* Números com a mesma largura, para alinhar */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Trecho de texto dentro do contexto: grade de horários disponíveis */
+
+.horarios-livres label:hover span {  /* Regra para: Trecho de texto dentro do contexto: grade de horários disponíveis, rótulos ao passar o mouse */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Trecho de texto dentro do contexto: grade de horários disponíveis, rótulos ao passar o mouse */
+
+.horarios-livres input:checked + span {  /* Regra para: Trecho de texto dentro do contexto: grade de horários disponíveis, campos marcado */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+}  /* Fim de regra de Trecho de texto dentro do contexto: grade de horários disponíveis, campos marcado */
+
+.horarios-livres input:focus-visible + span {  /* Regra para: Trecho de texto dentro do contexto: grade de horários disponíveis, campos com foco do teclado */
+  outline: 2px solid var(--azul-claro);  /* Contorno azul para quem navega pelo teclado */
+  outline-offset: 2px;  /* Afasta o contorno em 2px */
+}  /* Fim de regra de Trecho de texto dentro do contexto: grade de horários disponíveis, campos com foco do teclado */
+
+.horarios-livres input:disabled + span {  /* Regra para: Trecho de texto dentro do contexto: grade de horários disponíveis, campos indisponível */
+  border-color: var(--cinza-fundo);  /* Cor da borda: cinza-azulado */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  text-decoration: line-through;  /* Risca o texto */
+  cursor: not-allowed;  /* Cursor de proibido */
+}  /* Fim de regra de Trecho de texto dentro do contexto: grade de horários disponíveis, campos indisponível */
+
+/* ---------- Estrelas da avaliação ---------- */
+
+.estrelas {  /* Regra para: Estrelas da nota */
+  display: inline-flex;  /* Flexbox que ocupa só o tamanho do conteúdo */
+  flex-direction: row-reverse;  /* Coloca os filhos em linha, na ordem inversa */
+  justify-content: flex-end;  /* Distribui os filhos no final */
+  gap: 4px;  /* Espaço entre os filhos: 4px */
+}  /* Fim de regra de Estrelas da nota */
+
+.estrelas input {  /* Regra para: Campos dentro do contexto: estrelas da nota */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  width: 1px;  /* Largura: 1px */
+  height: 1px;  /* Altura: 1px */
+  opacity: 0;  /* Deixa o elemento invisível */
+}  /* Fim de regra de Campos dentro do contexto: estrelas da nota */
+
+.estrelas label {  /* Regra para: Rótulos dentro do contexto: estrelas da nota */
+  color: #33475f;  /* Cor do texto: código #33475f */
+  font-size: 38px;  /* Tamanho da letra: 38px */
+  line-height: 1;  /* Altura da linha igual à da letra */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Rótulos dentro do contexto: estrelas da nota */
+
+.estrelas input:checked ~ label,  /* Regra para: Rótulos dentro do contexto: estrelas da nota, campos marcado */
+.estrelas label:hover,  /* Regra para: Rótulos ao passar o mouse dentro do contexto: estrelas da nota */
+.estrelas label:hover ~ label {  /* Regra para: Rótulos dentro do contexto: estrelas da nota, rótulos ao passar o mouse */
+  color: var(--amarelo);  /* Cor do texto: amarelo */
+}  /* Fim de regra de Rótulos dentro do contexto: estrelas da nota, campos marcado */
+
+.estrelas input:focus-visible + label {  /* Regra para: Rótulos dentro do contexto: estrelas da nota, campos com foco do teclado */
+  outline: 2px solid var(--azul-claro);  /* Contorno azul para quem navega pelo teclado */
+  outline-offset: 2px;  /* Afasta o contorno em 2px */
+}  /* Fim de regra de Rótulos dentro do contexto: estrelas da nota, campos com foco do teclado */
+
+/* ---------- Horários da semana ---------- */
+
+.dia {  /* Regra para: Linha de um dia da semana */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+  padding: 14px 0;  /* Espaço interno: 14px 0 */
+  border-top: 1px solid var(--borda);  /* Borda superior de 1px na cor azul da borda */
+}  /* Fim de regra de Linha de um dia da semana */
+
+.dia:first-child {  /* Regra para: Linha de um dia da semana primeiro do grupo */
+  border-top: 0;  /* Borda superior removida */
+}  /* Fim de regra de Linha de um dia da semana primeiro do grupo */
+
+.informacao-dia {  /* Regra para: Nome e situação do dia */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+}  /* Fim de regra de Nome e situação do dia */
+
+.informacao-dia h3 {  /* Regra para: Títulos h3 dentro do contexto: nome e situação do dia */
+  font-size: 15px;  /* Tamanho da letra: 15px */
+}  /* Fim de regra de Títulos h3 dentro do contexto: nome e situação do dia */
+
+.estado-aberto,  /* Regra para: Texto Aberto */
+.estado-fechado {  /* Regra para: Texto Fechado */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Texto Aberto */
+
+.estado-fechado {  /* Regra para: Texto Fechado */
+  display: none;  /* Esconde o elemento */
+}  /* Fim de regra de Texto Fechado */
+
+.dia:not(:has(.interruptor input:checked)) .estado-aberto {  /* Regra para: Texto Aberto dentro do contexto: linha de um dia da semana quando a chave está desligada */
+  display: none;  /* Esconde o elemento */
+}  /* Fim de regra de Texto Aberto dentro do contexto: linha de um dia da semana quando a chave está desligada */
+
+.dia:not(:has(.interruptor input:checked)) .estado-fechado {  /* Regra para: Texto Fechado dentro do contexto: linha de um dia da semana quando a chave está desligada */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+}  /* Fim de regra de Texto Fechado dentro do contexto: linha de um dia da semana quando a chave está desligada */
+
+.dia:not(:has(.interruptor input:checked)) .horario {  /* Regra para: Horários de abertura e fechamento dentro do contexto: linha de um dia da semana quando a chave está desligada */
+  opacity: 0.35;  /* Deixa o elemento com 35% de opacidade */
+  pointer-events: none;  /* Impede cliques no elemento */
+}  /* Fim de regra de Horários de abertura e fechamento dentro do contexto: linha de um dia da semana quando a chave está desligada */
+
+.horario {  /* Regra para: Horários de abertura e fechamento */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Horários de abertura e fechamento */
+
+.horario input {  /* Regra para: Campos dentro do contexto: horários de abertura e fechamento */
+  width: 122px;  /* Largura: 122px */
+}  /* Fim de regra de Campos dentro do contexto: horários de abertura e fechamento */
+
+.interruptor {  /* Regra para: Chave liga/desliga */
+  position: relative;  /* Serve de referência para filhos posicionados */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  flex: none;  /* Não cresce nem encolhe */
+  width: 44px;  /* Largura: 44px */
+  height: 24px;  /* Altura: 24px */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Chave liga/desliga */
+
+.interruptor input {  /* Regra para: Campos dentro do contexto: chave liga/desliga */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  width: 100%;  /* Largura: 100% */
+  height: 100%;  /* Altura: 100% */
+  opacity: 0;  /* Deixa o elemento invisível */
+  cursor: pointer;  /* Cursor de mãozinha */
+}  /* Fim de regra de Campos dentro do contexto: chave liga/desliga */
+
+.interruptor span {  /* Regra para: Trecho de texto dentro do contexto: chave liga/desliga */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  inset: 0;  /* Encosta nos quatro lados */
+  border-radius: 999px;  /* Deixa os cantos em formato de pílula */
+  background-color: var(--cinza-fundo);  /* Cor de fundo: cinza-azulado */
+  transition: background-color 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Trecho de texto dentro do contexto: chave liga/desliga */
+
+.interruptor span::before {  /* Regra para: Trecho de texto pseudoelemento antes do conteúdo dentro do contexto: chave liga/desliga */
+  content: "";  /* Cria o pseudoelemento vazio */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  top: 3px;  /* Distância do topo: 3px */
+  left: 3px;  /* Distância da esquerda: 3px */
+  width: 18px;  /* Largura: 18px */
+  height: 18px;  /* Altura: 18px */
+  border-radius: 50%;  /* Deixa o elemento em círculo */
+  background-color: #ffffff;  /* Cor de fundo: branco */
+  transition: transform 0.2s;  /* Anima a mudança em 0,2 segundo */
+}  /* Fim de regra de Trecho de texto pseudoelemento antes do conteúdo dentro do contexto: chave liga/desliga */
+
+.interruptor input:checked + span {  /* Regra para: Trecho de texto dentro do contexto: chave liga/desliga, campos marcado */
+  background-color: var(--azul);  /* Cor de fundo: azul principal */
+}  /* Fim de regra de Trecho de texto dentro do contexto: chave liga/desliga, campos marcado */
+
+.interruptor input:checked + span::before {  /* Regra para: Trecho de texto pseudoelemento antes do conteúdo dentro do contexto: chave liga/desliga, campos marcado */
+  transform: translateX(20px);  /* Move 20px para a direita */
+}  /* Fim de regra de Trecho de texto pseudoelemento antes do conteúdo dentro do contexto: chave liga/desliga, campos marcado */
+
+.interruptor input:focus-visible + span {  /* Regra para: Trecho de texto dentro do contexto: chave liga/desliga, campos com foco do teclado */
+  outline: 2px solid var(--azul-claro);  /* Contorno azul para quem navega pelo teclado */
+  outline-offset: 2px;  /* Afasta o contorno em 2px */
+}  /* Fim de regra de Trecho de texto dentro do contexto: chave liga/desliga, campos com foco do teclado */
+
+/* ---------- Serviços ---------- */
+
+.servico {  /* Regra para: Linha de serviço */
+  display: grid;  /* Organiza os filhos em grade */
+  grid-template-columns: 44px minmax(0, 1fr) 90px 100px auto;  /* Define as colunas da grade: 44px minmax(0, 1fr) 90px 100px auto */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 16px;  /* Espaço entre os filhos: 16px */
+  padding: 14px 0;  /* Espaço interno: 14px 0 */
+  border-top: 1px solid var(--borda);  /* Borda superior de 1px na cor azul da borda */
+}  /* Fim de regra de Linha de serviço */
+
+.servico:first-child {  /* Regra para: Linha de serviço primeiro do grupo */
+  border-top: 0;  /* Borda superior removida */
+}  /* Fim de regra de Linha de serviço primeiro do grupo */
+
+.icone-servico {  /* Regra para: Ícone do serviço */
+  display: flex;  /* Organiza os filhos com flexbox */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  width: 44px;  /* Largura: 44px */
+  height: 44px;  /* Altura: 44px */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--azul-claro);  /* Cor do texto: azul-claro */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+}  /* Fim de regra de Ícone do serviço */
+
+.servico h3 {  /* Regra para: Títulos h3 dentro do contexto: linha de serviço */
+  font-size: 15px;  /* Tamanho da letra: 15px */
+}  /* Fim de regra de Títulos h3 dentro do contexto: linha de serviço */
+
+.servico p {  /* Regra para: Parágrafo dentro do contexto: linha de serviço */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Parágrafo dentro do contexto: linha de serviço */
+
+.dado-rotulado span {  /* Regra para: Trecho de texto dentro do contexto: dado com rótulo */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 12px;  /* Tamanho da letra: 12px */
+}  /* Fim de regra de Trecho de texto dentro do contexto: dado com rótulo */
+
+.dado-rotulado strong {  /* Regra para: Texto em destaque dentro do contexto: dado com rótulo */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-variant-numeric: tabular-nums;  /* Números com a mesma largura, para alinhar */
+}  /* Fim de regra de Texto em destaque dentro do contexto: dado com rótulo */
+
+/* ---------- Clientes (painel) ---------- */
+
+.linha-cliente {  /* Regra para: Linha de cliente */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: space-between;  /* Distribui os filhos com o espaço distribuído entre eles */
+  gap: 14px;  /* Espaço entre os filhos: 14px */
+  padding: 16px 20px;  /* Espaço interno: 16px 20px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 10px;  /* Cantos arredondados de 10px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+}  /* Fim de regra de Linha de cliente */
+
+.linha-cliente h2 {  /* Regra para: Títulos h2 dentro do contexto: linha de cliente */
+  font-size: 16px;  /* Tamanho da letra: 16px */
+}  /* Fim de regra de Títulos h2 dentro do contexto: linha de cliente */
+
+.linha-cliente p {  /* Regra para: Parágrafo dentro do contexto: linha de cliente */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 13px;  /* Tamanho da letra: 13px */
+}  /* Fim de regra de Parágrafo dentro do contexto: linha de cliente */
+
+.busca-linha {  /* Regra para: Linha de busca */
+  display: flex;  /* Organiza os filhos com flexbox */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+}  /* Fim de regra de Linha de busca */
+
+/* ---------- Planos ---------- */
+
+.plano {  /* Regra para: Cartão de plano */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  gap: 12px;  /* Espaço entre os filhos: 12px */
+  padding: 26px 24px;  /* Espaço interno: 26px 24px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 12px;  /* Cantos arredondados de 12px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+}  /* Fim de regra de Cartão de plano */
+
+.plano-atual {  /* Regra para: Plano contratado */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+  box-shadow: 0 0 24px rgba(0, 140, 255, 0.18);  /* Brilho azul em volta do elemento */
+}  /* Fim de regra de Plano contratado */
+
+.plano h2,  /* Regra para: Títulos h2 dentro do contexto: cartão de plano */
+.plano h3 {  /* Regra para: Títulos h3 dentro do contexto: cartão de plano */
+  font-size: 19px;  /* Tamanho da letra: 19px */
+}  /* Fim de regra de Títulos h2 dentro do contexto: cartão de plano */
+
+.plano-preco {  /* Regra para: Preço do plano */
+  font-size: 30px;  /* Tamanho da letra: 30px */
+  font-weight: 800;  /* Peso da letra: extranegrito */
+}  /* Fim de regra de Preço do plano */
+
+.plano-preco small {  /* Regra para: Texto menor dentro do contexto: preço do plano */
+  color: var(--texto-apagado);  /* Cor do texto: texto apagado */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 500;  /* Peso da letra: médio */
+}  /* Fim de regra de Texto menor dentro do contexto: preço do plano */
+
+.plano ul {  /* Regra para: Listas dentro do contexto: cartão de plano */
+  flex: 1;  /* Ocupa o espaço disponível */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Listas dentro do contexto: cartão de plano */
+
+.plano li {  /* Regra para: Itens da lista dentro do contexto: cartão de plano */
+  padding: 5px 0;  /* Espaço interno: 5px 0 */
+}  /* Fim de regra de Itens da lista dentro do contexto: cartão de plano */
+
+/* ---------- Login e cadastro ---------- */
+
+.pagina-acesso {  /* Regra para: Página de acesso */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  justify-content: center;  /* Distribui os filhos ao centro */
+  padding: 32px 16px;  /* Espaço interno: 32px 16px */
+}  /* Fim de regra de Página de acesso */
+
+.acesso {  /* Regra para: Caixa das telas de acesso */
+  width: 100%;  /* Largura: 100% */
+  max-width: 420px;  /* Largura máxima: 420px */
+}  /* Fim de regra de Caixa das telas de acesso */
+
+.acesso-largo {  /* Regra para: Caixa de acesso mais larga */
+  max-width: 560px;  /* Largura máxima: 560px */
+}  /* Fim de regra de Caixa de acesso mais larga */
+
+.acesso-logo {  /* Regra para: Logo das telas de acesso */
+  width: 140px;  /* Largura: 140px */
+  height: 140px;  /* Altura: 140px */
+  margin: 0 auto 18px;  /* Margem externa: 0 auto 18px */
+  border-radius: 12px;  /* Cantos arredondados de 12px */
+}  /* Fim de regra de Logo das telas de acesso */
+
+.acesso h1 {  /* Regra para: Títulos h1 dentro do contexto: caixa das telas de acesso */
+  margin-bottom: 18px;  /* Margem inferior: 18px */
+  font-size: 26px;  /* Tamanho da letra: 26px */
+}  /* Fim de regra de Títulos h1 dentro do contexto: caixa das telas de acesso */
+
+.separador {  /* Regra para: Linha separadora */
+  height: 1px;  /* Altura: 1px */
+  margin: 20px 0;  /* Margem externa: 20px 0 */
+  border: 0;  /* Borda removida */
+  background-color: var(--borda);  /* Cor de fundo: azul da borda */
+}  /* Fim de regra de Linha separadora */
+
+.texto-centro {  /* Regra para: Texto centralizado */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Texto centralizado */
+
+.perfis-demo {  /* Regra para: Botões de ver o protótipo */
+  display: grid;  /* Organiza os filhos em grade */
+  grid-template-columns: repeat(2, 1fr);  /* Cria 2 colunas de mesma largura */
+  gap: 10px;  /* Espaço entre os filhos: 10px */
+  margin-top: 12px;  /* Margem superior: 12px */
+}  /* Fim de regra de Botões de ver o protótipo */
+
+/* Perfil */
+
+.perfil-cartao {  /* Regra para: Cartão do perfil */
+  display: flex;  /* Organiza os filhos com flexbox */
+  flex-direction: column;  /* Empilha os filhos em coluna */
+  align-items: center;  /* Alinha os filhos ao centro no eixo cruzado */
+  gap: 8px;  /* Espaço entre os filhos: 8px */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Cartão do perfil */
+
+.perfil-cartao .ajuda {  /* Regra para: Texto de ajuda dentro do contexto: cartão do perfil */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Texto de ajuda dentro do contexto: cartão do perfil */
+
+/* ---------- Telas menores ---------- */
+
+@media (max-width: 1080px) {  /* Regras só para telas de até 1080px */
+  .navegacao {  /* Regra para: Barra de navegação */
+    flex-wrap: wrap;  /* Deixa os filhos passarem para a próxima linha */
+  }  /* Fim de regra de Barra de navegação */
+
+  .menu {  /* Regra para: Área do menu */
+    order: 3;  /* Passa este item para depois dos outros */
+    width: 100%;  /* Largura: 100% */
+    overflow-x: auto;  /* Mostra rolagem horizontal se precisar */
+  }  /* Fim de regra de Área do menu */
+
+  .grade-4 {  /* Regra para: Grade de 4 colunas */
+    grid-template-columns: repeat(2, minmax(0, 1fr));  /* Cria 2 colunas de mesma largura */
+  }  /* Fim de regra de Grade de 4 colunas */
+
+  .grade-3 {  /* Regra para: Grade de 3 colunas */
+    grid-template-columns: repeat(2, minmax(0, 1fr));  /* Cria 2 colunas de mesma largura */
+  }  /* Fim de regra de Grade de 3 colunas */
+
+  .layout-agendar {  /* Regra para: Layout da tela de agendar */
+    grid-template-columns: minmax(0, 1fr);  /* Cria uma única coluna */
+  }  /* Fim de regra de Layout da tela de agendar */
+
+  .resumo-lateral {  /* Regra para: Resumo lateral */
+    position: static;  /* Volta ao fluxo normal da página */
+  }  /* Fim de regra de Resumo lateral */
+}  /* Fim de bloco para telas de até 1080px */
+
+@media (max-width: 680px) {  /* Regras só para telas de até 680px */
+  .navegacao {  /* Regra para: Barra de navegação */
+    padding: 8px 16px;  /* Espaço interno: 8px 16px */
+  }  /* Fim de regra de Barra de navegação */
+
+  .principal {  /* Regra para: Conteúdo principal */
+    padding: 28px 16px 56px;  /* Espaço interno: 28px 16px 56px */
+  }  /* Fim de regra de Conteúdo principal */
+
+  .titulo {  /* Regra para: Título da página */
+    font-size: 27px;  /* Tamanho da letra: 27px */
+  }  /* Fim de regra de Título da página */
+
+  .grade-2,  /* Regra para: Grade de 2 colunas */
+  .grade-3 {  /* Regra para: Grade de 3 colunas */
+    grid-template-columns: minmax(0, 1fr);  /* Cria uma única coluna */
+  }  /* Fim de regra de Grade de 2 colunas */
+
+  .caixa strong {  /* Regra para: Texto em destaque dentro do contexto: caixa de resumo com número */
+    font-size: 20px;  /* Tamanho da letra: 20px */
+  }  /* Fim de regra de Texto em destaque dentro do contexto: caixa de resumo com número */
+
+  .destaque-inicial {  /* Regra para: Destaque da página inicial */
+    padding: 36px 18px;  /* Espaço interno: 36px 18px */
+  }  /* Fim de regra de Destaque da página inicial */
+
+  .busca-principal,  /* Regra para: Busca da página inicial */
+  .busca-linha {  /* Regra para: Linha de busca */
+    flex-direction: column;  /* Empilha os filhos em coluna */
+  }  /* Fim de regra de Busca da página inicial */
+
+  .servico {  /* Regra para: Linha de serviço */
+    grid-template-columns: 44px minmax(0, 1fr) auto;  /* Define as colunas da grade: 44px minmax(0, 1fr) auto */
+  }  /* Fim de regra de Linha de serviço */
+
+  .servico .dado-rotulado {  /* Regra para: Dado com rótulo dentro do contexto: linha de serviço */
+    grid-row: 2;  /* Fica na segunda linha da grade */
+  }  /* Fim de regra de Dado com rótulo dentro do contexto: linha de serviço */
+
+  .servico .dado-rotulado:nth-of-type(3) {  /* Regra para: Dado com rótulo número 3 dentro do contexto: linha de serviço */
+    grid-column: 1 / 3;  /* Ocupa as duas primeiras colunas da grade */
+  }  /* Fim de regra de Dado com rótulo número 3 dentro do contexto: linha de serviço */
+
+  .faixa .botao,  /* Regra para: Botão principal dentro do contexto: faixa de destaque */
+  .faixa .botao-secundario {  /* Regra para: Botão secundário dentro do contexto: faixa de destaque */
+    width: 100%;  /* Largura: 100% */
+  }  /* Fim de regra de Botão principal dentro do contexto: faixa de destaque */
+
+  .horario {  /* Regra para: Horários de abertura e fechamento */
+    width: 100%;  /* Largura: 100% */
+  }  /* Fim de regra de Horários de abertura e fechamento */
+
+  .horario input {  /* Regra para: Campos dentro do contexto: horários de abertura e fechamento */
+    flex: 1;  /* Ocupa o espaço disponível */
+    width: auto;  /* Largura: auto */
+    min-width: 0;  /* Largura mínima: 0 */
+  }  /* Fim de regra de Campos dentro do contexto: horários de abertura e fechamento */
+}  /* Fim de bloco para telas de até 680px */
+
+@media (prefers-reduced-motion: reduce) {  /* Regras só para quem pediu menos animação no sistema */
+  * {  /* Regra para: Todos os elementos */
+    transition: none !important;  /* Desliga as animações (com prioridade sobre outras regras) */
+    scroll-behavior: auto !important;  /* Rolagem imediata, sem animação (com prioridade sobre outras regras) */
+  }  /* Fim de regra de Todos os elementos */
+}  /* Fim de bloco para quem pediu menos animação no sistema */
+
+/* ---------- Seletor de área (presente em todas as telas) ---------- */
+
+.trocar-area {  /* Regra para: Menu de troca de área */
+  position: relative;  /* Serve de referência para filhos posicionados */
+}  /* Fim de regra de Menu de troca de área */
+
+.trocar-area summary {  /* Regra para: Título do menu dentro do contexto: menu de troca de área */
+  padding: 9px 14px;  /* Espaço interno: 9px 14px */
+  border: 1px solid var(--borda);  /* Borda de 1px na cor azul da borda */
+  border-radius: 6px;  /* Cantos arredondados de 6px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+  font-weight: 600;  /* Peso da letra: seminegrito */
+  cursor: pointer;  /* Cursor de mãozinha */
+  white-space: nowrap;  /* Não deixa o texto quebrar de linha */
+}  /* Fim de regra de Título do menu dentro do contexto: menu de troca de área */
+
+.trocar-area summary:hover {  /* Regra para: Título do menu ao passar o mouse dentro do contexto: menu de troca de área */
+  border-color: var(--azul);  /* Cor da borda: azul principal */
+}  /* Fim de regra de Título do menu ao passar o mouse dentro do contexto: menu de troca de área */
+
+.trocar-area ul {  /* Regra para: Listas dentro do contexto: menu de troca de área */
+  position: absolute;  /* Posiciona em relação ao pai de referência */
+  z-index: 5;  /* Ordem de sobreposição: 5 */
+  top: calc(100% + 6px);  /* Distância do topo: calc(100% + 6px) */
+  right: 0;  /* Distância da direita: 0 */
+  min-width: 170px;  /* Largura mínima: 170px */
+  padding: 6px;  /* Espaço interno: 6px */
+  border: 1px solid var(--borda-forte);  /* Borda de 1px na cor azul de borda forte */
+  border-radius: 8px;  /* Cantos arredondados de 8px */
+  background-color: var(--painel);  /* Cor de fundo: fundo dos painéis */
+}  /* Fim de regra de Listas dentro do contexto: menu de troca de área */
+
+.trocar-area a {  /* Regra para: Links dentro do contexto: menu de troca de área */
+  display: block;  /* Faz o elemento ocupar a linha inteira */
+  padding: 8px 10px;  /* Espaço interno: 8px 10px */
+  border-radius: 5px;  /* Cantos arredondados de 5px */
+  color: var(--texto-suave);  /* Cor do texto: texto suave */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Links dentro do contexto: menu de troca de área */
+
+.trocar-area a:hover,  /* Regra para: Links ao passar o mouse dentro do contexto: menu de troca de área */
+.trocar-area a[aria-current="page"] {  /* Regra para: Links da página atual dentro do contexto: menu de troca de área */
+  background-color: #0b2a49;  /* Cor de fundo: código #0b2a49 */
+  color: var(--texto);  /* Cor do texto: texto principal (branco) */
+}  /* Fim de regra de Links ao passar o mouse dentro do contexto: menu de troca de área */
+
+@media (max-width: 680px) {  /* Regras só para telas de até 680px */
+  .trocar-area ul {  /* Regra para: Listas dentro do contexto: menu de troca de área */
+    right: auto;  /* Distância da direita: auto */
+    left: 0;  /* Distância da esquerda: 0 */
+  }  /* Fim de regra de Listas dentro do contexto: menu de troca de área */
+}  /* Fim de bloco para telas de até 680px */
+
+/* ---------- Classes de ajuste fino ---------- */
+
+.mb-0 {  /* Regra para: Margem inferior de 0px */
+  margin-bottom: 0 !important;  /* Margem inferior: 0 (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 0px */
+
+.mb-8 {  /* Regra para: Margem inferior de 8px */
+  margin-bottom: 8px !important;  /* Margem inferior: 8px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 8px */
+
+.mb-14 {  /* Regra para: Margem inferior de 14px */
+  margin-bottom: 14px !important;  /* Margem inferior: 14px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 14px */
+
+.mb-16 {  /* Regra para: Margem inferior de 16px */
+  margin-bottom: 16px !important;  /* Margem inferior: 16px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 16px */
+
+.mb-18 {  /* Regra para: Margem inferior de 18px */
+  margin-bottom: 18px !important;  /* Margem inferior: 18px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 18px */
+
+.mb-26 {  /* Regra para: Margem inferior de 26px */
+  margin-bottom: 26px !important;  /* Margem inferior: 26px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem inferior de 26px */
+
+.mt-8 {  /* Regra para: Margem superior de 8px */
+  margin-top: 8px !important;  /* Margem superior: 8px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 8px */
+
+.mt-10 {  /* Regra para: Margem superior de 10px */
+  margin-top: 10px !important;  /* Margem superior: 10px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 10px */
+
+.mt-12 {  /* Regra para: Margem superior de 12px */
+  margin-top: 12px !important;  /* Margem superior: 12px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 12px */
+
+.mt-14 {  /* Regra para: Margem superior de 14px */
+  margin-top: 14px !important;  /* Margem superior: 14px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 14px */
+
+.mt-16 {  /* Regra para: Margem superior de 16px */
+  margin-top: 16px !important;  /* Margem superior: 16px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 16px */
+
+.mt-20 {  /* Regra para: Margem superior de 20px */
+  margin-top: 20px !important;  /* Margem superior: 20px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 20px */
+
+.mt-26 {  /* Regra para: Margem superior de 26px */
+  margin-top: 26px !important;  /* Margem superior: 26px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Margem superior de 26px */
+
+.m-0 {  /* Regra para: Sem margem */
+  margin: 0 !important;  /* Margem externa: 0 (com prioridade sobre outras regras) */
+}  /* Fim de regra de Sem margem */
+
+.gap-10 {  /* Regra para: Espaçamento de 10px */
+  gap: 10px !important;  /* Espaço entre os filhos: 10px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Espaçamento de 10px */
+
+.nome-perfil {  /* Regra para: Nome no perfil */
+  margin: 8px 0 0 !important;  /* Margem externa: 8px 0 0 (com prioridade sobre outras regras) */
+}  /* Fim de regra de Nome no perfil */
+
+.aviso-colado {  /* Regra para: Aviso colado ao bloco anterior */
+  margin: 18px 0 0 !important;  /* Margem externa: 18px 0 0 (com prioridade sobre outras regras) */
+}  /* Fim de regra de Aviso colado ao bloco anterior */
+
+.espaco {  /* Regra para: Espaço vazio */
+  height: 18px !important;  /* Altura: 18px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Espaço vazio */
+
+.coluna {  /* Regra para: Coluna estreita */
+  max-width: 620px !important;  /* Largura máxima: 620px (com prioridade sobre outras regras) */
+}  /* Fim de regra de Coluna estreita */
+
+.sem-caixa {  /* Regra para: Item sem caixa própria */
+  display: contents !important;  /* Remove a caixa do elemento e mantém os filhos no layout (com prioridade sobre outras regras) */
+}  /* Fim de regra de Item sem caixa própria */
+
+.coluna-centro {  /* Regra para: Coluna estreita centralizada */
+  max-width: 620px;  /* Largura máxima: 620px */
+  margin: 0 auto;  /* Margem externa: 0 auto */
+}  /* Fim de regra de Coluna estreita centralizada */
+
+.texto-servicos {  /* Regra para: Lista de serviços do profissional */
+  margin: 0 0 6px !important;  /* Margem externa: 0 0 6px (com prioridade sobre outras regras) */
+  font-size: 14px;  /* Tamanho da letra: 14px */
+}  /* Fim de regra de Lista de serviços do profissional */
+
+.ver-todos {  /* Regra para: Link Ver todos */
+  margin-top: 18px;  /* Margem superior: 18px */
+  text-align: center;  /* Alinha o texto ao centro */
+}  /* Fim de regra de Link Ver todos */
+
+.texto-esquerda {  /* Regra para: Texto à esquerda */
+  margin-bottom: 16px;  /* Margem inferior: 16px */
+  text-align: left;  /* Alinha o texto à esquerda */
+}  /* Fim de regra de Texto à esquerda */
+
+/* Largura das barras dos gráficos */
+
+.l-13 {  /* Regra para: Barra com 13% de largura */
+  width: 13%;  /* Largura: 13% */
+}  /* Fim de regra de Barra com 13% de largura */
+
+.l-33 {  /* Regra para: Barra com 33% de largura */
+  width: 33%;  /* Largura: 33% */
+}  /* Fim de regra de Barra com 33% de largura */
+
+.l-50 {  /* Regra para: Barra com 50% de largura */
+  width: 50%;  /* Largura: 50% */
+}  /* Fim de regra de Barra com 50% de largura */
+
+.l-58 {  /* Regra para: Barra com 58% de largura */
+  width: 58%;  /* Largura: 58% */
+}  /* Fim de regra de Barra com 58% de largura */
+
+.l-60 {  /* Regra para: Barra com 60% de largura */
+  width: 60%;  /* Largura: 60% */
+}  /* Fim de regra de Barra com 60% de largura */
+
+.l-62 {  /* Regra para: Barra com 62% de largura */
+  width: 62%;  /* Largura: 62% */
+}  /* Fim de regra de Barra com 62% de largura */
+
+.l-65 {  /* Regra para: Barra com 65% de largura */
+  width: 65%;  /* Largura: 65% */
+}  /* Fim de regra de Barra com 65% de largura */
+
+.l-70 {  /* Regra para: Barra com 70% de largura */
+  width: 70%;  /* Largura: 70% */
+}  /* Fim de regra de Barra com 70% de largura */
+
+.l-78 {  /* Regra para: Barra com 78% de largura */
+  width: 78%;  /* Largura: 78% */
+}  /* Fim de regra de Barra com 78% de largura */
+
+.l-80 {  /* Regra para: Barra com 80% de largura */
+  width: 80%;  /* Largura: 80% */
+}  /* Fim de regra de Barra com 80% de largura */
+
+.l-81 {  /* Regra para: Barra com 81% de largura */
+  width: 81%;  /* Largura: 81% */
+}  /* Fim de regra de Barra com 81% de largura */
+
+.l-90 {  /* Regra para: Barra com 90% de largura */
+  width: 90%;  /* Largura: 90% */
+}  /* Fim de regra de Barra com 90% de largura */
+
+.l-93 {  /* Regra para: Barra com 93% de largura */
+  width: 93%;  /* Largura: 93% */
+}  /* Fim de regra de Barra com 93% de largura */
+
+.l-98 {  /* Regra para: Barra com 98% de largura */
+  width: 98%;  /* Largura: 98% */
+}  /* Fim de regra de Barra com 98% de largura */
+
+.l-100 {  /* Regra para: Barra com 100% de largura */
+  width: 100%;  /* Largura: 100% */
+}  /* Fim de regra de Barra com 100% de largura */

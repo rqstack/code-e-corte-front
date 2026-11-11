@@ -1,0 +1,164 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Início | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body>  <!-- Abre o corpo da página, o que aparece na tela -->
+    <header class="cabecalho">  <!-- Abre cabeçalho do site -->
+      <nav class="navegacao" aria-label="Principal">  <!-- Abre barra de navegação -->
+        <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Code &amp; Corte: voltar ao início" /></a>  <!-- Link que leva para index.html -->
+        <div class="menu">  <!-- Abre área do menu -->
+          <ul class="lista-navegacao">  <!-- Abre lista do menu -->
+            <li><a href="index.html" class="link-navegacao" aria-current="page">Início</a></li>  <!-- Item “Início”, que leva para index.html -->
+            <li><a href="meus-agendamentos.html" class="link-navegacao">Meus agendamentos</a></li>  <!-- Item “Meus agendamentos”, que leva para meus-agendamentos.html -->
+          </ul>  <!-- Fecha lista do menu -->
+        </div>  <!-- Fecha área do menu -->
+        <div class="acoes-cabecalho">  <!-- Abre ações do cabeçalho -->
+          <details class="trocar-area">  <!-- Abre o menu de troca de área, que funciona sem JavaScript -->
+            <summary>Cliente</summary>  <!-- Área atual, que abre o menu ao clicar: Cliente -->
+            <ul>  <!-- Abre lista -->
+              <li><a href="index.html" aria-current="page">Cliente</a></li>  <!-- Item “Cliente”, que leva para index.html -->
+              <li><a href="funcionario/painel.html">Funcionário</a></li>  <!-- Item “Funcionário”, que leva para funcionario/painel.html -->
+              <li><a href="dono/painel.html">Dono</a></li>  <!-- Item “Dono”, que leva para dono/painel.html -->
+              <li><a href="admin/painel.html">Administração</a></li>  <!-- Item “Administração”, que leva para admin/painel.html -->
+            </ul>  <!-- Fecha lista -->
+          </details>  <!-- Fecha menu de troca de área -->
+          <a href="perfil.html" class="perfil">Perfil</a>  <!-- Botão perfil “Perfil”, que leva para perfil.html -->
+          <a href="login.html" class="sair">Sair</a>  <!-- Link sair “Sair”, que leva para login.html -->
+        </div>  <!-- Fecha ações do cabeçalho -->
+      </nav>  <!-- Fecha barra de navegação -->
+    </header>  <!-- Fecha cabeçalho do site -->
+
+    <main class="principal">  <!-- Abre conteúdo principal -->
+      <p id="salvo" class="aviso aviso-ok aviso-salvo" role="status">Pronto! Neste protótipo os dados ainda não são gravados.</p>  <!-- Caixa de aviso: Pronto! Neste protótipo os dados ainda não são gravados. -->
+
+      <section class="destaque-inicial">  <!-- Abre destaque da página inicial -->
+        <h1>Seu estilo, no seu tempo</h1>  <!-- Título principal: Seu estilo, no seu tempo -->
+        <p>Encontre salões perto de você e agende em poucos passos.</p>  <!-- Parágrafo: Encontre salões perto de você e agende em poucos passos. -->
+        <form class="busca-principal" action="index.html" role="search">  <!-- Abre o formulário, que envia para index.html -->
+          <input type="search" id="busca" placeholder="Buscar serviço ou estabelecimento" aria-label="Buscar serviço ou estabelecimento" />  <!-- Campo de busca: Buscar serviço ou estabelecimento -->
+          <button type="submit" class="botao">Buscar</button>  <!-- Botão que envia o formulário: Buscar -->
+        </form>  <!-- Fecha busca da página inicial -->
+      </section>  <!-- Fecha destaque da página inicial -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-16">Serviços</h2>  <!-- Título da seção: Serviços -->
+        <ul class="lista-categorias">  <!-- Abre lista de categorias de serviço -->
+          <li class="sem-caixa"><a href="index.html">Corte</a></li>  <!-- Item “Corte”, que leva para index.html -->
+          <li class="sem-caixa"><a href="index.html">Barba</a></li>  <!-- Item “Barba”, que leva para index.html -->
+          <li class="sem-caixa"><a href="index.html">Unhas</a></li>  <!-- Item “Unhas”, que leva para index.html -->
+          <li class="sem-caixa"><a href="index.html">Cabelo</a></li>  <!-- Item “Cabelo”, que leva para index.html -->
+          <li class="sem-caixa"><a href="index.html">Sobrancelha</a></li>  <!-- Item “Sobrancelha”, que leva para index.html -->
+        </ul>  <!-- Fecha lista de categorias de serviço -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao">  <!-- Abre seção -->
+        <h2 class="secao-titulo mb-16">Salões perto de você</h2>  <!-- Título da seção: Salões perto de você -->
+        <div class="filtros">  <!-- Abre filtro por tipo de salão -->
+          <input type="radio" name="tipo" id="f-todos" checked aria-label="Todos" />  <!-- Opção de escolha única: Todos, já marcada -->
+          <input type="radio" name="tipo" id="f-barbearia" aria-label="Barbearia" />  <!-- Opção de escolha única: Barbearia -->
+          <input type="radio" name="tipo" id="f-salao" aria-label="Salão" />  <!-- Opção de escolha única: Salão -->
+          <input type="radio" name="tipo" id="f-estetica" aria-label="Estética" />  <!-- Opção de escolha única: Estética -->
+          <input type="radio" name="tipo" id="f-manicure" aria-label="Manicure e pedicure" />  <!-- Opção de escolha única: Manicure e pedicure -->
+          <div class="filtros-rotulos">  <!-- Abre botões do filtro -->
+            <label for="f-todos">Todos</label>  <!-- Rótulo: Todos -->
+            <label for="f-barbearia">Barbearia</label>  <!-- Rótulo: Barbearia -->
+            <label for="f-salao">Salão</label>  <!-- Rótulo: Salão -->
+            <label for="f-estetica">Estética</label>  <!-- Rótulo: Estética -->
+            <label for="f-manicure">Manicure e pedicure</label>  <!-- Rótulo: Manicure e pedicure -->
+          </div>  <!-- Fecha botões do filtro -->
+          <div class="grade-3">  <!-- Abre grade de 3 colunas -->
+            <article class="salao-cartao tipo-barbearia">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">BB</div>  <!-- Capa do cartão do salão: BB -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Black Barber</h3>  <!-- Subtítulo: Black Barber -->
+                <p>Tatuapé · São Paulo</p>  <!-- Parágrafo: Tatuapé · São Paulo -->
+                <p>Corte, barba e mais</p>  <!-- Parágrafo: Corte, barba e mais -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,8</span> · 1,2 km</span>  <!-- Trecho de texto: ★ 4,8 · 1,2 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+            <article class="salao-cartao tipo-salao">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">SH</div>  <!-- Capa do cartão do salão: SH -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Style Hair</h3>  <!-- Subtítulo: Style Hair -->
+                <p>Mooca · São Paulo</p>  <!-- Parágrafo: Mooca · São Paulo -->
+                <p>Cabelo, unhas e mais</p>  <!-- Parágrafo: Cabelo, unhas e mais -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,6</span> · 2,8 km</span>  <!-- Trecho de texto: ★ 4,6 · 2,8 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+            <article class="salao-cartao tipo-barbearia">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">TB</div>  <!-- Capa do cartão do salão: TB -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Top Barber</h3>  <!-- Subtítulo: Top Barber -->
+                <p>Anália Franco · São Paulo</p>  <!-- Parágrafo: Anália Franco · São Paulo -->
+                <p>Corte, barba e mais</p>  <!-- Parágrafo: Corte, barba e mais -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,7</span> · 3,1 km</span>  <!-- Trecho de texto: ★ 4,7 · 3,1 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+            <article class="salao-cartao tipo-estetica">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">BE</div>  <!-- Capa do cartão do salão: BE -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Bella Estética</h3>  <!-- Subtítulo: Bella Estética -->
+                <p>Vila Formosa · São Paulo</p>  <!-- Parágrafo: Vila Formosa · São Paulo -->
+                <p>Limpeza de pele e sobrancelha</p>  <!-- Parágrafo: Limpeza de pele e sobrancelha -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,9</span> · 3,9 km</span>  <!-- Trecho de texto: ★ 4,9 · 3,9 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+            <article class="salao-cartao tipo-manicure">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">SN</div>  <!-- Capa do cartão do salão: SN -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Studio Nails</h3>  <!-- Subtítulo: Studio Nails -->
+                <p>Carrão · São Paulo</p>  <!-- Parágrafo: Carrão · São Paulo -->
+                <p>Manicure e pedicure</p>  <!-- Parágrafo: Manicure e pedicure -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,5</span> · 4,4 km</span>  <!-- Trecho de texto: ★ 4,5 · 4,4 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+            <article class="salao-cartao tipo-salao">  <!-- Abre cartão de salão -->
+              <div class="capa" aria-hidden="true">CC</div>  <!-- Capa do cartão do salão: CC -->
+              <div class="salao-corpo">  <!-- Abre informações do cartão de salão -->
+                <h3>Casa Corte</h3>  <!-- Subtítulo: Casa Corte -->
+                <p>Penha · São Paulo</p>  <!-- Parágrafo: Penha · São Paulo -->
+                <p>Corte, coloração e tratamentos</p>  <!-- Parágrafo: Corte, coloração e tratamentos -->
+                <div class="salao-rodape">  <!-- Abre rodapé do cartão de salão -->
+                  <span><span class="nota">★ 4,4</span> · 5,0 km</span>  <!-- Trecho de texto: ★ 4,4 · 5,0 km -->
+                  <a href="salao.html" class="botao-secundario botao-pequeno">Ver salão</a>  <!-- Botão secundário “Ver salão”, que leva para salao.html -->
+                </div>  <!-- Fecha rodapé do cartão de salão -->
+              </div>  <!-- Fecha informações do cartão de salão -->
+            </article>  <!-- Fecha cartão de salão -->
+          </div>  <!-- Fecha grade de 3 colunas -->
+        </div>  <!-- Fecha filtro por tipo de salão -->
+      </section>  <!-- Fecha seção -->
+
+      <section class="secao faixa">  <!-- Abre seção -->
+        <div>  <!-- Abre bloco -->
+          <h2>Tem um salão ou barbearia?</h2>  <!-- Título de seção: Tem um salão ou barbearia? -->
+          <p>Organize agenda, equipe e financeiro em um só lugar.</p>  <!-- Parágrafo: Organize agenda, equipe e financeiro em um só lugar. -->
+        </div>  <!-- Fecha bloco -->
+        <a href="perfil.html#contratar" class="botao">Conhecer os planos</a>  <!-- Botão principal “Conhecer os planos”, que leva para perfil.html#contratar -->
+      </section>  <!-- Fecha seção -->
+    </main>  <!-- Fecha conteúdo principal -->
+
+    <footer class="rodape">Code &amp; Corte · Tecnologia e estilo em cada detalhe</footer>  <!-- Rodapé: Code & Corte · Tecnologia e estilo em cada detalhe -->
+  </body>  <!-- Fecha corpo da página -->
+</html>  <!-- Fecha documento HTML -->

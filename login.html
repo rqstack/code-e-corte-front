@@ -1,0 +1,56 @@
+<!doctype html>  <!-- Informa ao navegador que a página usa HTML5 -->
+<html lang="pt-BR">  <!-- Início do documento, em português do Brasil -->
+  <head>  <!-- Abre as configurações da página -->
+    <meta charset="UTF-8" />  <!-- Usa a codificação UTF-8, que aceita acentos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Ajusta a página à largura da tela do aparelho -->
+    <title>Entrar | Code &amp; Corte</title>  <!-- Nome que aparece na aba do navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  <!-- Conecta antes ao servidor de fontes para carregar mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />  <!-- Carrega a fonte Montserrat do Google Fonts -->
+    <link rel="stylesheet" href="css/style.css" />  <!-- Liga esta página à folha de estilo única do site -->
+  </head>  <!-- Fecha cabeçalho técnico da página -->
+  <body class="pagina-acesso">  <!-- Abre o corpo da página, o que aparece na tela -->
+    <main class="acesso">  <!-- Abre caixa das telas de acesso -->
+      <img src="img/logo.jpg" alt="Code &amp; Corte" class="acesso-logo" />  <!-- Imagem: Code & Corte -->
+      <div class="cartao">  <!-- Abre cartão -->
+        <h1>Entrar</h1>  <!-- Título principal: Entrar -->
+        <form class="formulario" action="index.html">  <!-- Abre o formulário, que envia para index.html -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="email">E-mail</label>  <!-- Rótulo: E-mail -->
+            <input type="email" id="email" placeholder="Digite seu e-mail" required autocomplete="email" />  <!-- Campo de e-mail: E-mail, obrigatório -->
+          </div>  <!-- Fecha campo de formulário -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="senha">Senha</label>  <!-- Rótulo: Senha -->
+            <input type="password" id="senha" placeholder="Digite sua senha" required autocomplete="current-password" />  <!-- Campo de senha: Senha, obrigatório -->
+          </div>  <!-- Fecha campo de formulário -->
+          <button type="submit" class="botao botao-largo" formaction="index.html">Entrar como cliente</button>  <!-- Botão que envia o formulário: Entrar como cliente -->
+          <button type="submit" class="botao botao-largo" formaction="funcionario/painel.html">Entrar como funcionário</button>  <!-- Botão que envia o formulário: Entrar como funcionário -->
+          <button type="submit" class="botao botao-largo" formaction="dono/painel.html">Entrar como dono</button>  <!-- Botão que envia o formulário: Entrar como dono -->
+          <button type="submit" class="botao botao-largo" formaction="admin/painel.html">Entrar como administrador</button>  <!-- Botão que envia o formulário: Entrar como administrador -->
+          <a href="#recuperar" class="botao-secundario botao-largo">Esqueci minha senha</a>  <!-- Botão secundário “Esqueci minha senha”, que abre a janela recuperar -->
+        </form>  <!-- Fecha formulário -->
+        <hr class="separador" />  <!-- Linha horizontal que separa os blocos -->
+        <p class="texto-centro">Ainda não possui uma conta?</p>  <!-- Texto centralizado: Ainda não possui uma conta? -->
+        <a href="cadastro.html" class="botao-secundario botao-largo mt-12">Cadastre-se</a>  <!-- Botão secundário “Cadastre-se”, que leva para cadastro.html -->
+      </div>  <!-- Fecha cartão -->
+    </main>  <!-- Fecha caixa das telas de acesso -->
+
+    <section id="recuperar" class="modal" aria-label="Recuperar senha">  <!-- Abre janela sobreposta (recuperar) -->
+      <div class="modal-caixa">  <!-- Abre caixa da janela sobreposta -->
+        <a href="#" class="fechar" aria-label="Fechar">×</a>  <!-- Botão x de fechar “×”, que fecha a janela -->
+        <h2>Recuperar senha</h2>  <!-- Título de seção: Recuperar senha -->
+        <p>Informe seu e-mail para receber o link de redefinição.</p>  <!-- Parágrafo: Informe seu e-mail para receber o link de redefinição. -->
+        <form class="formulario" action="#">  <!-- Abre o formulário, que envia para # -->
+          <div class="campo">  <!-- Abre campo de formulário -->
+            <label for="email_recuperar">E-mail</label>  <!-- Rótulo: E-mail -->
+            <input type="email" id="email_recuperar" placeholder="voce@email.com" required autocomplete="email" />  <!-- Campo de e-mail: E-mail, obrigatório -->
+          </div>  <!-- Fecha campo de formulário -->
+          <div class="acoes-formulario">  <!-- Abre botões do formulário -->
+            <a href="#" class="botao-secundario">Voltar</a>  <!-- Botão secundário “Voltar”, que fecha a janela -->
+            <button type="submit" class="botao">Enviar link</button>  <!-- Botão que envia o formulário: Enviar link -->
+          </div>  <!-- Fecha botões do formulário -->
+        </form>  <!-- Fecha formulário -->
+      </div>  <!-- Fecha caixa da janela sobreposta -->
+    </section>  <!-- Fecha janela sobreposta -->
+  </body>  <!-- Fecha página de acesso -->
+</html>  <!-- Fecha documento HTML -->
